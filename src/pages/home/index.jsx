@@ -1,8 +1,12 @@
 import React from 'react'
+import Search from '../../components/searchbar/Search'
+
 const Home = () => {
   return (
 <div>
-  Home Screen
+
+  <Search/>
+
 </div>
 
   )
