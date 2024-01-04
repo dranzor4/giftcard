@@ -1,8 +1,9 @@
 import React from 'react'
+import SearchBy from '../../components/searchby'
 const Home = () => {
   return (
 <div>
-  Home Screen
+    <SearchBy />
 </div>
 
   )
