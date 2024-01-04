@@ -2,7 +2,7 @@ import React from 'react'
 
 const SearchBy = () => {
   return (
-    <div>SearchBy</div>
+    <div></div>
   )
 }
 
