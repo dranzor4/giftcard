@@ -4,15 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 const Search = () => {
-  // Sample data from JSON
-  const iconData = [
-    { id: 1, icon: "bi-search", name: "Search" },
-    { id: 2, icon: "bi-person", name: "Person" },
-    { id: 3, icon: "bi-envelope", name: "Envelope" },
-    { id: 4, icon: "bi-gear", name: "Gear" },
-  ];
-
-  return (
+    return (
     <>
       
       <div className="mt-4">
