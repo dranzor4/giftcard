@@ -43,7 +43,7 @@ const Carousel = () => {
     >
       <div className={styles.carousel} >
       {
-        cardData.map((data,index) =><SwiperSlide><Card data={data}  key={index}/><SwiperSlide/></SwiperSlide>)
+        cardData.map((data,index) =><SwiperSlide><Card data={data} key={index}/><SwiperSlide/></SwiperSlide>)
       }
     </div>
       ...

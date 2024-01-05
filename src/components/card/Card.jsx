@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./Card.module.css"
-export const Card = ({data,additionalCss}) => {
+export const Card = ({data}) => {
   return (
-    <div className={styles.cardContainer} style={additionalCss}>
+    <div className={styles.cardContainer}>
       <div className={styles.card} >
        <img src="/images/test.jpg" alt="nature" className={styles.cardImage}/>
         <div className={styles.cardBatch}>{data?.batch}</div>
