@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Card.module.css"
-export const Card = ({data}) => {
+export const Card = ({data,currentIndex}) => {
   return (
     <div className={styles.cardContainer}>
       <div className={styles.card}>
