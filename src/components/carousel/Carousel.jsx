@@ -3,7 +3,7 @@ import { cardData } from "../../utils/globalvariables/GlobalPath";
 import { Card } from "../card/Card";
 import styles from "./Carousel.module.css"
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { FreeMode} from 'swiper/modules';
+import {Autoplay ,FreeMode} from 'swiper/modules';
 import 'swiper/css/free-mode';
 import 'swiper/css';
 
@@ -21,22 +21,27 @@ const Carousel = () => {
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
       freeMode={true}
-      modules={[FreeMode]}
+      modules={[Autoplay,FreeMode]}
+      autoplay={{
+        delay: 2500,
+        // disableOnInteraction: false,
+      }}
+      loop={true}
       breakpoints={{
         0:{
-          slidesPerView: 3/2,
+          slidesPerView: 1.5,
           spaceBetween: 10,
         },
         640: {
-          slidesPerView: 5/2,
+          slidesPerView: 2.5,
           spaceBetween: 20,
         },
         768: {
-          slidesPerView: 7/2,
+          slidesPerView: 3.5,
           spaceBetween: 40,
         },
         1024: {
-          slidesPerView: 7/2,
+          slidesPerView: 4.5,
           spaceBetween: 50,
         },
       }}
