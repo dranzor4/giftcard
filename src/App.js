@@ -16,7 +16,8 @@
 // export default App
 
 import Layout from "./layout/Layout";
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 const App = () => {
   return (
     <>
