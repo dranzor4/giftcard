@@ -1,9 +1,9 @@
 import React from 'react'
-import Sidebar from '../../Sidebar';
+import Sidebar from '../Sidebar';
 
 // import "./header.css"
 import Style from "./Header.module.css"
-import ProfileIcon from '../../ProfileIcon';
+import ProfileIcon from '../ProfileIcon';
 
 
 
