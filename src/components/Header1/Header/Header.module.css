@@ -1,0 +1,22 @@
+.headerContainer {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.header {
+    z-index: 1;
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+}
+
+.headerNav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
