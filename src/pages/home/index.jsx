@@ -1,11 +1,11 @@
-import React from 'react'
+import SearchBy from "../../components/searchby";
+import Search from "../../components/searchbar/Search";
 const Home = () => {
   return (
     <div>
-      
+      <SearchBy />
+      <Search />
     </div>
-
-  )
-}
-
-export default Home
+  );
+};
+export default Home;
