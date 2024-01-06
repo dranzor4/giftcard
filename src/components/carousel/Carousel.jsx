@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import {Autoplay ,FreeMode} from 'swiper/modules';
 import 'swiper/css/free-mode';
 import 'swiper/css';
+import 'swiper/css/effect-fade';
 
 const Carousel = () => {
   return (
@@ -16,11 +17,12 @@ const Carousel = () => {
       </div>
     <Swiper
       spaceBetween={50}
-      slidesPerView={7/2}
+      slidesPerView={3.5}
       rewind={true}
-      onSlideChange={() => console.log('slide change')}
+      onSlideChange={() => {}}
       onSwiper={(swiper) => console.log(swiper)}
       freeMode={true}
+      effect={'fade'}
       modules={[Autoplay,FreeMode]}
       autoplay={{
         delay: 2500,
@@ -34,21 +36,21 @@ const Carousel = () => {
         },
         640: {
           slidesPerView: 2.5,
-          spaceBetween: 20,
+          spaceBetween: 10,
         },
         768: {
           slidesPerView: 3.5,
-          spaceBetween: 40,
+          spaceBetween: 10,
         },
         1024: {
           slidesPerView: 4.5,
-          spaceBetween: 50,
+          spaceBetween: 10,
         },
       }}
     >
       <div className={styles.carousel} >
       {
-        cardData.map((data,index) =><SwiperSlide><Card data={data} key={index}/><SwiperSlide/></SwiperSlide>)
+        cardData.map((data,index) =><SwiperSlide key={index}><Card data={data} /><SwiperSlide/></SwiperSlide>)
       }
     </div>
       ...
