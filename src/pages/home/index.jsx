@@ -17,7 +17,6 @@ const Home = () => {
   const handleClickGift = () => {
     setGiftToSomeone(true);
     setBuyForSelf(false);
-    console.log("gift");
   };
   return (
     <div>
@@ -38,9 +37,9 @@ const Home = () => {
           Gift to Someone
         </Button>
       </div>
-      <Carousel name="Hot Deals" delay={2500} />
-      <Carousel name="Best Sellers" delay={3000} />
-      <Carousel name="Value Offers" delay={3500} />
+      <Carousel name="Hot Deals" animationDelay={2500} />
+      <Carousel name="Best Sellers" animationDelay={3000} />
+      <Carousel name="Value Offers" animationDelay={3500} />
     </div>
   );
 };

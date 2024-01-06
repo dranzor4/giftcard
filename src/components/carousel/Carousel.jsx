@@ -9,7 +9,7 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 
 const Carousel = (props) => {
-  const{name,delay}=props;
+  const{name, animationDelay}=props;
   return (
     <div className={styles.carouselContainer}>
       <div className={styles.carouselHeader}>
@@ -27,7 +27,7 @@ const Carousel = (props) => {
       modules={[Autoplay,FreeMode]}
       speed={800}
       autoplay={{
-        delay: delay,
+        delay:animationDelay,
         // disableOnInteraction: false,
       }}
       loop={true}
