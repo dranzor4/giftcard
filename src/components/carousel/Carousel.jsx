@@ -55,7 +55,6 @@ const Carousel = (props) => {
         cardData.map((data,index) =><SwiperSlide key={index}><Card data={data} /><SwiperSlide/></SwiperSlide>)
       }
     </div>
-      ...
     </Swiper>
  
     
