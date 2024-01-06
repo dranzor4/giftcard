@@ -19,7 +19,7 @@ const Home = () => {
     setBuyForSelf(false);
   };
   return (
-    <div>
+    <div className={styles.home}>
       <SearchBy />
       <Search />
       <FadeCarousel />
@@ -40,6 +40,7 @@ const Home = () => {
       <Carousel name="Hot Deals" animationDelay={2500} />
       <Carousel name="Best Sellers" animationDelay={3000} />
       <Carousel name="Value Offers" animationDelay={3500} />
+      <Button className={styles.filterButton}>Filters</Button>
     </div>
   );
 };
