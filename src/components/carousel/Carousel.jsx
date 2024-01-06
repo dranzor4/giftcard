@@ -19,7 +19,7 @@ const Carousel = () => {
       spaceBetween={50}
       slidesPerView={3.5}
       rewind={true}
-      onSlideChange={() => console.log('slide change')}
+      onSlideChange={() => {}}
       onSwiper={(swiper) => console.log(swiper)}
       freeMode={true}
       effect={'fade'}
@@ -50,7 +50,7 @@ const Carousel = () => {
     >
       <div className={styles.carousel} >
       {
-        cardData.map((data,index) =><SwiperSlide><Card data={data} key={index}/><SwiperSlide/></SwiperSlide>)
+        cardData.map((data,index) =><SwiperSlide key={index}><Card data={data} /><SwiperSlide/></SwiperSlide>)
       }
     </div>
       ...
