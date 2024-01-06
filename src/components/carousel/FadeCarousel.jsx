@@ -15,17 +15,18 @@ const FadeCarousel = () => {
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
       effect={'fade'}
+      speed={1000}
       modules={[Autoplay,EffectFade]}
       autoplay={{
-        delay: 2500,
+        delay: 4000,
         // disableOnInteraction: false,
       }}
       loop={true}
     >
       <div className={styles.carousel} >
-      <SwiperSlide><img src="./images/nature1.jpg" alt="tree" className={styles.imageSize}/></SwiperSlide>
-      <SwiperSlide><img src="./images/tree.jpg" alt="test" className={styles.imageSize}/></SwiperSlide>
-      <SwiperSlide><img src="./images/nature2.jpg" alt="tree" className={styles.imageSize}/></SwiperSlide>
+      <SwiperSlide><img src="./images/nature1.jpg" alt="nature" className={styles.imageSize}/></SwiperSlide>
+      <SwiperSlide><img src="./images/tree.jpg" alt="tree" className={styles.imageSize}/></SwiperSlide>
+      <SwiperSlide><img src="./images/nature2.jpg" alt="nature" className={styles.imageSize}/></SwiperSlide>
     </div>
       ...
     </Swiper>
