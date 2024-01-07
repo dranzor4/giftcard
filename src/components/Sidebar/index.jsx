@@ -8,9 +8,7 @@ const Sidebar = ({ state, toggleDrawer }) => {
         <>
             <div className={` ${Style.sidebar} ${state ? Style.open : ""}`}>
                 <div className={Style.sidebarProfContainer}>
-                    <div className={Style.profileImageConatiner}>
-                        <ProfileIcon hamburger={false}/>
-                    </div>
+                        <ProfileIcon hamburger={false} />
                     <h3>Hello, aminesh</h3>
                     {/* <Button>Login</Button> */}
                 </div>
