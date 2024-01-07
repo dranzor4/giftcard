@@ -37,7 +37,6 @@ const Header = () => {
               <Link to="/calculator">
                 <img src="./Images/calculator.png" alt="" />
               </Link>
-
             </li>
             <li className={Style.NabLoginBox}>
               <Link to="/login">
@@ -45,7 +44,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link>
+              <Link to="/cart">
                 <CartIcon />
               </Link>
             </li>
