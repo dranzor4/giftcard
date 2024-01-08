@@ -1,0 +1,8 @@
+:root{
+    --bg-color-100: #1D86FF;
+
+    /* mobile responsive icone size */
+
+    --mobile-res-icon-width : 28px;
+    --mobile-res-icon-hight : 28px
+}
