@@ -42,7 +42,7 @@ const Home = () => {
       <Carousel name="Hot Deals" animationDelay={2500} />
       <Carousel name="Best Sellers" animationDelay={3000} />
       <Carousel name="Value Offers" animationDelay={3500} />
-      <Button className={styles.filterButton}>Filters</Button>
+      <Button className={styles.filterButton}>Filters <img src="/images/filter.png" alt="filter"/></Button>
     </div>
   );
 };

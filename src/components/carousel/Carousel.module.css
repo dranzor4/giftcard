@@ -1,7 +1,7 @@
 .carouselContainer{
   width: 100%;
   padding-left: 15px;
-  padding-right: 15px;
+  /* padding-right: 15px; */
   margin-top: 15px;
 }
 .FadeCarouselContainer{
@@ -31,11 +31,11 @@ margin-top: 15px;
   font-style: normal;
   letter-spacing: -0.48px;
   line-height: 20px;
-  color: #1E293B;
+  color:var(--header-text-color);
 }
 .carouselViewAll {
   font-size: 14px;
-  color: #1D86FF;
+  color: var(--bg-blue-color);
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
@@ -51,6 +51,11 @@ margin-top: 15px;
   .carouselHeader {
     display: flex;
     justify-content: space-between;
+    border: none;
+    margin-bottom: 12px;
+    margin-top: 20px;
+    padding: 0px;
+    padding-right:15px;
   }
   .carouselDeal {
     font-size: 14px;

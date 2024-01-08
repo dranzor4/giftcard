@@ -38,11 +38,17 @@ export const cardData = [
 
   },
   {
-    header: "rupesh",
+    header: "swapnil",
     paragraph: "wquwuwuwu",
     batch:"5% off",
     link: "url",
     imageShow:"./images/test.jpg"
-
+  },
+  {
+    header: "Ajit",
+    paragaph: "wquwuwuwu",
+    batch:"1% off",
+    link: "url",
+    imageShow:"./images/nature2.jpg"
   },
 ];

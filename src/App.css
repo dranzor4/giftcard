@@ -13,7 +13,7 @@ a{
 @font-face {
   font-family: "Poppins";   /*Can be any text*/
   src: local("Poppins-Regular"),
-    url("./font/Poppins-Regular.ttf") format("truetype");
+    url("./fonts/Poppins-Regular.ttf") format("truetype");
 }
 
 a, p, ul, li{
