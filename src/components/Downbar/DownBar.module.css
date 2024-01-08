@@ -1,0 +1,24 @@
+.downbar{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: yellow;
+   text-align: center;
+    border-radius: 24px 24px 0px 0px;
+    overflow: hidden;
+    z-index: 999;
+    
+}
+.downbar .DownBarheader {
+    padding: 10px;
+}
+
+.downbar .DownBarContent{
+    padding: 16px;
+}
+.downbar .DownBarContent p {
+    padding-bottom: 40px;
+    width: 70%;
+    margin: 0 auto;
+}
+
