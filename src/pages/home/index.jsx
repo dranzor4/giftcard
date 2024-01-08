@@ -24,6 +24,7 @@ const Home = () => {
       <Search />
       <FadeCarousel />
       <div className={styles.buttonTabContainer}>
+        <div className={styles.buttonContainer}>
         <Button
           className={buyForSelf ? styles.afterClick : styles.initial}
           handleClick={handleClickBuy}
@@ -36,6 +37,7 @@ const Home = () => {
         >
           Gift to Someone
         </Button>
+        </div>
       </div>
       <Carousel name="Hot Deals" animationDelay={2500} />
       <Carousel name="Best Sellers" animationDelay={3000} />

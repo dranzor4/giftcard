@@ -18,6 +18,7 @@
 import Layout from "./layout/Layout";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import "./fonts/Poppins-Regular.ttf"
 const App = () => {
   return (
     <>
