@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import Header from "../components/header/Header";
+
 import Routers from "../routes/Routes";
 import LoginModalComp from "../components/loginModal/LoginModalComp";
+import Header from "../components/header";
+
 
 const Layout = () => {
   const [showModal, setShowModal] = useState(true);

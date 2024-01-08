@@ -1,0 +1,50 @@
+.cardContainer {
+  width: 250px;
+  box-sizing: border-box;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.card {
+  width: 100%;
+  height: 150px;
+  box-sizing: border-box;
+  position: relative;
+}
+.cardImage {
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+}
+.cardBatch {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 15px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  background-color: green;
+  color: white;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  font-size: 13px;
+}
+.cardHeader {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+.cardContent {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.cardLink {
+  color: green;
+}
+.cardParagraph {
+  margin-right: 5px;
+}
