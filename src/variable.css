@@ -1,8 +1,16 @@
 :root{
     --bg-color-100: #1D86FF;
-
+    --header-text-color:#1E293B;
+    --bg-blue-color:#1D86FF;
+    --bg-button-container-color:rgba(208, 231, 255, 0.30);
+    --white-color:#ffff;
+    --box-shadow-color:rgba(0, 74, 143, 0.08);
+    --green-color:#25a42f;
+    --text-color:#64748b;
+    
     /* mobile responsive icone size */
 
     --mobile-res-icon-width : 28px;
-    --mobile-res-icon-hight : 28px
+    --mobile-res-icon-hight : 28px;
+    
 }
