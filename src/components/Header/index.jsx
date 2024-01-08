@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Sidebar from '../Sidebar';
 
 // import "./header.css"
@@ -11,18 +11,13 @@ import NavSignInSignUp from '../NavSignInSignUp';
 
 
 
-const Header = () => {
-  const [state, setState] = React.useState(false);
-
-  const toggleDrawer = () => {
-    setState(!state);
-  };
+const Header = ({toggleSidebar}) => {
   return (
     <>
       <header className={Style.header}>
         <div className={Style.headerContainer}>
           <div className={Style.mobileMenuWrap}>
-            <ProfileIcon hamburger={true} profileClick={toggleDrawer} />
+            <ProfileIcon hamburger={true} profileClick={toggleSidebar} />
           </div>
           <div className={Style.logoWrap}>
 
@@ -52,7 +47,6 @@ const Header = () => {
         </div>
       </header>
       <></>
-      <Sidebar toggleDrawer={toggleDrawer} state={state} />
     </>
   )
 }

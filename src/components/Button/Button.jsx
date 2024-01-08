@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from "./Button.module.css"
-const Button = ({children,className,handleClick}) => {
+const Button = ({children,customeClass,handleClick}) => {
   return (
-    <button className={`${styles.defaultButton} ${className}`} onClick={handleClick}>{children}</button>
+    <button className={`${styles.defaultButton} ${customeClass}`} onClick={handleClick}>{children}</button>
   )
 }
 
