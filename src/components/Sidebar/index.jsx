@@ -13,10 +13,10 @@ const Sidebar = ({ state, toggleDrawer }) => {
                     {/* <Button>Login</Button> */}
                 </div>
                 <ul>
-                    <li>My Account</li>
-                    <li>My Gift Cards</li>
-                    <li>Orders</li>
-                    <li>Logout</li>
+                    <li><span><img src="./Images/profile-icon.svg" alt="" /></span> My Account</li>
+                    <li><span><img src="./Images/giftcard-Icon.svg" alt="" /></span> My Gift Cards</li>
+                    <li><span><img src="./Images/order-bag.svg" alt="" /></span> Orders</li>
+                    <li><span><img src="./Images/logout-icon.svg" alt="" /></span> Logout</li>
                 </ul>
             </div>
             <div onClick={() => toggleDrawer()} className={`${Style.sidebarOverlay} ${state ? Style.active : ""}`}></div>

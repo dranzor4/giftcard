@@ -53,7 +53,10 @@
     padding: 14px;
     border-bottom: 1px solid #DCEBFD;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 14px;
+  }
+  .sidebar ul li span{
+    padding-right: 8px;
   }
   .sidebar ul li:last-child{
     border-top: 1px solid #DCEBFD;
