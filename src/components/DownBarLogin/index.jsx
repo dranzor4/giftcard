@@ -12,8 +12,8 @@ const DownBarLogin = ({ toggleDownbar, state }) => {
             <div className={Style.DownBarContent}>
                 <p>Are you sure you want to log out?</p>
                 <div className={Style.LogoutBtnGrp}>
-                    <Button handleClick={toggleDownbar} customeClass={Style.logoutCancelBtn}>Cancel</Button>
-                    <Button customeClass={Style.logoutBtn}>Logout</Button>
+                    <Button handleClick={toggleDownbar} className={Style.logoutCancelBtn}>Cancel</Button>
+                    <Button className={Style.logoutBtn}>Logout</Button>
                 </div>
             </div>
         </div>
