@@ -6,10 +6,8 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a{
+  text-decoration: none;
 }
 
 @font-face {
@@ -18,3 +16,7 @@
     url("./font/Poppins-Regular.ttf") format("truetype");
 }
 
+a, p, ul, li{
+  margin: 0;
+  padding: 0;
+}

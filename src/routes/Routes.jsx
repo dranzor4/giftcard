@@ -1,22 +1,21 @@
 // App.jsx
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import {Route, Routes } from 'react-router-dom';
 import Home from '../pages/home';
 import Login from '../pages/login';
 import ProductDetail from '../components/productDetail/ProductDetail';
 
 
 
-const App = () => {
+const Routers = () => {
     return (
-        <Router>
             <Routes>
                 <Route path="/" element={<Home/>} />
                 <Route path="/login" element={<Login/>} />
                 <Route path="/productDetail" element={<ProductDetail/>}/>
             </Routes>
-        </Router>
+        
     );
 };
 
-export default App;
+export default Routers;

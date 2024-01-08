@@ -1,0 +1,26 @@
+.cartIconConatiner{
+    display: flex;
+    align-items: end;
+}
+
+.cartText{
+    color: #1E293B;
+    font-weight: 600;
+    display: none;
+    font-size: 16px;
+}
+
+@media (min-width: 768px){
+    .cartText{
+        display: block;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1024px){
+    .cartText{
+       font-size: 16px;
+    }
+}
+
+
