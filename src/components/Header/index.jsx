@@ -12,16 +12,13 @@ import CalculatorModal from '../Calculator';
 
 
 
-const Header = () => {
+const Header = ({toggleSidebar}) => {
 const [state, setState] = useState(false);
 const [showModal, setshowModal] = useState(false);
   
 const handleShow = ()=>{setshowModal(true)}
 const handleClose = ()=>{setshowModal(false)}
 
-  const toggleDrawer = () => {
-    setState(!state);
-  };
   return (
     <>
       <header className={Style.header}>
@@ -55,7 +52,7 @@ const handleClose = ()=>{setshowModal(false)}
         </div>
       </header>
       <></>
-      <Sidebar toggleDrawer={toggleDrawer} state={state} />
+      <Sidebar toggleDrawer={toggleSidebar} state={state} />
       <CalculatorModal show={showModal} handleClose={handleClose}/>
       
     </>
