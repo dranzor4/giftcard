@@ -54,6 +54,7 @@ const handleClose = ()=>{setshowModal(false)}
       <></>
       <Sidebar toggleDrawer={toggleSidebar} state={state} />
       <CalculatorModal show={showModal} handleClose={handleClose}/>
+      
     </>
   )
 }
