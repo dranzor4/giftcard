@@ -28,7 +28,7 @@ const handleClose = ()=>{setshowModal(false)}
           </div>
           <div className={Style.logoWrap}>
 
-            <img src="./Images/Logo.svg" alt="" />
+            <img src="/Images/Logo.svg" alt="" />
 
           </div>
           <div className={Style.searchBarWrap}>
@@ -36,7 +36,7 @@ const handleClose = ()=>{setshowModal(false)}
           </div>
           <ul className={Style.headerNavwrap}>
             <li className={Style.calculator}>
-                <img src="./Images/calculator.png" alt="calculator" onClick={handleShow}/>
+                <img src="/Images/calculator.png" alt="calculator" onClick={handleShow}/>
             </li>
             <li className={Style.NabLoginBox}>
               <Link to="/login">
