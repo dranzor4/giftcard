@@ -6,35 +6,35 @@ export const cardData = [
     paragraph: "qwerrrrre",
     batch:"10% off",
     link: "url",
-    imageShow:"./images/tree.jpg"
+    imageShow:"/Images/tree.jpg"
   },
   {
     header: "Uzair",
     paragraph: "dbdhbshdbhsd",
     batch:"20% off",
     link: "url",
-    imageShow:"./images/nature1.jpg"
+    imageShow:"/Images/nature1.jpg"
   },
   {
     header: "Arshad",
     paragraph: "wdwfwfw",
     batch:"10% off",
     link: "url",
-    imageShow:"./images/nature2.jpg"
+    imageShow:"/Images/nature2.jpg"
   },
   {
     header: "sarvanan",
     paragraph: "dbdhbshdbhsd",
     batch:"30% off",
     link: "url",
-    imageShow:"./images/test.jpg"
+    imageShow:"/Images/test.jpg"
   },
   {
     header: "dipak",
     paragraph: "wquwuwuwu",
     batch:"15% off",
     link: "url",
-    imageShow:"./images/nature2.jpg"
+    imageShow:"/Images/nature2.jpg"
 
   },
   {
@@ -42,13 +42,13 @@ export const cardData = [
     paragraph: "wquwuwuwu",
     batch:"5% off",
     link: "url",
-    imageShow:"./images/test.jpg"
+    imageShow:"/Images/test.jpg"
   },
   {
     header: "Ajit",
     paragaph: "wquwuwuwu",
     batch:"1% off",
     link: "url",
-    imageShow:"./images/nature2.jpg"
+    imageShow:"/Images/nature2.jpg"
   },
 ];
