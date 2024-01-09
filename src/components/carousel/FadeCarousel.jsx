@@ -8,7 +8,7 @@ import 'swiper/css/effect-fade';
 
 const FadeCarousel = () => {
   return (
-    <div className={styles.carouselContainer}>
+    <div className={styles.FadeCarouselContainer}>
     <Swiper
       spaceBetween={50}
       slidesPerView={1}

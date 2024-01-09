@@ -1,0 +1,55 @@
+.downbar {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 0;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 24px 24px 0px 0px;
+    overflow: hidden;
+    z-index: 99999;
+    transition: .2s ease-in-out;
+}
+.downbar.active{
+    height: 224px;
+}
+
+.downbar .DownBarheader {
+    padding: 10px;
+}
+
+.downbar .DownBarContent {
+    padding: 16px;
+}
+
+.downbar .DownBarContent p {
+    padding-bottom: 40px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.LogoutBtnGrp {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.LogoutBtnGrp button {
+    padding: 14px 50px;
+    border-radius: 8px;
+}
+
+.LogoutBtnGrp .logoutCancelBtn {
+    background-color: rgba(29, 134, 255, 0.10);
+    color: #1D86FF;
+    font-weight: bold;
+}
+
+.LogoutBtnGrp .logoutBtn {
+    background-color: #1D86FF;
+    color: #FFF;
+    font-weight: bold;
+}
+.downbarLoginOverlay{
+    z-index: 99998;
+}

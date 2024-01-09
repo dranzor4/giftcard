@@ -33,26 +33,26 @@ const Carousel = (props) => {
       loop={true}
       breakpoints={{
         0:{
-          slidesPerView: 1.5,
+          slidesPerView: 2.2,
           spaceBetween: 10,
         },
         640: {
-          slidesPerView: 2.5,
+          slidesPerView: 3.2,
           spaceBetween: 10,
         },
         768: {
-          slidesPerView: 3.5,
+          slidesPerView: 4.2,
           spaceBetween: 10,
         },
         1024: {
-          slidesPerView: 4.5,
+          slidesPerView: 5.2,
           spaceBetween: 10,
         },
       }}
     >
       <div className={styles.carousel} >
       {
-        cardData.map((data,index) =><SwiperSlide key={index}><Card data={data} /><SwiperSlide/></SwiperSlide>)
+        cardData.map((data,index) =><SwiperSlide key={index}><Card data={data} index={index}/></SwiperSlide>)
       }
     </div>
     </Swiper>

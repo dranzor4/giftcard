@@ -27,7 +27,7 @@ const handleClose = ()=>{setshowModal(false)}
       <header className={Style.header}>
         <div className={Style.headerContainer}>
           <div className={Style.mobileMenuWrap}>
-            <ProfileIcon hamburger={true} profileClick={toggleDrawer} />
+            <ProfileIcon hamburger={true} profileClick={toggleSidebar} />
           </div>
           <div className={Style.logoWrap}>
 
