@@ -1,17 +1,16 @@
-
-.card{
-width: 157px;
-height: 100px;
-flex-shrink: 0;
-position: relative;
-border-radius: 5px;
+.card {
+  width: 100%;
+  height: 100px;
+  flex-shrink: 0;
+  position: relative;
+  border-radius: 5px;
 }
-.cardImage{
-width: 100%;
-height: 100%;
-border-radius: 5px;
+.cardImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
 }
-.cardBadge{
+.cardBadge {
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -22,21 +21,20 @@ border-radius: 5px;
   font-weight: 500;
   color: var(--white-color);
   border-radius: 0px 20px 20px 4px;
-
 }
-.cardHeader{
-color: var(--header-text-color);
-font-size: 10px;
-font-weight: 500;
-line-height: 16px;
-letter-spacing: -0.28px;
-margin-top: 8px;
-margin-bottom: 2px;
+.cardHeader {
+  color: var(--header-text-color);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: -0.28px;
+  margin-top: 8px;
+  margin-bottom: 2px;
 }
-.cardContent{
-display: flex;
+.cardContent {
+  display: flex;
 }
-.cardParagraph{
+.cardParagraph {
   color: var(--text-color);
   font-size: 10px;
   font-style: normal;
@@ -44,7 +42,7 @@ display: flex;
   line-height: 16px;
   letter-spacing: -0.2px;
 }
-.cardLink{
+.cardLink {
   color: var(--green-text-color);
   font-size: 10px;
   font-style: normal;
@@ -54,34 +52,33 @@ display: flex;
   margin-left: 4px;
 }
 
-@media screen and (min-width:760px){
-  .card{
-    width: 237px;
+@media screen and (min-width: 760px) {
+  .card {
+    width: 100%;
     height: 152px;
     flex-shrink: 0;
     position: relative;
     border-radius: 5px;
-    }
-    .cardImage{
+  }
+  .cardImage {
     width: 100%;
     height: 100%;
     border-radius: 5px;
-    }
-    .cardBadge{
-      position: absolute;
-      bottom: 0px;
-      left: 0px;
-      padding: 4px 16px;
-      background-color: var(--green-text-color);
-      gap: 10px;
-      font-size: 10px;
-      font-weight: 500;
-      color: var(--white-color);
-      border-radius: 0px 20px 20px 4px;
-      line-height: 12px;
-    
-    }
-    .cardHeader{
+  }
+  .cardBadge {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding: 4px 16px;
+    background-color: var(--green-text-color);
+    gap: 10px;
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--white-color);
+    border-radius: 0px 20px 20px 4px;
+    line-height: 12px;
+  }
+  .cardHeader {
     color: var(--header-text-color);
     font-size: 13px;
     font-weight: 400;
@@ -89,26 +86,25 @@ display: flex;
     letter-spacing: -0.26px;
     margin-top: 12px;
     margin-bottom: 4px;
-    }
-    .cardContent{
+  }
+  .cardContent {
     display: flex;
-    }
-    .cardParagraph{
-      color: var(--text-color);
-      font-size: 13px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 20px;
-      letter-spacing: -0.2px;
-    }
-    .cardLink{
-      color: var(--green-text-color);
-      font-size: 13px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 20px;
-      letter-spacing: -0.2px;
-      margin-left: 4px;
-    }
-    
+  }
+  .cardParagraph {
+    color: var(--text-color);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.2px;
+  }
+  .cardLink {
+    color: var(--green-text-color);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.2px;
+    margin-left: 4px;
+  }
 }

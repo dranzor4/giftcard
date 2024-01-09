@@ -63,7 +63,9 @@ const Carousel = (props) => {
                 to={`/productDetail/${index}`}
                 className={styles.cardNavigation}
               >
+                <div className={styles.cardParentContainer}>
                 <Card data={data} index={index} />
+                </div>
               </Link>
             </SwiperSlide>
           ))}
