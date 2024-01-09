@@ -1,0 +1,86 @@
+.home {
+  position: relative;
+  width: 100%;
+}
+.buttonTabContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding:4px;
+}
+.buttonContainer{
+  padding: 4px;
+  background-color: var(--bg-button-container-color);
+  border-radius: 8px;
+}
+.initial {
+  font-size: 14px;
+  background-color: transparent;
+  color: var(--bg-blue-color);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-weight: 500;
+  line-height: 20px;
+  font-style: normal;
+}
+.afterClick {
+  font-size: 14px;
+  background-color: var(--bg-blue-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-weight: 500;
+  line-height: 20px;
+  font-style: normal;
+}
+.filterButton {
+  display: none;
+}
+.filterAndCarouselContainer{
+  display: flex;
+  width: 100%;
+ padding-left: 40px;
+ padding-right: 40px;
+}
+.filterContainer{
+width: 25%;
+height: 786px;
+}
+.freeCarouselContainer{
+width: 75%;
+}
+@media screen and (max-width: 760px) {
+  .filterButton {
+    display: block;
+    background-color: var(--white-color);
+    font-size: 14px;
+    box-shadow: 0px 1px 8px 0px var(--box-shadow-color);
+    position: fixed;
+    bottom: 35px;
+    right: 15px;
+    z-index: 2;
+    border-radius: 50px;
+    font-weight: 400;
+    font-style: normal;
+    padding: 8px 16px;
+    line-height: 20px;
+    color: var(--header-text-color);
+    text-align: center;
+  }
+  .filterButton img{
+    width: 16px;
+    height: 16px;
+  }
+  .buttonContainer{
+    padding: 4px;
+    background-color: var(--bg-button-container-color);
+    border-radius: 100px;
+  }
+  .initial,.afterClick{
+    border-radius: 50px;
+  }
+}

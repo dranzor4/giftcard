@@ -1,0 +1,178 @@
+:root {
+    --graygray-200: rgba(226, 232, 240, 1);
+    --graygray-500: rgba(100, 116, 139, 1);
+    --graygray-800: rgba(30, 41, 59, 1);
+  }
+.frame {
+    align-items: flex-start;
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: var(--graygray-200);
+    border-radius: 15px;
+    /* display: flex; */
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
+    width: 95%;
+    /* margin-left: 20px; Add margin from the left side */
+    /* margin-right: 20px; Add margin from the right side */
+    /* max-width: 357px; Optionally, you can set a max-width to limit the width on larger screens */
+  }
+  
+  .frame .div {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 12px;
+    position: relative;
+  }
+  
+  .frame .avatars {
+    background-color: #d0e7ff4c;
+    border-radius: 18px;
+    height: 36px;
+    position: relative;
+    width: 36px;
+  }
+  
+   .text-wrapper {
+    color: #1d86ff;
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    left: 12px;
+    letter-spacing: 0;
+    line-height: 28.1px;
+    position: absolute;
+    text-align: center;
+    top: 2px;
+    white-space: nowrap;
+  }
+  
+  .frame .text-wrapper-2 {
+    color: var(--graygray-800);
+    font-family: "Poppins-Medium", Helvetica;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: right;
+    width: fit-content;
+  }
+  
+  .frame .line {
+    align-self: stretch;
+    height: 1px;
+    object-fit: cover;
+    position: relative;
+    width: 100%;
+  }
+  
+  .frame .div-2 {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+  }
+  
+  .frame .text-wrapper-3 {
+    color: var(--graygray-500);
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 24px;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .frame .text-wrapper-4 {
+    color: var(--graygray-800);
+    font-family: "Poppins-Medium", Helvetica;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 24px;
+    position: relative;
+    white-space: nowrap;
+    /* width: fit-content; */
+  }
+  
+  .frame .div-3 {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+  }
+  
+  .frame .div-4 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    position: relative;
+  }
+  .circle {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(230, 248, 255);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  .initial {
+    color: BLue; 
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .info-label {
+    color: gray;
+    font-size: 14px;
+  }
+  
+  .info-value {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  
+  .name {
+    color: #494949;
+    font-size: 16px;
+    font-weight: bold;
+    
+  }
+  .card {
+    max-width: 400px; /* Adjust the max-width based on your design */
+    margin: 0 auto; /* Center the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow property */
+  }
+  .profile-image {
+    max-width: 80%;
+    height: auto;
+    margin: 15px 0; /* Add margin-top for spacing between the text and images */
+    object-fit: contain;
+   
+  } 
+  .card-body {
+    padding-bottom: 0px;
+  }
+  .profile-image ,.info-value, .info-label{
+    padding-left: 10px;
+  }
+  
+  
