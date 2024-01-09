@@ -139,5 +139,40 @@
     font-size: 18px;
     font-weight: bold;
   }
+  .info-label {
+    color: gray;
+    font-size: 14px;
+  }
+  
+  .info-value {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  
+  .name {
+    color: #494949;
+    font-size: 16px;
+    font-weight: bold;
+    
+  }
+  .card {
+    max-width: 400px; /* Adjust the max-width based on your design */
+    margin: 0 auto; /* Center the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow property */
+  }
+  .profile-image {
+    max-width: 80%;
+    height: auto;
+    margin: 15px 0; /* Add margin-top for spacing between the text and images */
+    object-fit: contain;
+   
+  } 
+  .card-body {
+    padding-bottom: 0px;
+  }
+  .profile-image ,.info-value, .info-label{
+    padding-left: 10px;
+  }
   
   

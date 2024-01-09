@@ -10,22 +10,93 @@ const divStyle = {
 };
 const MyProfile = () => {
   return (
-    <Card border="lightgrey" className="m-3">
-      <Card.Body>
+    <div>
+      <Card border="lightgrey" className="m-3">
+        <Card.Body>
+          <Container>
+            <Row className="align-items-center border-bottom pb-2">
+              <Col xs="auto">
+                <div className="circle">
+                  <span className="initial">A</span>
+                </div>
+              </Col>
+              <Col>
+                <div className="name">Animesh Mandal</div>
+              </Col>
+            </Row>
+          </Container>
+        </Card.Body>
         <Container>
-          <Row className="align-items-center border-bottom pb-2">
-            <Col xs="auto">
-              <div className="circle">
-              <span className="initial">A</span>
-              </div>
+          <Row className="mt-3">
+            <Col xs="12">
+              <div className="info-label">Email:</div>
+              <div className="info-value">sam@example.com</div>
             </Col>
-            <Col>
-              <div className="name">Animesh Mandal</div>
+            <Col xs="6">
+              <div className="info-label">Mobile Number:</div>
+              <div className="info-value">9879879878</div>
+            </Col>
+            <Col xs="6" className="text-right">
+              <div className="info-label">Date of Birth:</div>
+              <div className="info-value">04-01-2000</div>
             </Col>
           </Row>
         </Container>
-      </Card.Body>
-    </Card>
+      </Card>
+      <Card border="lightgrey" className="m-3">
+        <Card.Body>
+          <Container>
+            <Row className="align-items-center border-bottom pb-2">
+             
+              <Col>
+                <div className="name">Your HDFC Cards</div>
+              </Col>
+            </Row>
+          </Container>
+        </Card.Body>
+        <Container>
+          <Row className="mt-3">
+            
+            <Col xs="6">
+            <img 
+              className="d-block w-100 profile-image"
+              src="images/profile-card1.png"
+              alt="Second slide"
+              
+            />
+            </Col>
+            <Col xs="6" className="text-right ">
+            <img
+              className="d-block w-100 profile-image"
+              src="images/profile-card2.png"
+              alt="Second slide"
+            />
+            </Col>
+          </Row>
+        </Container>
+      </Card>
+      <Card border="lightgrey" className="m-3">
+        <Card.Body>
+          <Container>
+          <Row className="align-items-center border-bottom pb-2">
+             
+             <Col>
+               <div className="name">Billing Details</div>
+             </Col>
+           </Row>
+          </Container>
+        </Card.Body>
+        <Container>
+          <Row className="mt-3">
+          <Col xs="12">
+              <div className="info-value">A-2, Udyog Nagar Indl Area, Peeragarhi Chowk, Rohtak Road 110041, India</div>
+              {/* <div className="info-value">sam@example.com</div> */}
+            </Col>
+            
+          </Row>
+        </Container>
+      </Card>
+    </div>
 
     //     <Container className="frame">
     //     <Row  className="div align-items-center border-bottom ">
