@@ -1,0 +1,15 @@
+.modal-content {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.searchitem {
+  margin: 15px 0;
+}
+
+.select {
+  width: 100%;
+  border: 1px solid#CBD5E1;
+  padding: 10px, 12px, 10px, 12px;
+  border-radius: 6px;
+}
