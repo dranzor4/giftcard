@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Sidebar from '../Sidebar';
 
 // import "./header.css"
@@ -8,11 +8,16 @@ import SearchBar1 from '../SearchBar1/Index';
 import CartIcon from '../CartIcon';
 import { Link } from 'react-router-dom';
 import NavSignInSignUp from '../NavSignInSignUp';
+import CalculatorModal from '../Calculator';
 
 
 
 const Header = () => {
-  const [state, setState] = React.useState(false);
+const [state, setState] = useState(false);
+const [showModal, setshowModal] = useState(false);
+  
+const handleShow = ()=>{setshowModal(true)}
+const handleClose = ()=>{setshowModal(false)}
 
   const toggleDrawer = () => {
     setState(!state);
@@ -34,9 +39,7 @@ const Header = () => {
           </div>
           <ul className={Style.headerNavwrap}>
             <li className={Style.calculator}>
-              <Link to="/calculator">
-                <img src="./Images/calculator.png" alt="" />
-              </Link>
+                <img src="./Images/calculator.png" alt="calculator" onClick={handleShow}/>
             </li>
             <li className={Style.NabLoginBox}>
               <Link to="/login">
@@ -53,6 +56,8 @@ const Header = () => {
       </header>
       <></>
       <Sidebar toggleDrawer={toggleDrawer} state={state} />
+      <CalculatorModal show={showModal} handleClose={handleClose}/>
+      
     </>
   )
 }
