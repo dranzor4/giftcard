@@ -1,7 +1,4 @@
 import React from "react";
-import { useParams,useNavigate } from "react-router-dom";
-import { Card } from "../card/Card";
-import { cardData } from "../../utils/constants/constants";
 import styles from "./ProductDetail.module.css";
 import CustomCard from "../CustomCard/index";
 
