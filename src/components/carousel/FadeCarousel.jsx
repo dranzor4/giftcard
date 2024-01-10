@@ -28,9 +28,9 @@ const FadeCarousel = () => {
       loop={true}
     >
       <div className={styles.carousel} >
-      <SwiperSlide><img src="./images/nature1.jpg" alt="nature" className={styles.imageSize}/></SwiperSlide>
-      <SwiperSlide><img src="./images/tree.jpg" alt="tree" className={styles.imageSize}/></SwiperSlide>
-      <SwiperSlide><img src="./images/nature2.jpg" alt="nature" className={styles.imageSize}/></SwiperSlide>
+      <SwiperSlide><img src="./images/banner1.png" alt="nature" className={styles.imageSize}/></SwiperSlide>
+      <SwiperSlide><img src="./images/banner2.png" alt="tree" className={styles.imageSize}/></SwiperSlide>
+      <SwiperSlide><img src="./images/banner1.png" alt="nature" className={styles.imageSize}/></SwiperSlide>
     </div>
     </Swiper>
  

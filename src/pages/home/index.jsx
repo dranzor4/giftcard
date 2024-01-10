@@ -1,5 +1,5 @@
 import SearchBy from "../../components/searchby";
-import Search from "../../components/searchbar/Search";
+// import Search from "../../components/searchbar/Search";
 import Carousel from "../../components/carousel/Carousel";
 import FadeCarousel from "../../components/carousel/FadeCarousel";
 import Button from "../../components/Button/Button";
@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <div className={styles.home}>
       <SearchBy />
-      <Search />
+      {/* <Search /> */}
       <FadeCarousel />
       <div className={styles.buttonTabContainer}>
         <div className={styles.buttonContainer}>
