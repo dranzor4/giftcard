@@ -1,13 +1,74 @@
-.custom-radio-button {
-    display: flex;
-    align-items: center;
-    /* margin-bottom: 10px; */
-  }
+/* CustomToggle.css */
+
+.custom-toggle {
+  display: inline-block;
+}
+
+.toggle-option {
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+/* Apply styles for selected option */
+.toggle-option.selected {
+  background-color: #1E293B;
+  color: white;
+}
+.toggle-option input{
+  display: none;
+}
+
+/* Apply styles for grouped options container */
+.custom-toggle.grouped {
+  border: 2px solid #3498db;
+  border-radius: 15px;
+  padding: 10px;
+  display: inline-block;
+}
+
+
+/* //product form input css */
+
+/* .product-form-input .toggle-option{
   
-  input {
-    margin-right: 5px;
-  }
-  
-  label {
-    cursor: pointer;
-  }
+}
+.product-form-input .toggle-option.selected{
+background-color: #000;
+}
+
+.product-form-input .toggle-option input{} */
+
+.product-selforgift-btn.grouped{
+ padding: 0;
+ overflow: hidden;
+ border: 1px solid #CBD5E1;
+ border-radius:  8px 8px 8px 8px;
+}
+.product-selforgift-btn.grouped .toggle-option{
+  margin: 0;
+  border: 0;
+  padding: 8px 20px;
+  border-radius: 0;
+  font-size: 14px;
+}
+/* .product-form-input.grouped .toggle-option:first-child{
+  border-radius:  8px 0px 0px 8px;
+}
+.product-form-input.grouped .toggle-option:last-child{
+  border-radius:  0px 8px 8px 0px;
+} */
+
+/* -------------- byforself-pric css ----------------- */
+
+.byforself-pric .toggle-option{
+  padding: 8px 24px;
+  margin: 0;
+
+}

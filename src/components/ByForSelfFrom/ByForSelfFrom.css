@@ -1,0 +1,19 @@
+.byforself-form{
+    padding-top: 24px;
+}
+.byforself-form .bold-label{
+    color: #181C2D;
+    font-size: 14px;
+    font-weight: 500;
+}
+.byforself-form .input-box .radio-group{
+    /* padding-top: 20px; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.byforself-form-container{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}

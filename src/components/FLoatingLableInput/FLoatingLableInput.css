@@ -1,0 +1,43 @@
+/* FloatingInput.css */
+
+.input-container {
+    position: relative;
+    width: 300px;
+    margin: 20px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  label {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    padding: 10px;
+    font-size: 16px;
+    color: #666;
+    pointer-events: none;
+    transition: 0.2s ease-out;
+  }
+  
+  input:focus + label, input:not(:placeholder-shown) + label {
+    transform: translateY(-25px);
+    font-size: 14px;
+    color: #3498db;
+  }
+  
+  .message {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 12px;
+    color: #e74c3c;
+  }
+  
