@@ -7,7 +7,7 @@ const DownBarLogin = ({ toggleDownbar, state }) => {
     return (<>
         <div className={`${Style.downbar} ${state ? Style.active : ""} `}>
             <div className={Style.DownBarheader} onClick={toggleDownbar}>
-                <img src="./Images/rectangle-bar.svg" alt="" />
+                <img src="/Images/rectangle-bar.svg" alt="" />
             </div>
             <div className={Style.DownBarContent}>
                 <p>Are you sure you want to log out?</p>

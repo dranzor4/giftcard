@@ -17,7 +17,7 @@ const ProfileIcon = ({ hamburger, profileClick }) => {
                 <span className={Style.avatarText}> A</span>
             </div>
                {
-                hamburger &&  <img className={Style.hamburger} src="./Images/Menu.svg" alt="" />
+                hamburger &&  <img className={Style.hamburger} src="/Images/Menu.svg" alt="" />
                }
         </div>
 

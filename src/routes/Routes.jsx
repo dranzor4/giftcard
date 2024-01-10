@@ -12,10 +12,10 @@ import CalculatorModal from '../components/Calculator';
 const Routers = () => {
     return (
             <Routes>
-                <Route path="/" element={<Home/>} />
-                <Route path="/login" element={<Login/>} />
-                <Route path="/productDetail" element={<ProductDetail/>}/>
-                <Route path="/my-profile" element={<MyProfile/> }/>
+                <Route exact path="/" element={<Home/>} />
+                <Route exact path="/login" element={<Login/>} />
+                <Route exact path="/productDetail/:productIndex" element={<ProductDetail/>}/>
+                <Route exact path="/my-profile" element={<MyProfile/> }/>
                 <Route path="/calculator" element={<CalculatorModal/> }/>
             </Routes>
         

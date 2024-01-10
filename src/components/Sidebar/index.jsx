@@ -14,10 +14,10 @@ const Sidebar = ({ state, toggleSidebar, toggleDownbar }) => {
                     {/* <Button>Login</Button> */}
                 </div>
                 <ul>
-                    <li><span><img src="./Images/profile-icon.svg" alt="" /></span> My Account</li>
-                    <li><span><img src="./Images/giftcard-Icon.svg" alt="" /></span> My Gift Cards</li>
-                    <li><span><img src="./Images/order-bag.svg" alt="" /></span> Orders</li>
-                    <li onClick={() => toggleDownbar()}><span><img src="./Images/logout-icon.svg" alt="" /></span> Logout</li>
+                    <li><span><img src="/Images/profile-icon.svg" alt="" /></span> My Account</li>
+                    <li><span><img src="/Images/giftcard-Icon.svg" alt="" /></span> My Gift Cards</li>
+                    <li><span><img src="/Images/order-bag.svg" alt="" /></span> Orders</li>
+                    <li onClick={() => toggleDownbar()}><span><img src="/Images/logout-icon.svg" alt="" /></span> Logout</li>
                 </ul>
             </div>
             <TransparentOverlay handleClick={toggleSidebar} customeClass={Style.SidebarOverlay} isOpen={state}/>
