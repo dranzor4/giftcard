@@ -17,13 +17,10 @@ const CalculatorModal = ({ show, handleClose }) => {
             <div className="modal_items">
               <div className="options">
                 <select name="" id="" className="select">
-                  <option value="" className="select">
-                    1
-                  </option>
+                  <option value="" className="select">1</option>
                   <option value="">2</option>
                   <option value="">3</option>
                 </select>
-
                 <input type="text" name="" id="" className="select" placeholder="Search Brand" />
                 <input type="text" name="" id="" className="select" placeholder="Enter Amount" />
               </div>
