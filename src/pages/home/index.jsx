@@ -4,7 +4,8 @@ import Carousel from "../../components/carousel/Carousel";
 import FadeCarousel from "../../components/carousel/FadeCarousel";
 import Button from "../../components/Button/Button";
 import styles from "./index.module.css";
-import BuySell from "../../components/ButtonTab/BuySell";
+import ButtonTab from "../../components/ButtonTab/ButtonTab";
+import { buySellButtonData } from "../../utils/constants/constants";
 
 const Home = () => {
   return (
@@ -12,7 +13,7 @@ const Home = () => {
       <SearchBy />
       <Search />
       <FadeCarousel />
-      <BuySell/>
+      <ButtonTab data={buySellButtonData}/>
       <Carousel name="Hot Deals" animationDelay={2500} />
       <Carousel name="Best Sellers" animationDelay={3000} />
       <Carousel name="Value Offers" animationDelay={3500} />

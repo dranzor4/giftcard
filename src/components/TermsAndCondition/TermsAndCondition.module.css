@@ -1,0 +1,15 @@
+.tcContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width:760px){
+    .tcContainer{
+        width: 100%;
+        display: flex;
+        justify-content:flex-start;
+        align-items: center;
+    }
+}
