@@ -27,7 +27,6 @@ const LoginModalComp = ({ show, handleClose }) => {
         setTimer((prevTimer) => prevTimer - 1);
       }, 1000);
     } else if (welcomeform) {
-      // Close the modal after 3 seconds    when welcomeform is true
       setTimeout(() => {
         handleClose();
       }, 1000);
