@@ -52,3 +52,14 @@ export const cardData = [
     imageShow:"/Images/nature2.jpg"
   },
 ];
+
+export const buySellButtonData= [
+  { name: 'Buy For Self', id: 1 },
+  { name: 'Gift To Someone', id: 2 },
+];
+
+export const threeButtonData= [
+  { name: 'How To Use', id: 1 },
+  { name: 'T&C', id: 2 },
+  { name: 'Video', id: 3 },
+];
