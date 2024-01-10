@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import RadioBox from '../RadioBox'
 import "./ByForSelfFrom.css"
+import CustomInput from '../CustomInput';
 
 const ByForSelfFrom = () => {
 
@@ -8,23 +9,43 @@ const ByForSelfFrom = () => {
     const handleOptionChange = (event) => {
         setSelectedOption(event.target.value);
     };
+
+    let PriceRadioBtnArry = [
+        {
+            value: "250",
+            label: "₹250"
+        },
+        {
+            value: "500",
+            label: "₹250"
+        },
+        {
+            value: "1000",
+            label: "₹250"
+        },
+        {
+            value: "5000",
+            label: "₹250"
+        }
+    ]
+
+    const PriceRadioBtns = () => PriceRadioBtnArry.map((obj, index) => <RadioBox key={index} onOptionChange={handleOptionChange} selectedOption={selectedOption} options={[{ value: obj.value, label: obj.label }]} className={"byforself-pric"} />)
+
     return (
-        <div className='byforself-form'>
-            <div className='byforself-form-container'>
+        <div className='product-form-commn-fields'>
                 <label className='bold-label'>Select Gift Value</label>
                 <div className='input-box'>
                     <div className='radio-group'>
-                        <RadioBox onOptionChange={handleOptionChange} selectedOption={selectedOption} options={[{ value: '250', label: '₹250' }]} className={"byforself-pric"} />
-                        <RadioBox onOptionChange={handleOptionChange} selectedOption={selectedOption} options={[{ value: '500', label: '₹500' }]} className={"byforself-pric"} />
-                        <RadioBox onOptionChange={handleOptionChange} selectedOption={selectedOption} options={[{ value: '1000', label: '₹1000' }]} className={"byforself-pric"} />
-                        <RadioBox onOptionChange={handleOptionChange} selectedOption={selectedOption} options={[{ value: '5000', label: '₹5000' }]} className={"byforself-pric"} />
+                        <PriceRadioBtns />
                     </div>
                 </div>
                 <label className='bold-label'>Or</label>
                 <div className='input-box'>
-                   
+                    <CustomInput label={"Enter Amount"} hint={"Min: ₹100, Max: ₹1,00,000"} />
                 </div>
-            </div>
+                <div className='input-box'>
+                    <CustomInput label={"Quantity"} hint={"Min: 1, Max: 10"} />
+                </div>
         </div>
     )
 }

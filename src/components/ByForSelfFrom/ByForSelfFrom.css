@@ -1,19 +1,18 @@
-.byforself-form{
+.product-form-commn-fields{
     padding-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
-.byforself-form .bold-label{
+.product-form-commn-fields .bold-label{
     color: #181C2D;
     font-size: 14px;
     font-weight: 500;
 }
-.byforself-form .input-box .radio-group{
+.product-form-commn-fields .input-box .radio-group{
     /* padding-top: 20px; */
     display: flex;
-    justify-content: space-between;
-}
-
-.byforself-form-container{
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    gap: 5px;
+    /* justify-content: center; */
+    flex-wrap: wrap;
 }
