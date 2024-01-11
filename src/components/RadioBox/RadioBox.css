@@ -1,0 +1,13 @@
+.custom-radio-button {
+    display: flex;
+    align-items: center;
+    /* margin-bottom: 10px; */
+  }
+  
+  input {
+    margin-right: 5px;
+  }
+  
+  label {
+    cursor: pointer;
+  }
