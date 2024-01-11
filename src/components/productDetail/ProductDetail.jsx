@@ -1,7 +1,9 @@
 import React from "react";
 import styles from "./ProductDetail.module.css";
 import CustomCard from "../CustomCard/index";
-import TermsAndCondition from "../TermsAndCondition/TermsAndCondition";
+import TermsAndCondition from '../TermsAndCondition/index'
+import Offers from "../Offers";
+import Redeemable from "../Redeemable/Redeemable";
 
 const ProductDetail = () => {
   // const { productIndex } = useParams();
@@ -31,6 +33,8 @@ const ProductDetail = () => {
           card forms
         </div>
       </div>
+      <Redeemable/>
+      <Offers/>
       <TermsAndCondition/>
     </div>
     </>
