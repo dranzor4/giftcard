@@ -20,3 +20,12 @@ a, p, ul, li{
   margin: 0;
   padding: 0;
 }
+.accordion-button:not(.collapsed) {
+  background-color: #fff;
+}
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+
+
