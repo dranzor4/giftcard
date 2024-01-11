@@ -4,9 +4,9 @@
   justify-content: center;
   align-items: center;
 }
-.tc{
-    width: 100%;
-    height:100%;
+.tc {
+  width: 100%;
+  height: 100%;
 }
 .productDetailTab {
   margin-top: 24px;
@@ -21,8 +21,8 @@
   /* margin: 20px 0px; */
 }
 
-.tcContainer ol{
-    padding-left: 1rem;
+.tcContainer ol {
+  padding-left: 1rem;
 }
 .tcContainer .description-para,
 .tcContainer ol li {
@@ -32,6 +32,47 @@
   color: #334155;
 }
 
+
+.addToCartOrBuyNow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 12px;
+  padding-bottom: 20px;
+}
+.addToCart {
+  padding: 14px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 8px;
+  background: var(--bg-initial-button-color);
+  color: var(--bg-blue-color);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+  text-transform: capitalize;
+  width: 100%;
+}
+.buyNow {
+  display: flex;
+  padding: 14px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 8px;
+  background: var(--bg-blue-color);
+  color: var(--white-color);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+  text-transform: capitalize;
+  width: 100%;
+}
 @media screen and (min-width: 760px) {
   .tcContainer {
     width: 100%;
@@ -42,11 +83,11 @@
   .carousel {
     width: 100%;
   }
-  .tc{
+  .tc {
     width: 100%;
-    height:100%;
-}
-.addToCartOrBuyNow{
+    height: 100%;
+  }
+  .addToCartOrBuyNow {
     display: none;
-}
+  }
 }
