@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from "react";
 import ButtonTab from "../ButtonTab";
-import { threeButtonData, addToCartOrBuyNow } from "../../utils/constants/constants";
+import Button from "../Button";
+import {
+  threeButtonData,
+  addToCartOrBuyNow,
+} from "../../utils/constants/constants";
 import "./TermsAndCondition.css";
 
 const TermsAndCondition = () => {
   const [selected, setSelected] = useState();
-  const[selected1,setSelected1]=useState();
+  const [selected1, setSelected1] = useState();
   useEffect(() => {
     setSelected(threeButtonData[0]?.id);
-    setSelected1(addToCartOrBuyNow[1]?.id)
+    setSelected1(addToCartOrBuyNow[1]?.id);
   }, []);
 
   return (
@@ -17,7 +21,9 @@ const TermsAndCondition = () => {
         <div className="productDetailTab">
           <ButtonTab
             data={threeButtonData}
-            selected={(data) => setSelected(data)}
+            selected={(data) => {
+              setSelected(data);
+            }}
             defaultSelected={threeButtonData[0]?.id}
           />
         </div>
@@ -45,11 +51,8 @@ const TermsAndCondition = () => {
           </div>
         )}
         <div className="addToCartOrBuyNow">
-        <ButtonTab
-            data={addToCartOrBuyNow}
-            selected={(data) => setSelected1(data)}
-            defaultSelected={addToCartOrBuyNow[1]?.id}
-          />
+          <Button className="addToCart">Add To Cart</Button>
+          <Button className="buyNow">Buy Now</Button>
         </div>
       </div>
     </div>

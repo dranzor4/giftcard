@@ -36,7 +36,7 @@ const Offers = () => {
       </div>
       {data?.map((data) => {
         return (
-          <div className="offers">
+          <div className="offers" key={data.id}>
             <img src="/Images/offer.svg" alt="offer" />
             <div className="offer-description">
               <span className="offerSummary">{data.summary}</span>

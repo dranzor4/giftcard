@@ -3,7 +3,7 @@ import Search from "../../components/searchbar/Search";
 import LinkCarousel from "../../components/carousel/LinkCarousel";
 import Carousel from "../../components/carousel/Carousel"
 import FadeCarousel from "../../components/carousel/FadeCarousel";
-import Button from "../../components/Button/Button";
+import Button from "../../components/Button";
 import "./home.css";
 import ButtonTab from "../../components/ButtonTab";
 import { buySellButtonData } from "../../utils/constants/constants";
@@ -21,7 +21,7 @@ const Home = () => {
       <LinkCarousel name="Hot Deals" animationDelay={2500} />
       <LinkCarousel name="Best Sellers" animationDelay={3000} />
       <LinkCarousel name="Value Offers" animationDelay={3500} />
-      <Carousel cardData={cardData}/>
+      {/* <Carousel cardData={cardData}/> */}
       <Button className="filterButton">Filters <img src="/images/filter.png" alt="filter"/></Button>
     </div>
   );

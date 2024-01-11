@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Button from '../Button/Button';
+import Button from '../Button';
 import styles from "./Redeemable.module.css"
 const Redeemable = () => {
     const[online,setOnline]=useState(true);
