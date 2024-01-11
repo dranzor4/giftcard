@@ -1,7 +1,9 @@
 .input-box{
     position: relative;
 }
-.input-box input{
+
+.input-box input,
+.input-box textarea{
     width: 100%;
     padding: 14px 16px;
     background-color: transparent;
@@ -11,6 +13,11 @@
     font-size: 14px;
     color: #181C2D;
     font-weight: 400;
+    display: block;
+}
+
+.input-box input[type="textarea"]{
+    height: 100px;
 }
 .input-box span {
     position: absolute;
@@ -23,7 +30,9 @@
     font-weight: 400;
 }
 .input-box input:valid ~ span,
-.input-box input:focus ~ span
+.input-box input:focus ~ span,
+.input-box textarea:valid ~ span,
+.input-box textarea:focus ~ span
 {
     color: #64748B;
     transform: translateX(7px) translateY(-9px);

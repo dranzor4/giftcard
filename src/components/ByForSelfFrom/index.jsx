@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import RadioBox from '../RadioBox'
 import "./ByForSelfFrom.css"
 import CustomInput from '../CustomInput';
+import NetEffecttive from '../NetEffecttive';
 
 const ByForSelfFrom = () => {
 
@@ -32,20 +33,21 @@ const ByForSelfFrom = () => {
     const PriceRadioBtns = () => PriceRadioBtnArry.map((obj, index) => <RadioBox key={index} onOptionChange={handleOptionChange} selectedOption={selectedOption} options={[{ value: obj.value, label: obj.label }]} className={"byforself-pric"} />)
 
     return (
-        <div className='product-form-commn-fields'>
-                <label className='bold-label'>Select Gift Value</label>
-                <div className='input-box'>
-                    <div className='radio-group'>
-                        <PriceRadioBtns />
-                    </div>
+        <div className='buy-for-sefl-form'>
+            <form>
+                <label className='form-label'>
+                    Select Gift Value</label>
+                <div className='radio-group-box'>
+                    <PriceRadioBtns />
                 </div>
-                <label className='bold-label'>Or</label>
-                <div className='input-box'>
-                    <CustomInput label={"Enter Amount"} hint={"Min: ₹100, Max: ₹1,00,000"} />
-                </div>
-                <div className='input-box'>
-                    <CustomInput label={"Quantity"} hint={"Min: 1, Max: 10"} />
-                </div>
+                <label className='form-label'>Or</label>
+
+                <CustomInput label={"Enter Amount"} hint={"Min: ₹100, Max: ₹1,00,000"} />
+
+                <CustomInput label={"Quantity"} hint={"Min: 1, Max: 10"} />
+
+                <NetEffecttive />
+            </form>
         </div>
     )
 }

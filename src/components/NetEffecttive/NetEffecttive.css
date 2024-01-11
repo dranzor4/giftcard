@@ -1,0 +1,19 @@
+.net-effective{
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #F1F5F9;
+    border-radius: 4px;
+}
+.net-effective .text{
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.net-effective button{
+    border: 0;
+    background-color: transparent;
+    text-decoration: underline;
+    color: #25A42F;
+    font-weight: 500;
+}

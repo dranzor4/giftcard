@@ -1,18 +1,16 @@
-.product-form-commn-fields{
+.buy-for-sefl-form form{
     padding-top: 24px;
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
-.product-form-commn-fields .bold-label{
+.buy-for-sefl-form .form-label{
     color: #181C2D;
     font-size: 14px;
     font-weight: 500;
 }
-.product-form-commn-fields .input-box .radio-group{
-    /* padding-top: 20px; */
+.buy-for-sefl-form .radio-group-box{
     display: flex;
     gap: 5px;
-    /* justify-content: center; */
     flex-wrap: wrap;
 }

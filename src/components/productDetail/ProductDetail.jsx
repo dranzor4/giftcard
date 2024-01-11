@@ -3,6 +3,7 @@ import styles from "./ProductDetail.module.css";
 import CustomCard from "../CustomCard/index";
 import RadioBox from "../RadioBox";
 import ByForSelfFrom from "../ByForSelfFrom";
+import GiftForSomeoneFrom from "../GiftForSomeoneFrom";
 
 const ProductDetail = () => {
   // const { productIndex } = useParams();
@@ -38,13 +39,14 @@ const ProductDetail = () => {
         </div>
         <div className={styles.prductDetailPage}>
           <div className={styles.cardDetails}>
-            <CustomCard />
+            <CustomCard label={true} />
           </div>
           <div className={styles.cardForm}>
             <div className="text-center">
               <RadioBox options={options} selectedOption={selectedOption} onOptionChange={handleOptionChange} className="product-selforgift-btn" />
             </div>
-            <ByForSelfFrom />
+            {/* <ByForSelfFrom /> */}
+            <GiftForSomeoneFrom />
           </div>
         </div>
       </div>

@@ -24,8 +24,6 @@
 .toggle-option input{
   display: none;
 }
-
-/* Apply styles for grouped options container */
 .custom-toggle.grouped {
   border: 2px solid #3498db;
   border-radius: 15px;
@@ -70,5 +68,4 @@ background-color: #000;
 .byforself-pric .toggle-option{
   padding: 8px 24px;
   margin: 0;
-
 }
