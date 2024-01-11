@@ -1,0 +1,107 @@
+.buttonTabContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 4px;
+}
+.buttonTabContainer .buttonContainer {
+  padding: 4px;
+  background-color: var(--bg-button-container-color);
+  border-radius: 8px;
+}
+.buttonTabContainer .buttonContainer .initial {
+  font-size: 14px;
+  background-color: transparent;
+  color: var(--bg-blue-color);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-weight: 500;
+  line-height: 20px;
+  font-style: normal;
+}
+.afterClick {
+  font-size: 14px;
+  background-color: var(--bg-blue-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-weight: 500;
+  line-height: 20px;
+  font-style: normal;
+}
+
+.addToCartOrBuyNow .buttonTabContainer .buttonContainer {
+  width: 100%;
+  background: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0px;
+  gap: 12px;
+}
+.addToCartOrBuyNow .buttonTabContainer .buttonContainer .initial {
+  padding: 14px 24px;
+  color: var(--bg-blue-color);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  text-transform: capitalize;
+  background-color: var(--bg-initial-button-color);
+  border-radius: 8px;
+  width: 100%;
+}
+.addToCartOrBuyNow .buttonTabContainer .buttonContainer .afterClick {
+  padding: 14px 24px;
+  color: var(--white-color);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  text-transform: capitalize;
+  background-color: var(--bg-blue-color);
+  border-radius: 8px;
+  width: 100%;
+}
+@media screen and (min-width: 760px) {
+  .buttonContainer {
+    padding: 4px;
+    background-color: var(--bg-button-container-color);
+    border-radius: 100px;
+  }
+  .initial,
+  .afterClick {
+    border-radius: 50px;
+  }
+  .productDetailTab .buttonTabContainer {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0px;
+    /* margin: 0px; */
+    border-bottom: 1.97px solid var(--Gray-Gray-300, #cbd5e1);
+  }
+  .productDetailTab .buttonTabContainer .buttonContainer {
+    padding: 0px;
+    /* margin: 0px; */
+    background: none;
+  }
+
+  .productDetailTab .buttonTabContainer .buttonContainer .initial {
+    padding: 19.203px 20.077px 21.542px 19.695px;
+    color: #2c2c2c;
+    background: none;
+    font-size: 16.002px;
+    font-weight: 500;
+    line-height: 24.004px;
+    border-radius: 0px;
+  }
+  .productDetailTab .buttonTabContainer .buttonContainer .afterClick {
+    padding: 19.203px 20.077px 21.542px 19.695px;
+    background: none;
+    color: var(--bg-blue-color);
+    font-size: 16.002px;
+    font-weight: 500;
+    line-height: 24.004px;
+    border-bottom: 1.97px solid var(--bg-blue-color);
+    border-radius: 0px;
+  }
+}

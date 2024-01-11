@@ -27,7 +27,7 @@ const FadeCarousel = () => {
       }}
       loop={true}
     >
-      <div className={styles.carousel} >
+      <div className={styles.car} >
       <SwiperSlide><img src="./images/nature1.jpg" alt="nature" className={styles.imageSize}/></SwiperSlide>
       <SwiperSlide><img src="./images/tree.jpg" alt="tree" className={styles.imageSize}/></SwiperSlide>
       <SwiperSlide><img src="./images/nature2.jpg" alt="nature" className={styles.imageSize}/></SwiperSlide>

@@ -1,23 +1,28 @@
 import SearchBy from "../../components/searchby";
 import Search from "../../components/searchbar/Search";
-import Carousel from "../../components/carousel/Carousel";
+import LinkCarousel from "../../components/carousel/LinkCarousel";
+import Carousel from "../../components/carousel/Carousel"
 import FadeCarousel from "../../components/carousel/FadeCarousel";
 import Button from "../../components/Button/Button";
-import styles from "./index.module.css";
-import ButtonTab from "../../components/ButtonTab/ButtonTab";
+import "./home.css";
+import ButtonTab from "../../components/ButtonTab";
 import { buySellButtonData } from "../../utils/constants/constants";
+import { cardData } from "../../utils/constants/constants";
 
 const Home = () => {
   return (
-    <div className={styles.home}>
+    <div className="home">
       <SearchBy />
       <Search />
-      <FadeCarousel />
+      {/* <FadeCarousel /> */}
+      <div className="buttonTab">
       <ButtonTab data={buySellButtonData}/>
-      <Carousel name="Hot Deals" animationDelay={2500} />
-      <Carousel name="Best Sellers" animationDelay={3000} />
-      <Carousel name="Value Offers" animationDelay={3500} />
-      <Button className={styles.filterButton}>Filters <img src="/images/filter.png" alt="filter"/></Button>
+      </div>
+      <LinkCarousel name="Hot Deals" animationDelay={2500} />
+      <LinkCarousel name="Best Sellers" animationDelay={3000} />
+      <LinkCarousel name="Value Offers" animationDelay={3500} />
+      <Carousel cardData={cardData}/>
+      <Button className="filterButton">Filters <img src="/images/filter.png" alt="filter"/></Button>
     </div>
   );
 };

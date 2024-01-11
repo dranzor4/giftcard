@@ -1,18 +1,22 @@
 import React from "react";
+import { cardData } from "../../utils/constants/constants";
+import { Card } from "../Cards/Card";
+import { Link } from "react-router-dom";
 import styles from "./Carousel.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, FreeMode } from "swiper/modules";
-import ProductDetailCard from "../Cards/ProductDetailCard";
-import { cardData1 } from "../../utils/constants/constants";
 import "swiper/css/free-mode";
 import "swiper/css";
 import "swiper/css/effect-fade";
 
-const ImageCarousel = (props) => {
-  const { cardData, animationDelay } = props;
-  console.log("carddata", cardData);
+const Carousel = (props) => {
+  const { name, animationDelay} = props;
   return (
     <div className={styles.carouselContainer}>
+      <div className={styles.carouselHeader}>
+        <div className={styles.carouselDeal}>{name}</div>
+        <div className={styles.carouselViewAll}>View all</div>
+      </div>
       <Swiper
         spaceBetween={50}
         slidesPerView={3.5}
@@ -30,43 +34,45 @@ const ImageCarousel = (props) => {
         loop={true}
         breakpoints={{
           0: {
-            slidesPerView: 1.3,
+            slidesPerView: 2.2,
             spaceBetween: 10,
           },
           640: {
-            slidesPerView: 2.2,
+            slidesPerView: 3.2,
             spaceBetween: 10,
           },
           768: {
             slidesPerView: 3,
             spaceBetween: 10,
           },
-          960: {
-            slidesPerView: 3,
+          960:{
+            slidesPerView: 4,
             spaceBetween: 10,
           },
           1024: {
-            slidesPerView: 4,
+            slidesPerView: 5,
             spaceBetween: 10,
           },
         }}
       >
-        <div className="carousel">
-          {cardData1.map((data, index) => {
-            return (
-              <SwiperSlide key={index}>
+        <div className={styles.carousel}>
+          {cardData.map((data, index) => (
+            <SwiperSlide key={index}>
+              {" "}
+              <Link
+                to={`/productDetail/${index}`}
+                className={styles.cardNavigation}
+              >
                 <div className={styles.cardParentContainer}>
-                  <div className={styles.imageContainer}>
-                    <ProductDetailCard cardData={data} />
-                  </div>
+                <Card data={data} index={index} />
                 </div>
-              </SwiperSlide>
-            );
-          })}
+              </Link>
+            </SwiperSlide>
+          ))}
         </div>
       </Swiper>
     </div>
   );
 };
 
-export default ImageCarousel;
+export default Carousel;
