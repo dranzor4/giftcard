@@ -11,7 +11,7 @@ const ButtonTab = ({ data, selected, defaultSelected}) => {
   
   const handleButtonClick = (buttonId) => {
     setActiveButton(buttonId);
-    selected(buttonId);
+    selected && selected(buttonId);
   };
 
   return (

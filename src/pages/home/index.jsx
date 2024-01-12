@@ -14,9 +14,9 @@ const Home = () => {
     <div className="home">
       <SearchBy />
       <Search />
-      {/* <FadeCarousel /> */}
+      <FadeCarousel />
       <div className="buttonTab">
-      <ButtonTab data={buySellButtonData}/>
+      <ButtonTab data={buySellButtonData} defaultSelected={buySellButtonData[0]?.id}/>
       </div>
       <LinkCarousel name="Hot Deals" animationDelay={2500} />
       <LinkCarousel name="Best Sellers" animationDelay={3000} />
