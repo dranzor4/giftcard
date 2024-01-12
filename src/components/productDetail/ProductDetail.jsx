@@ -3,7 +3,7 @@ import styles from "./ProductDetail.module.css";
 import CustomCard from "../CustomCard/index";
 import TermsAndCondition from '../TermsAndCondition/index'
 import Offers from "../Offers";
-import Redeemable from "../Redeemable/Redeemable";
+import Redeemable from "../Redeemable";
 
 const ProductDetail = () => {
   // const { productIndex } = useParams();

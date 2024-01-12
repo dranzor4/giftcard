@@ -13,8 +13,6 @@ const FadeCarousel = () => {
       spaceBetween={50}
       slidesPerView={1}
       rewind={true}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
       effect={'fade'}
       pagination={{
         dynamicBullets: true,
@@ -27,10 +25,9 @@ const FadeCarousel = () => {
       }}
       loop={true}
     >
-      <div className={styles.carousel} >
+      <div className={styles.car} >
       <SwiperSlide><img src="./images/banner1.png" alt="nature" className={styles.imageSize}/></SwiperSlide>
       <SwiperSlide><img src="./images/banner2.png" alt="tree" className={styles.imageSize}/></SwiperSlide>
-      <SwiperSlide><img src="./images/banner1.png" alt="nature" className={styles.imageSize}/></SwiperSlide>
     </div>
     </Swiper>
  

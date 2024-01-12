@@ -1,7 +1,6 @@
 import React from "react";
 import "./ProductDetailCard.css"
 const ProductDetailCard = (props) => {
-  console.log("instr",props)
   const{cardData}=props
   return (
     <div className="productDetailCardContainer">
