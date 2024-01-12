@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <div className="home">
       <SearchBy />
-      <Search />
+      {/* <Search /> */}
       <FadeCarousel />
       <div className="buttonTab">
       <ButtonTab data={buySellButtonData} defaultSelected={buySellButtonData[0]?.id}/>

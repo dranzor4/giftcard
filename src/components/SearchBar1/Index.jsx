@@ -5,7 +5,6 @@ import useIsMobile from '../../customHooks/useIsMobile';
 
 const SearchBar1 = ({ customStyle }) => {
     const modile = useIsMobile();
-    console.log(modile);
     return (
         <Form inline className={customStyle} >
 
