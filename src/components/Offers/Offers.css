@@ -50,7 +50,7 @@
   width: 24px;
 }
 .offersContainer .offers .offer-description {
-  display: inline-block;
+  line-height: 0;
 }
 .offersContainer .offers .offer-description .offerSummary {
   color: var(--header-text-color);
