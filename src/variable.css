@@ -3,12 +3,14 @@
     --header-text-color:#1E293B;
     --bg-blue-color:#1D86FF;
     --bg-button-container-color:rgba(208, 231, 255, 0.30);
+    --bg-initial-button-color:rgba(29, 134, 255, 0.10);
     --white-color:#ffff;
     --box-shadow-color:rgba(0, 74, 143, 0.08);
     --green-color:#25a42f;
     --green-text-color:#25A42F;
     --text-color:#64748b;
     --border-color:#E2E8F0;
+    --button-border-color:#CBD5E1;
     
     /* mobile responsive icon size */
 

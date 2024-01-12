@@ -43,7 +43,7 @@ const Header = ({ toggleSidebar }) => {
               />
             </li>
             <li className={Style.NabLoginBox}>
-              <Link to="/login">
+              <Link to="#">
                 <NavSignInSignUp />
               </Link>
             </li>

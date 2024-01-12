@@ -1,4 +1,4 @@
-.product {
+/* .product {
   width: 100%;
   padding-left: 16px;
   padding-right: 16px;
@@ -54,4 +54,25 @@
     .card {
         width: 400px;
       }
+} */
+
+.backBtn{
+  color: #1E293B;
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 0 34px 0;
+}
+.mainConatiner{
+  padding: 0 16px;
+}
+
+
+@media(min-width: 768px){
+  .mainConatiner{
+      padding: 0 80px;
+  }
+  .prductDetailPage{
+      display: grid;
+      grid-template-columns: 400px auto;
+  }
 }
