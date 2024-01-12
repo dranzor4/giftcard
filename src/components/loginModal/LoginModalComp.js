@@ -63,7 +63,9 @@ const LoginModalComp = ({ show, handleClose }) => {
   };
 
   const handleMobileNumberChange = (e) => {
-    setMobileNumber(e.target.value);
+    let inputValue = e.target.value;
+    inputValue = inputValue.replace(/\D/g, '');
+    setMobileNumber(inputValue);
   };
 
   const handleCreateAccountClick = () => {
@@ -83,7 +85,7 @@ const LoginModalComp = ({ show, handleClose }) => {
         onHide={handleClose}
         centered
       >
-        <Modal.Header closeButton={true}>
+        
           {welcomeform ? (
             <div className="welcome-header">
               <div className="welcome-header-one">
@@ -96,10 +98,12 @@ const LoginModalComp = ({ show, handleClose }) => {
               <div className="modal-header-first">
                 <div className="modal-header-first-one">
                   <div className="login-header-one">
+                  <Modal.Header closeButton={true} style={{ borderBottom: "none" }}>
                     <div className="login-header-first">
                       <div>Welcome to Woohoo</div>
                       <div>Login to your account</div>
                     </div>
+                    </Modal.Header>
                     <div
                       style={{
                         alignSelf: "stretch",
@@ -137,14 +141,14 @@ const LoginModalComp = ({ show, handleClose }) => {
                               placeholder="Enter OTP"
                               aria-label="Enter OTP"
                               aria-describedby="mobile-prefix"
-                              style={{ fontSize: "medium", borderLeft: "none" }}
+                              style={{ fontSize: "small", borderLeft: "none" }}
                               value={enteredOtp}
                               onChange={(e) => setEnteredOtp(e.target.value)}
                             />{" "}
                           </InputGroup>
                           <div className="login-otp-button">
                             <Button
-                            style={{width:"-webkit-fill-available !important"}}
+                            style={{width:"-webkit-fill-available !important", fontSize:"small"}}
                               variant="primary"
                               className="custom-width-btn"
                               // onClick={handleSendOTP}
@@ -200,11 +204,11 @@ const LoginModalComp = ({ show, handleClose }) => {
                               +91
                             </InputGroup.Text>
                             <Form.Control
-                              type="tel"
+                              type="text"
                               placeholder="Mobile number"
                               aria-label="Mobile Number"
                               aria-describedby="mobile-prefix"
-                              style={{ fontSize: "medium", borderLeft: "none" }}
+                              style={{ fontSize: "small", borderLeft: "none" }}
                               value={mobileNumber}
                               onChange={handleMobileNumberChange}
                             />{" "}
@@ -215,6 +219,7 @@ const LoginModalComp = ({ show, handleClose }) => {
                             variant="primary"
                             className="custom-width-btn"
                             onClick={handleSendOTP}
+                            style={{fontSize: "small"}}
                           >
                             Send OTP
                           </Button>
@@ -247,7 +252,7 @@ const LoginModalComp = ({ show, handleClose }) => {
               </div>
             </div>
           )}
-        </Modal.Header>
+      
       </BootstrapModal>
 
       <SignModalComp

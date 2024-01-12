@@ -151,7 +151,8 @@ const SignModalComp = ({ show, handleClose }) => {
                           }}
                           value={mobileNumber}
                           required
-                          onChange={(e) => setMobileNumber(e.target.value)}
+                          onChange={(e) => {const onlyDigits = e.target.value.replace(/\D/g, ''); // Remove non-numeric characters
+                          setMobileNumber(onlyDigits);}}
                         />{" "}
                         {mobileNumberVerified && (
                           <InputGroup.Text
@@ -188,6 +189,7 @@ const SignModalComp = ({ show, handleClose }) => {
                             id="verify-number"
                             onClick={generateOtp}
                             className="otp-generation-style"
+                      
                           >
                             Resend OTP
                           </InputGroup.Text>
@@ -206,7 +208,7 @@ const SignModalComp = ({ show, handleClose }) => {
                             type="text"
                             placeholder="Enter OTP"
                             value={otp}
-                            style={{ borderLeft: "none", borderRight: "none" }}
+                            style={{ borderLeft: "none", borderRight: "none", fontSize: "small" }}
                             onChange={(e) => setOtp(e.target.value)}
                           />
 
@@ -242,6 +244,7 @@ const SignModalComp = ({ show, handleClose }) => {
                     </div>
                     <div className="login-otp-button">
                       <Button
+                      style={{fontSize:"small"}}
                         variant="primary"
                         className="custom-width-btn"
                         // onClick={handleSendOTP}
