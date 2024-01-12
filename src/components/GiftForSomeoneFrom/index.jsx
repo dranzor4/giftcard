@@ -6,7 +6,8 @@ import RadioBox from '../RadioBox'
 import { Form } from "react-bootstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
 import CustomCard from '../CustomCard'
-import Button from '../Button/Button'
+import Button from '../Button'
+import TermsAndCondition from '../TermsAndCondition'
 const GiftForSomeoneFrom = () => {
     const [selectedOption, setSelectedOption] = useState('');
     const [sendNowOrLater, setSendNowOrLater] = useState('');
@@ -157,6 +158,7 @@ const GiftForSomeoneFrom = () => {
                         <Swiper
                             slidesPerView={3.1}
                             spaceBetween={10}
+                            loop={true}
                         >
                             <SwiperSlide><div className='each-slide-container'><CustomCard /></div></SwiperSlide>
                             <SwiperSlide><div className='each-slide-container'><CustomCard /></div></SwiperSlide>
@@ -166,9 +168,10 @@ const GiftForSomeoneFrom = () => {
                     </div>
                     <CustomInput label={"Email Subject"} hintText={"Max 24 characters"} hintShow={true} />
                     <CustomInput type='textarea' label={"Personal Message"} hintText={"Min: ₹100, Max: ₹1,00,000"} hintShow={true} />
-                   <div className='form-btn'>
-                   <Button>Preview eGift Card</Button>
-                   </div>
+                    <div className='form-btn'>
+                        <Button>Preview eGift Card</Button>
+                    </div>
+                    <TermsAndCondition />
                 </div>
 
 

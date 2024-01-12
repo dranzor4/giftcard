@@ -4,6 +4,9 @@ import CustomCard from "../CustomCard/index";
 import RadioBox from "../RadioBox";
 import ByForSelfFrom from "../ByForSelfFrom";
 import GiftForSomeoneFrom from "../GiftForSomeoneFrom";
+import TermsAndCondition from '../TermsAndCondition/index'
+import Offers from "../Offers";
+import Redeemable from "../Redeemable";
 
 const ProductDetail = () => {
   // const { productIndex } = useParams();
@@ -40,6 +43,8 @@ const ProductDetail = () => {
         <div className={styles.prductDetailPage}>
           <div className={styles.cardDetails}>
             <CustomCard label={true} />
+            <Redeemable />
+            <Offers />
           </div>
           <div className={styles.cardForm}>
             <div className="text-center">

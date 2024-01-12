@@ -3,6 +3,7 @@ import RadioBox from '../RadioBox'
 import "./ByForSelfFrom.css"
 import CustomInput from '../CustomInput';
 import NetEffecttive from '../NetEffecttive';
+import TermsAndCondition from '../TermsAndCondition';
 
 const ByForSelfFrom = () => {
 
@@ -47,6 +48,7 @@ const ByForSelfFrom = () => {
                 <CustomInput label={"Quantity"} hint={"Min: 1, Max: 10"} />
 
                 <NetEffecttive />
+                <TermsAndCondition />
             </form>
         </div>
     )
