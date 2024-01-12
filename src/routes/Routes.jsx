@@ -18,7 +18,6 @@ const Routers = () => {
                 <Route path="/calculator" element={<CalculatorModal/> }/>
                 <Route path="/my-gift-card" element={<MyGiftCard/> }/>
             </Routes>
-        
     );
 };
 

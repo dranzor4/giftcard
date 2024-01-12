@@ -28,7 +28,7 @@ const ProductDetail = () => {
     setSelectedOption(event.target.value);
   };
   const options = [
-    { value: 'Buy for Self', label: 'Buy for Self'  },
+    { value: 'Buy for Self', label: 'Buy for Self' },
     { value: 'Gift to Someone', label: 'Gift to Someone' },
   ];
 
@@ -37,10 +37,10 @@ const ProductDetail = () => {
       <div className={styles.mainConatiner}>
         <div className={styles.backBtn}>
           <img src="/Images/left-arrow.svg" onClick={() => navigate(-1)} alt="" />
-          <img  src="/Images/search-icon.svg" alt="" />
+          <img src="/Images/search-icon.svg" alt="" />
         </div>
-        <div className={styles.prductDetailPage}>
-          <div className={styles.cardDetails}>
+        <div className={""}>
+          {/* <div className={styles.cardDetails}>
             <CustomCard label={true} tag={true}/>
             <Redeemable />
             <Offers />
@@ -49,9 +49,25 @@ const ProductDetail = () => {
             <div className="text-center line-height-0">
               <RadioBox options={options} selectedOption={selectedOption} onOptionChange={handleOptionChange} className="product-selforgift-btn" />
             </div>
-            {/* <ByForSelfFrom /> */}
+            <ByForSelfFrom />
             <GiftForSomeoneFrom />
+          </div> */}
+          <div className="row">
+            <div className="col-md-3 bg-primary">1</div>
+            <div className="col-md-9 bg-warning">
+              <div className={`row`}>
+                <div className={`${styles.gridForm} row`}>
+                  <div className="form-toggle p-5">buttons</div>
+                  <div className="fomr-1 p-5">Form 1</div>
+                  <div className={styles.form2}>FOrm 2</div>
+                </div>
+                <div className="row bg bg-danger p-5">
+                  form 3
+                </div>
+              </div>
+            </div>
           </div>
+          <div className="row bg-success float-right p-5">form 2</div>
         </div>
       </div>
     </>
