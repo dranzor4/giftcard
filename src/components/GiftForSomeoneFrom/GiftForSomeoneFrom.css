@@ -1,0 +1,147 @@
+/* form default style  start */
+.form-label {
+    color: #181C2D;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+    display: block;
+}
+
+.form-divider {
+    margin: 40px 0 28px 0;
+}
+
+.form-light-text {
+    color: #64748B;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/* form default style  end */
+
+.gift-for-someone-form form {
+    padding-top: 24px;
+}
+
+.gift-for-someone-form .form-price-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+}
+
+.form-net-effetive-setion {}
+
+
+.gift-for-someone-form .radiobtn-group {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.gift-for-someone-form .form-divider h3 {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    line-height: 0.1em;
+    font-size: 16px;
+    margin: 10px 0 20px;
+}
+
+.gift-for-someone-form .form-divider h3 span {
+    font-weight: 600;
+    background: #fff;
+    padding: 0 10px;
+}
+
+.gift-for-someone-form .form-light-label {
+    font-size: 12px;
+    font-weight: 400;
+    color: #64748B;
+}
+
+
+/* form sms or mail section */
+
+.gift-for-someone-form .checkbox-group {
+    display: flex;
+    gap: 30px;
+    padding-bottom: 10px;
+}
+
+.gift-for-someone-form .checkbox-group .form-check input {
+    margin-right: 12px;
+
+}
+
+.gift-for-someone-form .checkbox-group .form-check label {
+    font-size: 14px;
+    color: #181C2D;
+    font-weight: 400;
+}
+
+.form-sms-or-mail-section .form-label {
+    padding-bottom: 16px;
+}
+
+.form-sms-or-mail-section .form-light-text {
+    padding-bottom: 24px;
+}
+
+.form-sms-or-mail-section .custom-toggle {
+    padding-left: 8px;
+}
+
+.form-sms-or-mail-section .checkbox-group .form-check-input:focus{
+    box-shadow: unset;
+}
+
+/* --------------- form user datils  ------------*/
+
+.form-user-details {
+    margin-top: 40px;
+}
+
+.form-user-details .form-label {
+    margin-bottom: 4px;
+}
+
+.form-user-details .form-light-text {
+    padding-bottom: 19px;
+}
+
+/* -------------------- gift section  */
+
+.form-personalise-section .form-label{
+    padding-bottom: 14px;
+}
+.form-personalise-section .input-box{
+    padding-bottom: 14px;
+}
+.form-personalise-section .radiobtn-group{
+    padding-bottom: 36px;
+}
+
+.form-personalise-section .form-btn{
+    padding-top: 24px;
+}
+
+.form-personalise-section .radiobtn-group  .swiper-slide {
+    width: auto !important;
+}
+
+.form-personalise-section .radiobtn-group.gift .swiper-slide{
+    width: 150px !important;
+}
+.form-btn{
+    text-align: center;
+}
+
+.form-personalise-section button{
+    border: 1px solid #1D86FF;
+    Padding :10px, 18px, 10px, 18px;
+    color: #1D86FF;
+    font-weight: 600;
+    border-radius: 6px;
+
+}

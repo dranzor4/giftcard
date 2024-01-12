@@ -65,6 +65,14 @@
 .mainConatiner{
   padding: 0 16px;
 }
+.cardForm {
+  /* text-align: center; */
+  padding: 40px 0 24px 0;
+}
+
+.cardForm .custom-toggle {
+  text-align: center;
+}
 
 
 @media(min-width: 768px){
