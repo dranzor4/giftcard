@@ -39,7 +39,7 @@ const handleClose = ()=>{setshowModal(false)}
                 <img src="/Images/calculator.png" alt="calculator" onClick={handleShow}/>
             </li>
             <li className={Style.NabLoginBox}>
-              <Link to="/login">
+              <Link to="#">
                 <NavSignInSignUp />
               </Link>
             </li>
