@@ -29,7 +29,7 @@ const Header = ({ toggleSidebar }) => {
             <ProfileIcon hamburger={true} profileClick={toggleSidebar} />
           </div>
           <div className={Style.logoWrap}>
-            <img src="./Images/Logo.svg" alt="" />
+            <img src="/Images/Logo.svg" alt="" />
           </div>
           <div className={Style.searchBarWrap}>
             <SearchBar1 />
@@ -37,7 +37,7 @@ const Header = ({ toggleSidebar }) => {
           <ul className={Style.headerNavwrap}>
             <li className={Style.calculator}>
               <img
-                src="./Images/calculator.png"
+                src="/Images/calculator.png"
                 alt="calculator"
                 onClick={handleShow}
               />

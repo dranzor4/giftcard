@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import styles from "./ProductDetail.module.css";
 import CustomCard from "../CustomCard/index";
 import RadioBox from "../RadioBox";
-import ByForSelfFrom from "../ByForSelfFrom";
 import GiftForSomeoneFrom from "../GiftForSomeoneFrom";
-import TermsAndCondition from '../TermsAndCondition/index'
 import Offers from "../Offers";
 import Redeemable from "../Redeemable";
+import { useNavigate } from "react-router-dom";
 
 const ProductDetail = () => {
   // const { productIndex } = useParams();
@@ -22,14 +21,14 @@ const ProductDetail = () => {
   //   validityText: styles.validityText,
   // };
 
-  const [selectedOption, setSelectedOption] = useState('');
+  const navigate = useNavigate()
 
+  const [selectedOption, setSelectedOption] = useState('');
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
   };
-
   const options = [
-    { value: 'Buy for Self', label: 'Buy for Self' },
+    { value: 'Buy for Self', label: 'Buy for Self'  },
     { value: 'Gift to Someone', label: 'Gift to Someone' },
   ];
 
@@ -37,17 +36,17 @@ const ProductDetail = () => {
     <>
       <div className={styles.mainConatiner}>
         <div className={styles.backBtn}>
-          <img src="/Images/left-arrow.svg" alt="" />
-          <img src="/Images/search-light-icon.svg" alt="" />
+          <img src="/Images/left-arrow.svg" onClick={() => navigate(-1)} alt="" />
+          <img  src="/Images/search-icon.svg" alt="" />
         </div>
         <div className={styles.prductDetailPage}>
           <div className={styles.cardDetails}>
-            <CustomCard label={true} />
+            <CustomCard label={true} tag={true}/>
             <Redeemable />
             <Offers />
           </div>
           <div className={styles.cardForm}>
-            <div className="text-center">
+            <div className="text-center line-height-0">
               <RadioBox options={options} selectedOption={selectedOption} onOptionChange={handleOptionChange} className="product-selforgift-btn" />
             </div>
             {/* <ByForSelfFrom /> */}

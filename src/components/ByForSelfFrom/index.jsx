@@ -36,7 +36,7 @@ const ByForSelfFrom = () => {
     return (
         <div className='buy-for-sefl-form'>
             <form>
-                <label className='form-label'>
+                <label className='form-label p-b-8'>
                     Select Gift Value</label>
                 <div className='radio-group-box'>
                     <PriceRadioBtns />

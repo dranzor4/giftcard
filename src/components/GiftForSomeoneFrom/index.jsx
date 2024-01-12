@@ -75,7 +75,7 @@ const GiftForSomeoneFrom = () => {
             <Form>
 
                 <div className='form-price-section'>
-                    <label className='form-label'>
+                    <label className='form-label p-b-8'>
                         Select Gift Value
                     </label>
                     <div className='radiobtn-group'>
@@ -142,6 +142,7 @@ const GiftForSomeoneFrom = () => {
                         <Swiper
                             slidesPerView={3.2}
                             spaceBetween={16}
+                            loop={true}
                         >
                             {
                                 giftCategoryArr.map((ele) => <SwiperSlide><RadioBox onOptionChange={handleOptionChange} selectedOption={selectedOption} options={[{ value: ele.value, label: ele.label }]} className={"byforself-pric"} /></SwiperSlide>)
