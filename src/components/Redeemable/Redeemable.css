@@ -1,4 +1,4 @@
-.container {
+.redeemable-container {
   display: flex;
   align-items: center;
 }
@@ -9,7 +9,7 @@
   padding: 13px 0px;
   color: var(--header-text-color);
   margin-right: 20px;
-text-transform: uppercase;
+  text-transform: uppercase;
 }
 .online {
   color: var(--green-text-color);

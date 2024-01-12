@@ -11,7 +11,7 @@ const SearchBy = () => {
   ];
 
   return (
-    <div className="container">
+    <div className="searchByContainer">
       <h5 className={style.title}>Search by</h5>
       <div className="row">
         {a.map((item, index) => (
