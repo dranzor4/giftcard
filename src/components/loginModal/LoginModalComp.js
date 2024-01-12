@@ -85,7 +85,7 @@ const LoginModalComp = ({ show, handleClose }) => {
         onHide={handleClose}
         centered
       >
-        <Modal.Header closeButton={true}>
+        
           {welcomeform ? (
             <div className="welcome-header">
               <div className="welcome-header-one">
@@ -98,10 +98,12 @@ const LoginModalComp = ({ show, handleClose }) => {
               <div className="modal-header-first">
                 <div className="modal-header-first-one">
                   <div className="login-header-one">
+                  <Modal.Header closeButton={true} style={{ borderBottom: "none" }}>
                     <div className="login-header-first">
                       <div>Welcome to Woohoo</div>
                       <div>Login to your account</div>
                     </div>
+                    </Modal.Header>
                     <div
                       style={{
                         alignSelf: "stretch",
@@ -250,7 +252,7 @@ const LoginModalComp = ({ show, handleClose }) => {
               </div>
             </div>
           )}
-        </Modal.Header>
+      
       </BootstrapModal>
 
       <SignModalComp

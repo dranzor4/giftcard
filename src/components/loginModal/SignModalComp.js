@@ -189,7 +189,7 @@ const SignModalComp = ({ show, handleClose }) => {
                             id="verify-number"
                             onClick={generateOtp}
                             className="otp-generation-style"
-                            style={{fontSize:"small"}}
+                      
                           >
                             Resend OTP
                           </InputGroup.Text>
