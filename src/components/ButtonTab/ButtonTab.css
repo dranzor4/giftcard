@@ -7,7 +7,7 @@
 .buttonTabContainer .buttonContainer {
   padding: 4px;
   background-color: var(--bg-button-container-color);
-  border-radius: 8px;
+  border-radius: 100px;
 }
 .buttonTabContainer .buttonContainer .initial {
   font-size: 14px;
@@ -30,6 +30,26 @@
   font-weight: 500;
   line-height: 20px;
   font-style: normal;
+}
+.productDetailTab .buttonTabContainer .buttonContainer .initial {
+  font-size: 12px;
+  background-color: transparent;
+  color: var(--bg-blue-color);
+  border: none;
+  border-radius: 100px;
+  padding: 8px 20px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.productDetailTab .afterClick {
+  font-size: 12px;
+  background-color: var(--bg-blue-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 100px;
+  padding: 8px 20px;
+  font-weight: 500;
+  line-height: 20px;
 }
 
 
