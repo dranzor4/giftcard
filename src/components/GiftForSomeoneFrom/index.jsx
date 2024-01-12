@@ -157,6 +157,7 @@ const GiftForSomeoneFrom = () => {
                         <Swiper
                             slidesPerView={3.1}
                             spaceBetween={10}
+                            loop={true}
                         >
                             <SwiperSlide><div className='each-slide-container'><CustomCard /></div></SwiperSlide>
                             <SwiperSlide><div className='each-slide-container'><CustomCard /></div></SwiperSlide>
@@ -166,9 +167,9 @@ const GiftForSomeoneFrom = () => {
                     </div>
                     <CustomInput label={"Email Subject"} hintText={"Max 24 characters"} hintShow={true} />
                     <CustomInput type='textarea' label={"Personal Message"} hintText={"Min: ₹100, Max: ₹1,00,000"} hintShow={true} />
-                   <div className='form-btn'>
-                   <Button>Preview eGift Card</Button>
-                   </div>
+                    <div className='form-btn'>
+                        <Button>Preview eGift Card</Button>
+                    </div>
                 </div>
 
 
