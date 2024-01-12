@@ -2,54 +2,54 @@ const home = "/";
 const about = "/aboutus";
 export const cardData = [
   {
-    header: "Roshan",
-    paragraph: "qwerrrrre",
+    header: "Amazon Shopping Voucher Special",
+    paragraph: "Promo code",
     batch: "10% off",
-    link: "url",
-    imageShow:"./images/atm1.png"
+    link: "HURRY",
+    imageShow:"/Images/atm1.png"
   },
   {
-    header: "Uzair",
-    paragraph: "dbdhbshdbhsd",
+    header: "Croma E-voucher",
+    paragraph: "Promo code",
     batch: "20% off",
-    link: "url",
-    imageShow:"./images/atm2.png"
+    link: "HURRY",
+    imageShow:"/Images/atm2.png"
   },
   {
-    header: "Arshad",
-    paragraph: "wdwfwfw",
+    header: "Zomato E-voucher",
+    paragraph: "Promo code",
     batch: "10% off",
-    link: "url",
-    imageShow:"./images/atm3.png"
+    link: "HURRY",
+    imageShow:"/Images/atm3.png"
   },
   {
-    header: "sarvanan",
-    paragraph: "dbdhbshdbhsd",
+    header: "Myntra-voucher",
+    paragraph: "Promo Code",
     batch: "30% off",
-    link: "url",
-    imageShow:"./images/atm4.png"
+    link: "HURRY",
+    imageShow:"/Images/atm4.png"
   },
   {
-    header: "dipak",
-    paragraph: "wquwuwuwu",
+    header: "Uber E-voucher",
+    paragraph: "Promo Code",
     batch: "15% off",
-    link: "url",
-    imageShow:"./images/atm6.png"
+    link: "HURRY",
+    imageShow:"/Images/atm6.png"
 
   },
   {
-    header: "swapnil",
-    paragraph: "wquwuwuwu",
+    header: "Swiggy E-voucher",
+    paragraph: "Promo Code",
     batch: "5% off",
-    link: "url",
-    imageShow:"./images/atm7.png"
+    link: "HURRY",
+    imageShow:"/Images/atm7.png"
   },
   {
-    header: "Ajit",
-    paragaph: "wquwuwuwu",
+    header: "Dominos E-voucher",
+    paragaph: "Promo Code",
     batch: "1% off",
-    link: "url",
-    imageShow:"./images/atm1.png"
+    link: "HURRY",
+    imageShow:"/Images/atm1.png"
   },
 ];
 
