@@ -10,15 +10,15 @@ const CustomInput = ({ type = "text", onChange, label, error, value, hintShow, h
             {/* <input type={type} onChange={(e) => onChange(e.target.value)} required /> */}
             <input type={type} required />
             <span>{label}</span>
-            {error === "" ? hintShow ? <p className='input-tip'>hintText</p> : "" : <p className='input-error'>{error}</p>}
-            <p>{hintText}</p>
+            {/* {error === "" ? hintShow ? <p className='input-tip'>{hintText}</p> : "" : <p className='input-error'>{error}</p>} */}
+            {hintText && <p className='input-tip'>{hintText}</p>} 
           </div> : <div className='input-box'>
-              <textarea name="" id="" required cols="30" rows="3"></textarea>
-              <span>{label}</span>
-              {error === "" ? hintShow ? <p className='input-tip'>hintText</p> : "" : <p className='input-error'>{error}</p>}
-              <p>{hintText}</p>
-            </div>
-          
+            <textarea name="" id="" required cols="30" rows="3"></textarea>
+            <span>{label}</span>
+            {/* {error === "" ? hintShow ? <p className='input-tip'>{hintText}</p> : "" : <p className='input-error'>{error}</p>} */}
+            {hintText && <p className='input-tip'>{hintText}</p>} 
+          </div>
+
       }
     </>
   )

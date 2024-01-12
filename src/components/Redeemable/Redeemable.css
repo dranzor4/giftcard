@@ -1,12 +1,12 @@
 .redeemable-container {
   display: flex;
   align-items: center;
+  margin-top: 8px;
 }
 .containerHeader {
   font-size: 14px;
   font-weight: 500;
   line-height: 40px;
-  padding: 13px 0px;
   color: var(--header-text-color);
   margin-right: 20px;
   text-transform: uppercase;
