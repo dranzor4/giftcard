@@ -5,23 +5,28 @@ import DownBarLogin from "../components/DownBarLogin";
 import Sidebar from "../components/Sidebar";
 import Header from "../components/Header";
 import LoginModalComp from "../components/loginModal/LoginModalComp";
+import SignModalComp from "../components/loginModal/SignModalComp";
 
 const Layout = () => {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false)
   const [isLogoutbarOpen, setIsLogoutbarOpen] = useState(false)
-  const [showModal, setShowModal] = useState(true);
+  const [showLoginModal, setShowLoginModal] = useState(true);
+  
   const toggleSidebar = () => {
     setIsSideBarOpen(!isSideBarOpen)
   }
   const toggleDownbar = () => {
     setIsLogoutbarOpen(!isLogoutbarOpen)
   }
-  const handleCloseModal = () => {
-    setShowModal(false);
+
+  const handleCloseLoginModal = () => {
+    setShowLoginModal(false);
+ 
   };
+
   return (
     <>
-    <LoginModalComp show={showModal} handleClose={handleCloseModal} />
+    <LoginModalComp show={showLoginModal} handleClose={handleCloseLoginModal}  />
       <Header toggleSidebar={toggleSidebar}/>
       <Routers />
       <Sidebar toggleSidebar={toggleSidebar} toggleDownbar={toggleDownbar} state={isSideBarOpen} />

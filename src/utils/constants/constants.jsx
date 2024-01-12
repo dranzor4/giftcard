@@ -6,49 +6,50 @@ export const cardData = [
     paragraph: "qwerrrrre",
     batch: "10% off",
     link: "url",
-    imageShow: "/Images/tree.jpg",
+    imageShow:"./images/atm1.png"
   },
   {
     header: "Uzair",
     paragraph: "dbdhbshdbhsd",
     batch: "20% off",
     link: "url",
-    imageShow: "/Images/nature1.jpg",
+    imageShow:"./images/atm2.png"
   },
   {
     header: "Arshad",
     paragraph: "wdwfwfw",
     batch: "10% off",
     link: "url",
-    imageShow: "/Images/nature2.jpg",
+    imageShow:"./images/atm3.png"
   },
   {
     header: "sarvanan",
     paragraph: "dbdhbshdbhsd",
     batch: "30% off",
     link: "url",
-    imageShow: "/Images/test.jpg",
+    imageShow:"./images/atm4.png"
   },
   {
     header: "dipak",
     paragraph: "wquwuwuwu",
     batch: "15% off",
     link: "url",
-    imageShow: "/Images/nature2.jpg",
+    imageShow:"./images/atm6.png"
+
   },
   {
     header: "swapnil",
     paragraph: "wquwuwuwu",
     batch: "5% off",
     link: "url",
-    imageShow: "/Images/test.jpg",
+    imageShow:"./images/atm7.png"
   },
   {
     header: "Ajit",
     paragaph: "wquwuwuwu",
     batch: "1% off",
     link: "url",
-    imageShow: "/Images/nature2.jpg",
+    imageShow:"./images/atm1.png"
   },
 ];
 
