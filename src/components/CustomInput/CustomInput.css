@@ -51,6 +51,17 @@
     list-style: 14px;
 }
 
-.input-error{
+.input-tip.error{
+    color: #D00;
+}
+
+.input-box.error input{
+    border: 1px solid #D00;
+}
+
+.input-box.error input:valid ~ span,
+.input-box.error input:focus ~ span,
+.input-box.error textarea:valid ~ span,
+.input-box.error textarea:focus ~ span{
     color: #D00;
 }

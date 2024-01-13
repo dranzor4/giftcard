@@ -1,22 +1,22 @@
 import React from 'react'
 import "./CustomInput.css"
 
-const CustomInput = ({ type = "text", onChange, label, error, value, hintShow, hintText, }) => {
+const CustomInput = ({ type = "text", onChange, label, error = true, value, hintShow, hintText, }) => {
   return (
     <>
       {
         type === "text" ?
-          <div className='input-box'>
-            {/* <input type={type} onChange={(e) => onChange(e.target.value)} required /> */}
+          <div className={`input-box ${error ? "error" : ""}`}>
+           
             <input type={type} required />
             <span>{label}</span>
-            {/* {error === "" ? hintShow ? <p className='input-tip'>{hintText}</p> : "" : <p className='input-error'>{error}</p>} */}
-            {hintText && <p className='input-tip'>{hintText}</p>} 
-          </div> : <div className='input-box'>
+           
+            {hintText && <p className={`input-tip  ${error ? "error" : ""}`}>{hintText}</p>} 
+          </div> : <div className={`input-box ${error ? "error" : ""}`}>
             <textarea name="" id="" required cols="30" rows="3"></textarea>
             <span>{label}</span>
-            {/* {error === "" ? hintShow ? <p className='input-tip'>{hintText}</p> : "" : <p className='input-error'>{error}</p>} */}
-            {hintText && <p className='input-tip'>{hintText}</p>} 
+           
+            {hintText && <p className={`input-tip  ${error ? "error" : ""}`}>{hintText}</p>} 
           </div>
 
       }

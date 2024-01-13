@@ -12,6 +12,7 @@ import { Form } from "react-bootstrap";
 import Button from "../Button";
 import TermsAndCondition from "../TermsAndCondition";
 import { Swiper, SwiperSlide } from "swiper/react";
+import ImageCarouselRadioBtn from "../ImageCarouselRadioBtn";
 const ProductDetail = () => {
   // const { productIndex } = useParams();
   // const navigate=useNavigate();
@@ -30,10 +31,15 @@ const ProductDetail = () => {
 
   const [selectedOption, setSelectedOption] = useState('');
   const [sendNowOrLater, setSendNowOrLater] = useState('');
+  const [selectedImage, setSelectedImage] = useState(0);
 
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
+    console.log(event.target.value);
   };
+  const handleRadioChange = (index) => {
+    setSelectedImage(index);
+};
   const options = [
     { value: 'Buy for Self', label: 'Buy for Self' },
     { value: 'Gift to Someone', label: 'Gift to Someone' },
@@ -92,24 +98,12 @@ const ProductDetail = () => {
   const SendNowOrLaterRadioBtns = () => sendNowOrLaterBtnArr.map((obj, index) => <RadioBox key={index} onOptionChange={handlesetSendNowOrLaterChange} selectedOption={sendNowOrLater} options={[{ value: obj.value, label: obj.label }]} className={"byforself-pric"} />)
   return (
     <>
-      <div className={"mainConatin"}>
+      <div className="mainConatiner">
         <div className={"backBtn"}>
- "         <img src="/Images/left-arrow.svg" onClick={() => navigate(-1)} alt="" />
+          <img src="/Images/left-arrow.svg" onClick={() => navigate(-1)} alt="" />
           <img src="/Images/search-icon.svg" alt="" />
         </div>
         <div className={""}>
-          {/* <div className={"cardDetails"}>
-            <CustomCard label={true} tag={true}/>
-            <Redeemable />
-            <Offers />
-          </div>
-          <div className={"cardForm}>
-"            <div className="text-center line-height-0">
-              <RadioBox options={options} selectedOption={selectedOption} onOptionChange={handleOptionChange} className="product-selforgift-btn" />
-            </div>
-            <ByForSelfFrom />
-            <GiftForSomeoneFrom />
-          </div> */}
           <div className="row">
             <div className="col-md-6 col-lg-4">
               <CustomCard label={true} tag={true} />
@@ -133,9 +127,7 @@ const ProductDetail = () => {
                         <PriceRadioBtns />
                       </div>
                       <label className='form-label'>Or</label>
-
                       <CustomInput label={"Enter Amount"} hintText={"Min: ₹100, Max: ₹1,00,000"} hintShow={true} />
-
                       <CustomInput label={"Quantity"} hintText={"Min: 1, Max: 10"} hintShow={true} />
                     </div>
                   </div>
@@ -194,7 +186,6 @@ const ProductDetail = () => {
               <div className='radiobtn-group'>
                 <Swiper
                   slidesPerView={3.2}
-                  spaceBetween={16}
                   loop={true}
                 >
                   {
@@ -205,8 +196,8 @@ const ProductDetail = () => {
               <label className='form-label'>
                 Select a Theme
               </label>
-              <div className='radiobtn-group gift'>
-                <Swiper
+              <div className='radiobtn-group '>
+                {/* <Swiper
                   slidesPerView={3.1}
                   spaceBetween={10}
                   loop={true}
@@ -215,7 +206,8 @@ const ProductDetail = () => {
                   <SwiperSlide><div className='each-slide-container'><CustomCard /></div></SwiperSlide>
                   <SwiperSlide><div className='each-slide-container'><CustomCard /></div></SwiperSlide>
                   <SwiperSlide><div className='each-slide-container'><CustomCard /></div></SwiperSlide>
-                </Swiper>
+                </Swiper> */}
+                <ImageCarouselRadioBtn onChange={handleRadioChange} selectedImage={selectedImage} />
               </div>
               <CustomInput label={"Email Subject"} hintText={"Max 24 characters"} hintShow={true} />
               <CustomInput type='textarea' label={"Personal Message"} hintText={"Min: ₹100, Max: ₹1,00,000"} hintShow={true} />

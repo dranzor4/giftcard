@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import "./GiftForSomeoneFrom.css"
+// import "./GiftForSomeoneFrom.css"
 import CustomInput from '../CustomInput'
 import NetEffecttive from '../NetEffecttive'
 import RadioBox from '../RadioBox'
