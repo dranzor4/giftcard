@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./ProductDetail.module.css";
+import "./ProductDetail.css";
 import CustomCard from "../CustomCard/index";
 import RadioBox from "../RadioBox";
 import GiftForSomeoneFrom from "../GiftForSomeoneFrom";
@@ -68,22 +68,22 @@ const ProductDetail = () => {
   ]
   let giftCategoryArr = [
     {
-        value: "best_wishes",
-        label: "Best Wishes"
+      value: "best_wishes",
+      label: "Best Wishes"
     },
     {
-        value: "cccasions",
-        label: "Occasions"
+      value: "cccasions",
+      label: "Occasions"
     },
     {
-        value: "festival",
-        label: "Festival"
+      value: "festival",
+      label: "Festival"
     },
     {
-        value: "anniversary",
-        label: "Anniversary"
+      value: "anniversary",
+      label: "Anniversary"
     }
-]
+  ]
   const handlesetSendNowOrLaterChange = (event) => {
     setSendNowOrLater(event.target.value);
   };
@@ -92,33 +92,33 @@ const ProductDetail = () => {
   const SendNowOrLaterRadioBtns = () => sendNowOrLaterBtnArr.map((obj, index) => <RadioBox key={index} onOptionChange={handlesetSendNowOrLaterChange} selectedOption={sendNowOrLater} options={[{ value: obj.value, label: obj.label }]} className={"byforself-pric"} />)
   return (
     <>
-      <div className={styles.mainConatiner}>
-        <div className={styles.backBtn}>
-          <img src="/Images/left-arrow.svg" onClick={() => navigate(-1)} alt="" />
+      <div className={"mainConatin"}>
+        <div className={"backBtn"}>
+ "         <img src="/Images/left-arrow.svg" onClick={() => navigate(-1)} alt="" />
           <img src="/Images/search-icon.svg" alt="" />
         </div>
         <div className={""}>
-          {/* <div className={styles.cardDetails}>
+          {/* <div className={"cardDetails"}>
             <CustomCard label={true} tag={true}/>
             <Redeemable />
             <Offers />
           </div>
-          <div className={styles.cardForm}>
-            <div className="text-center line-height-0">
+          <div className={"cardForm}>
+"            <div className="text-center line-height-0">
               <RadioBox options={options} selectedOption={selectedOption} onOptionChange={handleOptionChange} className="product-selforgift-btn" />
             </div>
             <ByForSelfFrom />
             <GiftForSomeoneFrom />
           </div> */}
           <div className="row">
-            <div className="col-md-6">
+            <div className="col-md-6 col-lg-4">
               <CustomCard label={true} tag={true} />
               <Redeemable />
               <Offers />
             </div>
-            <div className={`${styles.productForm} | col-md-6`}>
+            <div className={`${"productForm"} | col-md-6 col-lg-8`}>
               <div className={`row`}>
-                <div className={`${styles.gridForm} row`}>
+                <div className={`${"gridForm"} row`}>
                   <div className="form-toggle ">
                     <div className="text-center line-height-0">
                       <RadioBox options={options} selectedOption={selectedOption} onOptionChange={handleOptionChange} className="product-selforgift-btn" />
@@ -139,7 +139,7 @@ const ProductDetail = () => {
                       <CustomInput label={"Quantity"} hintText={"Min: 1, Max: 10"} hintShow={true} />
                     </div>
                   </div>
-                  <div className={styles.form2}>
+                  <div className={"form2"}>
                     <NetEffecttive />
                   </div>
                 </div>
@@ -150,7 +150,7 @@ const ProductDetail = () => {
                     </div>
 
                     <div className="row">
-                      <div className='form-sms-or-mail-section col-md-6'>
+                      <div className='form-sms-or-mail-section col-lg-6'>
                         <label className='form-label'>How would you like to send it?</label>
                         <div className='checkbox-group'>
                           <Form.Check
@@ -168,7 +168,7 @@ const ProductDetail = () => {
                         <label className='form-label'>How would you like to send it?</label>
                         <SendNowOrLaterRadioBtns />
                       </div>
-                      <div className='form-user-details col-md-6'>
+                      <div className='form-user-details col-lg-6'>
                         <label className='form-label'>Who is this gift for?</label>
                         <p className='form-light-text'>Gift card will be delivered to this Mobile number and Email ID</p>
                         <CustomInput label={"First Name"} />
@@ -182,10 +182,10 @@ const ProductDetail = () => {
               </div>
             </div>
           </div>
-          <div className="row col-md-9  float-end">
-          <div className='form-divider'>
-                <h3><span>Personalise your Gift Card</span></h3>
-              </div>
+          <div className="row col-md-9">
+            <div className='form-divider'>
+              <h3><span>Personalise your Gift Card</span></h3>
+            </div>
             <div className="col-md-6"></div>
             <div className='form-personalise-section col-md-6 '>
               <label className='form-label'>
@@ -200,7 +200,6 @@ const ProductDetail = () => {
                   {
                     giftCategoryArr.map((ele) => <SwiperSlide><RadioBox onOptionChange={handleOptionChange} selectedOption={selectedOption} options={[{ value: ele.value, label: ele.label }]} className={"byforself-pric"} /></SwiperSlide>)
                   }
-
                 </Swiper>
               </div>
               <label className='form-label'>
