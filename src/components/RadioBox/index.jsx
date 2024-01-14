@@ -5,7 +5,6 @@
 import React from 'react';
 import './RadioBox.css';
 const RadioBox = ({ options, selectedOption, onOptionChange, className }) => {
-  
   return (
     <div className={`custom-toggle ${className ? className : ''} ${options.length > 1 ? 'grouped' : ''}` }>
       {options.map((option,index) => (

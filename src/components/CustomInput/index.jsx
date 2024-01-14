@@ -8,12 +8,12 @@ const CustomInput = ({ type = "text", onChange, label, error = true, value, hint
         type === "text" ?
           <div className={`input-box ${error ? "error" : ""}`}>
            
-            <input type={type} required />
+            <input type={type} required onChange={onChange} value={value}/>
             <span>{label}</span>
            
             {hintText && <p className={`input-tip  ${error ? "error" : ""}`}>{hintText}</p>} 
           </div> : <div className={`input-box ${error ? "error" : ""}`}>
-            <textarea name="" id="" required cols="30" rows="3"></textarea>
+            <textarea name="" id="" required cols="30" rows="3" onChange={onChange}></textarea>
             <span>{label}</span>
            
             {hintText && <p className={`input-tip  ${error ? "error" : ""}`}>{hintText}</p>} 
