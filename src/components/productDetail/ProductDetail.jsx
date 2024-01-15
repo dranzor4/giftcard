@@ -45,7 +45,7 @@ const ProductDetail = () => {
     emailMessage: ""
   })
   console.log(formFields);
-  const [formToggle, setFormToggle] = useState("")
+  const [formToggle, setFormToggle] = useState("buy-for-self")
   const [selectedOption, setSelectedOption] = useState('');
   const [sendNowOrLater, setSendNowOrLater] = useState('');
   const [selectedImage, setSelectedImage] = useState(0);
@@ -58,8 +58,8 @@ const ProductDetail = () => {
     setSelectedImage(index);
   };
   const options = [
-    { value: 'Buy for Self', label: 'Buy for Self' },
-    { value: 'Gift to Someone', label: 'Gift to Someone' },
+    { value: 'buy-for-self', label: 'Buy for Self' },
+    { value: 'gift-to-someone', label: 'Gift to Someone' },
   ];
   let PriceRadioBtnArry = [
     {
@@ -151,8 +151,8 @@ const ProductDetail = () => {
                   <div className="form-toggle ">
                     <div className="text-center line-height-0">
                       <RadioBox options={options}
-                        selectedOption={selectedOption}
-                        onOptionChange={handleOptionChange}
+                        selectedOption={formToggle}
+                        onOptionChange={(event) => setFormToggle(event.target.value)}
                         className="product-selforgift-btn" />
                     </div>
                   </div>
@@ -187,7 +187,7 @@ const ProductDetail = () => {
                     <NetEffecttive />
                   </div>
                 </div>
-                <div className="row">
+                {formToggle === "gift-to-someone" ? <div className="row">
                   <div className='form-delivery-details-section '>
                     <div className='form-divider'>
                       <h3><span>Delivery Details</span></h3>
@@ -242,16 +242,21 @@ const ProductDetail = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> : null}
               </div>
             </div>
           </div>
           <div className="row col-md-9">
-            <div className='form-divider'>
+            {
+              formToggle === "gift-to-someone" ? <>
+              <div className='form-divider'>
               <h3><span>Personalise your Gift Card</span></h3>
             </div>
+            </> : null
+            }
             <div className="col-md-6"></div>
-            <div className='form-personalise-section col-md-6 '>
+            <div className='form-personalise-section col-md-6'>
+              {formToggle === "gift-to-someone" ?<>
               <label className='form-label'>
                 Choose Category
               </label>
@@ -284,23 +289,24 @@ const ProductDetail = () => {
               <CustomInput
                 label={"Email Subject"}
                 hintText={"Max 24 characters"}
-                hintShow={true} 
+                hintShow={true}
                 onChange={(event) => setFormFields({ ...formFields, "emailSubject": event.target.value })}
                 value={formFields.emailSubject}
-                />
-                
+              />
+
               <CustomInput
                 type='textarea'
                 label={"Personal Message"}
                 hintText={"Min: ₹100, Max: ₹1,00,000"}
-                hintShow={true} 
+                hintShow={true}
                 onChange={(event) => setFormFields({ ...formFields, "emailMessage": event.target.value })}
                 value={formFields.emailMessage}
-                />
-                
+              />
+
               <div className='form-btn'>
                 <Button>Preview eGift Card</Button>
               </div>
+              </> : null} 
               <TermsAndCondition />
             </div>
 

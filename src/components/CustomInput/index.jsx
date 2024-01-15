@@ -1,7 +1,7 @@
 import React from 'react'
 import "./CustomInput.css"
 
-const CustomInput = ({ type = "text", onChange, label, error = true, value, hintShow, hintText, }) => {
+const CustomInput = ({ type = "text", onChange, label, error = false, value, hintShow, hintText, }) => {
   return (
     <>
       {

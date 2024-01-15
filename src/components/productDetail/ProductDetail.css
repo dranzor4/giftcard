@@ -77,6 +77,12 @@
 .p-l-50{
   padding-left: 50px;
 }
+.productForm{
+  margin-top: 40px;
+}
+.form2{
+  padding-top: 12px;
+}
 
 
 @media(min-width: 768px){
@@ -165,6 +171,7 @@ form {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  margin-top: 24px;
 
 }
 
