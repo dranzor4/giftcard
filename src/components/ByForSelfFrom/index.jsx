@@ -6,7 +6,6 @@ import NetEffecttive from '../NetEffecttive';
 import TermsAndCondition from '../TermsAndCondition';
 
 const ByForSelfFrom = () => {
-
     const [selectedOption, setSelectedOption] = useState('');
     const handleOptionChange = (event) => {
         setSelectedOption(event.target.value);

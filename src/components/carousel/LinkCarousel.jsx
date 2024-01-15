@@ -2,7 +2,7 @@ import React from "react";
 import { cardData } from "../../utils/constants/constants";
 import { Card } from "../Cards/Card";
 import { Link } from "react-router-dom";
-import styles from "./Carousel.module.css";
+import  "./Carousel.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, FreeMode } from "swiper/modules";
 import "swiper/css/free-mode";
@@ -12,10 +12,10 @@ import "swiper/css/effect-fade";
 const Carousel = (props) => {
   const { name, animationDelay} = props;
   return (
-    <div className={styles.carouselContainer}>
-      <div className={styles.carouselHeader}>
-        <div className={styles.carouselDeal}>{name}</div>
-        <div className={styles.carouselViewAll}>View all</div>
+    <div className="carouselContainer">
+      <div className="carouselHeader">
+        <div className="carouselDeal">{name}</div>
+        <div className="carouselViewAll">View all</div>
       </div>
       <Swiper
         spaceBetween={50}
@@ -55,15 +55,15 @@ const Carousel = (props) => {
           },
         }}
       >
-        <div className={styles.carousel}>
+        <div className="carousel">
           {cardData.map((data, index) => (
             <SwiperSlide key={index}>
               {" "}
               <Link
-                to={`/productDetail/${index}`}
-                className={styles.cardNavigation}
+                to={`/productDetail/${data.id}`}
+                className="cardNavigation"
               >
-                <div className={styles.cardParentContainer}>
+                <div className="cardParentContainer">
                 <Card data={data} index={index} />
                 </div>
               </Link>
