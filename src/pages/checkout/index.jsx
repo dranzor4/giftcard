@@ -1,6 +1,6 @@
 import React from "react";
 import CheckoutCmp from "../../components/CheckoutCmp";
-const checkout = () => {
+const Checkout = () => {
   return (
     <div>
       <CheckoutCmp />
@@ -8,4 +8,4 @@ const checkout = () => {
   );
 };
 
-export default checkout;
+export default Checkout;
