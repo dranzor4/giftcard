@@ -1,0 +1,9 @@
+.img-carousel-btn.selected{
+    box-shadow: 5px 5px 10px #ccc;
+}
+.img-carousel-btn img{
+    width: 100%;
+}
+.img-carousel-btn input{
+    display: none;
+}
