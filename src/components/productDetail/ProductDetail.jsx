@@ -238,6 +238,7 @@ const ProductDetail = () => {
                           label={"Mobile Number"}
                           onChange={(event) => setFormFields({ ...formFields, "mobileNo": event.target.value })}
                           value={formFields.mobileNo}
+                          type="number"
                         />
                       </div>
                     </div>

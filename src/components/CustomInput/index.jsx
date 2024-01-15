@@ -5,20 +5,32 @@ const CustomInput = ({ type = "text", onChange, label, error = false, value, hin
   return (
     <>
       {
-        type === "text" ?
-          <div className={`input-box ${error ? "error" : ""}`}>
+        type === "text" && <>
+         <div className={`input-box ${error ? "error" : ""}`}>
            
-            <input type={type} required onChange={onChange} value={value}/>
+           <input type={type} required onChange={onChange} value={value}/>
+           <span>{label}</span>
+          
+           {hintText && <p className={`input-tip  ${error ? "error" : ""}`}>{hintText}</p>} 
+         </div></>
+      }
+      {
+        type === "textarea" && <>
+        <div className='input-box'>
+            <textarea name="" id="" required cols="30" rows="3"></textarea>
             <span>{label}</span>
-           
-            {hintText && <p className={`input-tip  ${error ? "error" : ""}`}>{hintText}</p>} 
-          </div> : <div className={`input-box ${error ? "error" : ""}`}>
-            <textarea name="" id="" required cols="30" rows="3" onChange={onChange}></textarea>
-            <span>{label}</span>
-           
-            {hintText && <p className={`input-tip  ${error ? "error" : ""}`}>{hintText}</p>} 
+            {/* {error === "" ? hintShow ? <p className='input-tip'>{hintText}</p> : "" : <p className='input-error'>{error}</p>} */}
+            {hintText && <p className='input-tip'>{hintText}</p>} 
           </div>
-
+        </>
+      }
+      {
+        type === "number" && <>
+         <div className={`input-box ${error ? "error" : ""} number`}>
+          <input type={type} required onChange={onChange} value={value} placeholder='+91'/>
+           <span>{label}</span>
+           {hintText && <p className={`input-tip  ${error ? "error" : ""}`}>{hintText}</p>} 
+         </div></>
       }
     </>
   )
