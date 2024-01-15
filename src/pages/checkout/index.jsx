@@ -1,9 +1,11 @@
-import React from 'react'
-
+import React from "react";
+import CheckoutCmp from "../../components/CheckoutCmp";
 const checkout = () => {
   return (
-    <div>checkout</div>
-  )
-}
+    <div>
+      <CheckoutCmp />
+    </div>
+  );
+};
 
 export default checkout;

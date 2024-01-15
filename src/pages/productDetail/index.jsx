@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./ProductDetail.css";
-import CustomCard from "../CustomCard/index";
-import RadioBox from "../RadioBox";
-import GiftForSomeoneFrom from "../GiftForSomeoneFrom";
-import Offers from "../Offers";
-import Redeemable from "../Redeemable";
+import CustomCard from "../../components/CustomCard/index";
+import RadioBox from "../../components/RadioBox";
+import GiftForSomeoneFrom from "../../components/GiftForSomeoneFrom";
+import Offers from "../../components/Offers";
+import Redeemable from "../../components/Redeemable"
 import { useNavigate } from "react-router-dom";
 
 const ProductDetail = () => {
