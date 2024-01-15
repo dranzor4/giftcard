@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Carousel.module.css";
+import "./Carousel.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, FreeMode } from "swiper/modules";
 import ProductDetailCard from "../Cards/ProductDetailCard";
@@ -10,9 +10,8 @@ import "swiper/css/effect-fade";
 
 const ImageCarousel = (props) => {
   const { cardData, animationDelay } = props;
-  console.log("carddata", cardData);
   return (
-    <div className={styles.carouselContainer}>
+    <div className="carouselContainer">
       <Swiper
         spaceBetween={50}
         slidesPerView={3.5}
@@ -54,8 +53,8 @@ const ImageCarousel = (props) => {
           {cardData1.map((data, index) => {
             return (
               <SwiperSlide key={index}>
-                <div className={styles.cardParentContainer}>
-                  <div className={styles.imageContainer}>
+                <div className="cardParentContainer">
+                  <div className="imageContainer">
                     <ProductDetailCard cardData={data} />
                   </div>
                 </div>
