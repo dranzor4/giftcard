@@ -3,7 +3,7 @@ import "./NetEffecttive.css"
 const NetEffecttive = () => {
   return (
     <div className='net-effective'>
-        <p className=''>Net Effective Price: ₹850 </p>
+        <p className='text'>Net Effective Price <img src='/Images/tooltips.svg' /> </p>
         <button className='button'>Know How</button>
     </div>
   )
