@@ -10,6 +10,9 @@
 a{
   text-decoration: none;
 }
+.row{
+  --bs-gutter-x: 0;
+}
 
 @font-face {
   font-family: "Poppins";   /*Can be any text*/

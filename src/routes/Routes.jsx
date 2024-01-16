@@ -20,7 +20,6 @@ const Routers = () => {
                 <Route path="/checkout" element={<Checkout/>}/>
                 <Route path="/my-gift-card" element={<MyGiftCard/> }/>
             </Routes>
-        
     );
 };
 
