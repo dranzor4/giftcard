@@ -6,6 +6,7 @@ import ProductDetail from '../components/productDetail/ProductDetail';
 import MyProfile from '../pages/mygiftcard';
 import CalculatorModal from '../components/Calculator';
 import MyGiftCard from '../pages/mygiftcard';
+import Checkout from '../pages/checkout';
 
 
 
@@ -17,6 +18,8 @@ const Routers = () => {
                 <Route exact path="/my-profile" element={<MyProfile/> }/>
                 <Route path="/calculator" element={<CalculatorModal/> }/>
                 <Route path="/my-gift-card" element={<MyGiftCard/> }/>
+                <Route  path="/checkout" element={<Checkout/>} />
+
             </Routes>
     );
 };
