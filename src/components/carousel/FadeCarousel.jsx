@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Carousel.module.css"
+import "./Carousel.css"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {Autoplay,EffectFade,Pagination} from 'swiper/modules';
 import 'swiper/css';
@@ -8,13 +8,11 @@ import 'swiper/css/effect-fade';
 
 const FadeCarousel = () => {
   return (
-    <div className={styles.FadeCarouselContainer}>
+    <div className="FadeCarouselContainer">
     <Swiper
       spaceBetween={50}
       slidesPerView={1}
       rewind={true}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
       effect={'fade'}
       pagination={{
         dynamicBullets: true,
@@ -27,10 +25,9 @@ const FadeCarousel = () => {
       }}
       loop={true}
     >
-      <div className={styles.carousel} >
-      <SwiperSlide><img src="./images/nature1.jpg" alt="nature" className={styles.imageSize}/></SwiperSlide>
-      <SwiperSlide><img src="./images/tree.jpg" alt="tree" className={styles.imageSize}/></SwiperSlide>
-      <SwiperSlide><img src="./images/nature2.jpg" alt="nature" className={styles.imageSize}/></SwiperSlide>
+      <div className="car" >
+      <SwiperSlide><img src="./images/banner1.png" alt="nature" className="imageSize"/></SwiperSlide>
+      <SwiperSlide><img src="./images/banner2.png" alt="tree" className="imageSize"/></SwiperSlide>
     </div>
     </Swiper>
  

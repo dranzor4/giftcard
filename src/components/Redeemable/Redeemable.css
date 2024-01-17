@@ -1,0 +1,45 @@
+.redeemable-container {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+.containerHeader {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 40px;
+  color: var(--header-text-color);
+  margin-right: 20px;
+  text-transform: uppercase;
+}
+.online {
+  color: var(--green-text-color);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 24.004px;
+  padding: 0px 12px;
+  gap: 8px;
+  border-radius: 100px;
+  background-color: #e6f2e7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+.online img,
+.offline img {
+  width: 12px;
+  height: 12px;
+}
+.offline {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 24.004px;
+  padding: 0px 12px;
+  gap: 8px;
+  border-radius: 100px;
+  background-color: #e6f2e7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

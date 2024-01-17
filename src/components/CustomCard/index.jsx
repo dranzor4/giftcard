@@ -1,17 +1,19 @@
 import React from 'react'
-import style from "./CustomCard.module.css"
+import "./CustomCard.css"
 
-const CustomCard = () => {
+const CustomCard = ({ label, tag=false }) => {
   return (
-    <div className={style.card}>
-      <div className={style.cardHeader}>
+    <div className="card">
+      <div className="cardHeader">
         <img src="/Images/amazon-card.png" alt="card" />
+        {tag && <div className="cardtag"><p>3%</p><p>OFF</p></div>}
       </div>
-      <div className={style.cardBody}>
-        <p className={style.cardBoldText}>Amazon Shopping Voucher</p>
-        <p className={style.cardLightText}>Validity: 1 year from the date of issue</p>
-        <p></p>
-      </div>
+      {
+        label && <div className="cardBody">
+          <p className="cardBoldText">Amazon Shopping Voucher</p>
+          <p className="cardLightText">Validity: 1 year from the date of issue</p>
+        </div>
+      }
     </div>
   )
 }

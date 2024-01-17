@@ -1,0 +1,20 @@
+.p-b-8{
+    padding-bottom: 8px;
+}
+
+.buy-for-sefl-form form{
+    padding-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.buy-for-sefl-form .form-label{
+    color: #181C2D;
+    font-size: 14px;
+    font-weight: 500;
+}
+.buy-for-sefl-form .radio-group-box{
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}

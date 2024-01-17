@@ -1,0 +1,17 @@
+.defaultButton {
+  padding: 5px 30px;
+  color: var(--bg-blue-color);
+  border: none;
+  background-color: var(--white-color);
+  font-weight: 600;
+}
+.checkoutApplyButton {
+  padding: 14px 24px 14px 24px;
+  font-size: 12px;
+  line-height: 16px;
+  border-radius: 0px 8px 8px 0px;
+  width: 100%;
+  background: var(--white-color);
+  color: var(--bg-blue-color);
+  border: 1px solid var(--bg-blue-color);
+}
