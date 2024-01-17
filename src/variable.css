@@ -1,20 +1,20 @@
-:root{
-    --bg-color-100: #1D86FF;
-    --header-text-color:#1E293B;
-    --bg-blue-color:#1D86FF;
-    --bg-button-container-color:rgba(208, 231, 255, 0.30);
-    --bg-initial-button-color:rgba(29, 134, 255, 0.10);
-    --white-color:#ffff;
-    --box-shadow-color:rgba(0, 74, 143, 0.08);
-    --green-color:#25a42f;
-    --green-text-color:#25A42F;
-    --text-color:#64748b;
-    --border-color:#E2E8F0;
-    --button-border-color:#CBD5E1;
-    
-    /* mobile responsive icon size */
+:root {
+  --bg-color-100: #1d86ff;
+  --header-text-color: #1e293b;
+  --bg-blue-color: #1d86ff;
+  --bg-button-container-color: rgba(208, 231, 255, 0.3);
+  --bg-initial-button-color: rgba(29, 134, 255, 0.1);
+  --white-color: #ffff;
+  --box-shadow-color: rgba(0, 74, 143, 0.08);
+  --green-color: #25a42f;
+  --green-text-color: #25a42f;
+  --text-color: #64748b;
+  --border-color: #e2e8f0;
+  --button-border-color: #cbd5e1;
+  --box-shadow-color: #004a8f14;
 
-    --mobile-res-icon-width : 28px;
-    --mobile-res-icon-hight : 28px;
-    
+  /* mobile responsive icon size */
+
+  --mobile-res-icon-width: 28px;
+  --mobile-res-icon-hight: 28px;
 }
