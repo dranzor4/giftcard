@@ -1,0 +1,82 @@
+.promoCodeContainer {
+  border-radius: 0px, 8px, 8px, 0px;
+}
+.promoCodeInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 16px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--button-border-color);
+}
+.orderSummaryContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 8px 16px 8px 16px;
+  /* box-shadow: 0px 1px 8px 0px var(--box-shadow-color); */
+  box-shadow: 0px 6px 7px -7px var(--box-shadow-color);
+}
+.orderSummaryContainer img {
+  padding: 10px 0px;
+  margin-right: 20px;
+}
+.orderSummary {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+  color: var(--header-text-color);
+}
+.checkoutNormalInp {
+  width: 70%;
+}
+.checkoutButton {
+  width: 30%;
+}
+.orderAmountDetail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.orderPayable {
+  border-bottom: 1px solid var(--button-border-color);
+  padding-bottom: 20px;
+}
+.orderDetailContainer {
+  padding: 30px 0px;
+  margin: 0px 16px;
+  border-bottom: 1px solid var(--button-border-color);
+}
+.totalPayableDetail {
+  padding: 30px 0px;
+  margin: 0px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.orderAmountDetail .totalOrder {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: var(--header-text-color);
+}
+.orderAmountDetail .lightTotalOrder {
+  font-weight: 400;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 20px;
+}
+.totalPayableDetail .totalOrder {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: var(--header-text-color);
+}
+.totalPayableDetail .totalOrder {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: var(--header-text-color);
+}
