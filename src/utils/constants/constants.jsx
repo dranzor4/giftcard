@@ -1,7 +1,8 @@
 const home = "/";
-const about = "/aboutus";
+const about = "/aboutUs";
 export const cardData = [
   {
+    id:1,
     header: "Amazon Shopping Voucher Special",
     paragraph: "Promo code",
     batch: "10% off",
@@ -9,6 +10,7 @@ export const cardData = [
     imageShow:"/Images/atm1.png"
   },
   {
+    id:2,
     header: "Croma E-voucher",
     paragraph: "Promo code",
     batch: "20% off",
@@ -16,6 +18,7 @@ export const cardData = [
     imageShow:"/Images/atm2.png"
   },
   {
+    id:3,
     header: "Zomato E-voucher",
     paragraph: "Promo code",
     batch: "10% off",
@@ -23,6 +26,7 @@ export const cardData = [
     imageShow:"/Images/atm3.png"
   },
   {
+    id:4,
     header: "Myntra-voucher",
     paragraph: "Promo Code",
     batch: "30% off",
@@ -30,6 +34,7 @@ export const cardData = [
     imageShow:"/Images/atm4.png"
   },
   {
+    id:5,
     header: "Uber E-voucher",
     paragraph: "Promo Code",
     batch: "15% off",
@@ -38,6 +43,7 @@ export const cardData = [
 
   },
   {
+    id:6,
     header: "Swiggy E-voucher",
     paragraph: "Promo Code",
     batch: "5% off",
@@ -45,6 +51,7 @@ export const cardData = [
     imageShow:"/Images/atm7.png"
   },
   {
+    id:7,
     header: "Dominos E-voucher",
     paragaph: "Promo Code",
     batch: "1% off",

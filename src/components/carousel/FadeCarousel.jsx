@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Carousel.module.css"
+import "./Carousel.css"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {Autoplay,EffectFade,Pagination} from 'swiper/modules';
 import 'swiper/css';
@@ -8,7 +8,7 @@ import 'swiper/css/effect-fade';
 
 const FadeCarousel = () => {
   return (
-    <div className={styles.FadeCarouselContainer}>
+    <div className="FadeCarouselContainer">
     <Swiper
       spaceBetween={50}
       slidesPerView={1}
@@ -25,9 +25,9 @@ const FadeCarousel = () => {
       }}
       loop={true}
     >
-      <div className={styles.car} >
-      <SwiperSlide><img src="./images/banner1.png" alt="nature" className={styles.imageSize}/></SwiperSlide>
-      <SwiperSlide><img src="./images/banner2.png" alt="tree" className={styles.imageSize}/></SwiperSlide>
+      <div className="car" >
+      <SwiperSlide><img src="./images/banner1.png" alt="nature" className="imageSize"/></SwiperSlide>
+      <SwiperSlide><img src="./images/banner2.png" alt="tree" className="imageSize"/></SwiperSlide>
     </div>
     </Swiper>
  
