@@ -13,22 +13,8 @@ import Button from "../Button";
 import TermsAndCondition from "../TermsAndCondition";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ImageCarouselRadioBtn from "../ImageCarouselRadioBtn";
-import CustomSelect from "../CustomSelect";
 import RewardSummaryDesk from "../RewardSummaryDesk";
 const ProductDetail = () => {
-  // const { productIndex } = useParams();
-  // const navigate=useNavigate();
-  // const data = cardData[productIndex];
-  // let customClass = {
-  //   product: styles.product,
-  //   card: styles.card,
-  //   cardHeader: styles.cardHeader,
-  //   cardContent: styles.cardContent,
-  //   cardImage: styles.cardImage,
-  //   cardBadge: styles.cardBadge,
-  //   validityText: styles.validityText,
-  // };
-
   const navigate = useNavigate()
 
   const [formFields, setFormFields] = useState({
@@ -49,15 +35,10 @@ const ProductDetail = () => {
   console.log(formFields);
   const [formToggle, setFormToggle] = useState("buy-for-self")
   const [selectedOption, setSelectedOption] = useState('');
-  const [sendNowOrLater, setSendNowOrLater] = useState('');
-  const [selectedImage, setSelectedImage] = useState(0);
 
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
     console.log(event.target.value);
-  };
-  const handleRadioChange = (index) => {
-    setSelectedImage(index);
   };
   const options = [
     { value: 'buy-for-self', label: 'Buy for Self' },
@@ -274,16 +255,6 @@ const ProductDetail = () => {
                   Select a Theme
                 </label>
                 <div className='radiobtn-group '>
-                  {/* <Swiper
-                  slidesPerView={3.1}
-                  spaceBetween={10}
-                  loop={true}
-                >
-                  <SwiperSlide><div className='each-slide-container'><CustomCard /></div></SwiperSlide>
-                  <SwiperSlide><div className='each-slide-container'><CustomCard /></div></SwiperSlide>
-                  <SwiperSlide><div className='each-slide-container'><CustomCard /></div></SwiperSlide>
-                  <SwiperSlide><div className='each-slide-container'><CustomCard /></div></SwiperSlide>
-                </Swiper> */}
                   <ImageCarouselRadioBtn onChange={(index) => setFormFields({ ...formFields, "giftCardTheme": index })} selectedImage={formFields.giftCardTheme} />
                 </div>
                 <CustomInput
