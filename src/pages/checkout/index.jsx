@@ -5,7 +5,7 @@ const Checkout = () => {
   return (
     <div>
       <CheckoutCmp />
-      <CheckoutCmpBase />
+      {/* <CheckoutCmpBase /> */}
     </div>
   );
 };

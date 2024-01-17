@@ -2,6 +2,8 @@ import React from "react";
 import NormalInput from "../NormalInput";
 import Button from "../Button";
 import "./CheckoutCmp.css";
+import RewardSummaryDesk from "../RewardSummaryDesk";
+import CheckoutCmpBase from "../CheckoutCmpBase";
 
 const CheckoutCmp = () => {
   return (
@@ -35,10 +37,17 @@ const CheckoutCmp = () => {
             </div>
           </div>
 
+
           <div className="totalPayableDetail">
             <div className="totalOrder">Total Payable</div>
             <div className="totalOrder">2015</div>
           </div>
+        </div>
+        <div className="crps-container">
+          <RewardSummaryDesk />
+        </div>
+        <div>
+        <CheckoutCmpBase />
         </div>
       </div>
     </div>
