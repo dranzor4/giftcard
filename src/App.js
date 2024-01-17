@@ -5,6 +5,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "./fonts/Poppins-Regular.ttf";
 import "./variable.css";
 import "./App.css";
+
 const App = () => {
   return (
     <>

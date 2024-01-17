@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 import Style from "./DownBarLogin.module.css"
 import Button from '../Button/Button'
 import TransparentOverlay from "../TransparentOverlay/index"
 const DownBarLogin = ({ toggleDownbar, state }) => {
-    console.log("DownBarLogin render");
+    // console.log("DownBarLogin render");
     return (<>
         <div className={`${Style.downbar} ${state ? Style.active : ""} `}>
             <div className={Style.DownBarheader} onClick={toggleDownbar}>

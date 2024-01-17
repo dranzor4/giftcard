@@ -9,7 +9,7 @@ const CalculatorModal = ({ show, handleClose }) => {
           <div className="modal_cont">
             <div className="modal_items">
             <p><img src="images/Close.svg" alt="" onClick={handleClose}/></p>
-              <div className="title">
+              <div className="calculator_title">
                 <i><img src="images/fa-solid_gifts.svg" alt="" /></i>
                 <span className="title_text">Reward Points Calculator</span>
               </div>

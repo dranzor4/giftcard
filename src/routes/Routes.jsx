@@ -6,6 +6,7 @@ import Login from '../pages/login';
 import ProductDetail from '../components/productDetail/ProductDetail';
 import MyProfile from '../pages/myprofile';
 import CalculatorModal from '../components/Calculator';
+import GiftCard from '../pages/giftCardDetails';
 
 
 
@@ -17,6 +18,7 @@ const Routers = () => {
                 <Route exact path="/productDetail/:productIndex" element={<ProductDetail/>}/>
                 <Route exact path="/my-profile" element={<MyProfile/> }/>
                 <Route path="/calculator" element={<CalculatorModal/> }/>
+                <Route path="/gifts" element={<GiftCard/> }/>
             </Routes>
         
     );
