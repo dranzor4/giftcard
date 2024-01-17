@@ -19,6 +19,8 @@ const Routers = () => {
                 <Route path="/calculator" element={<CalculatorModal/> }/>
                 <Route path="/checkout" element={<Checkout/>}/>
                 <Route path="/my-gift-card" element={<MyGiftCard/> }/>
+                <Route  path="/checkout" element={<Checkout/>} />
+
             </Routes>
     );
 };
