@@ -7,7 +7,7 @@
   align-items: center;
   padding: 0px 16px;
   padding-top: 20px;
-  padding-bottom: 30px;
+  padding-bottom: 32px;
   border-bottom: 1px solid var(--button-border-color);
 }
 .orderSummaryContainer {
@@ -38,20 +38,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 .orderPayable {
   border-bottom: 1px solid var(--button-border-color);
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 }
 .orderDetailContainer {
-  padding: 30px 0px;
-  margin: 0px 16px;
+  padding: 20px 16px;
   border-bottom: 1px solid var(--button-border-color);
 }
 .totalPayableDetail {
-  padding: 30px 0px;
-  margin: 0px 16px;
+  padding: 20px 16px 0 16px; 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -79,4 +77,9 @@
   line-height: 20px;
   font-weight: 500;
   color: var(--header-text-color);
+}
+
+.crps-container{
+  padding: 20px 16px 40px 16px;
+  border-bottom: 1px solid #CBD5E1;
 }
