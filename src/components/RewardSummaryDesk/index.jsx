@@ -39,7 +39,7 @@ const RewardSummaryDesk = () => {
                 </ul>
             </div>
             <div className="rps-footer">
-                <NetEffecttive />
+                <NetEffecttive price={"800"}/>
             </div>
         </div>
     )
