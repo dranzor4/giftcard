@@ -85,8 +85,8 @@ const generateAccordionBody = (data) => {
   };
 
   return (
-    <Accordion.Body key={data.id}>
-      <Card border="lightgrey" className="">
+    <Accordion.Body key={data.id} className="py-2">
+      <Card border="lightgrey" >
         <Card.Body>
           <Container>
             <Row className="align-items-center border-bottom pb-2">
@@ -100,7 +100,7 @@ const generateAccordionBody = (data) => {
           </Container>
         </Card.Body>
         <Container>
-          <Row className="mb-3">
+          <Row className="mb-2 px-3">
             <Col xs="6">
               <div className={`${style.name}  ${style.label}`} >Available Balance</div>
               <div className={`${style.name} `} style={balanceStyle}>
