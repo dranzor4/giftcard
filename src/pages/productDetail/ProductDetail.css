@@ -311,8 +311,21 @@ form {
 
 .rps-mob-view .rps-header,
 .rps-mob-view .rps-ul,
-.rps-mob-view .net-effective{
-  padding: 0 20px;
+.rps-mob-view .rps-footer .net-effective{
+  padding: 8px 20px;
+}
+.rps-mob-view .reward-point-summery {
+  padding: 20px 0;
+}
+.rps-mob-view .reward-point-summery .rps-header h2{
+  font-size: 16px;
+  font-weight: 600;
+}
+.rps-mob-view .reward-point-summery .custom-select{
+  margin-top: 12px;
+}
+.rps-mob-view .reward-point-summery .rps-body{
+  margin-top: 24px;
 }
 
 .rps-btn{

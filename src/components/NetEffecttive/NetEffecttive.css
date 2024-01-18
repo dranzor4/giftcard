@@ -3,6 +3,7 @@
     justify-content: space-between;
     background-color: #F1F5F9;
     border-radius: 4px;
+    padding: 10px 20px;
 }
 .net-effective .text{
     font-size: 13px;
@@ -15,7 +16,7 @@
     background-color: transparent;
     text-decoration: underline;
     color: #25A42F;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 13px;
 }
 .net-effective p img {
