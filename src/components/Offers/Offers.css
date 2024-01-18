@@ -35,14 +35,15 @@
   display: flex;
   cursor: pointer;
 }
+.offersContainer .offersCode {
+  border-top: 1px solid var(--button-border-color);
+}
 .offersContainer .offers {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   gap: 20px;
-  margin-top: 16px;
-  border-top: 1px solid #CBD5E1;
-  border-bottom: 1px solid #CBD5E1;
+  border-bottom: 1px solid var(--button-border-color);
   padding: 12px 0;
 }
 .offersContainer .offers img {
