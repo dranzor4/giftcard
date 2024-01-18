@@ -306,3 +306,33 @@ form {
   font-weight: 600;
   border-radius: 6px;
 }
+
+/* reward point summary downbar----------- */
+
+.rps-mob-view .rps-header,
+.rps-mob-view .rps-ul,
+.rps-mob-view .net-effective{
+  padding: 0 20px;
+}
+
+.rps-btn{
+  margin-top: 10px;
+  background-color: #1D86FF;
+  color: #ffffff;
+  width: 100%;
+  border-radius: 8px;
+  padding: 14px 24px;
+  font-weight: 600;
+}
+
+
+/* preview gift card downbar----------- */
+
+.pg-mob-view .DownBarContent  img{ 
+  width: 100%;
+}
+.pg-mob-view h3{
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+}

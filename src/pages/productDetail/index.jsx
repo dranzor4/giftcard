@@ -12,8 +12,9 @@ import Button from "../../components/Button";
 import TermsAndCondition from "../../components/TermsAndCondition";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ImageCarouselRadioBtn from "../../components/ImageCarouselRadioBtn";
-import CustomSelect from "../../components/CustomSelect";
 import RewardSummaryDesk from "../../components/RewardSummaryDesk";
+import DownBar from "../../components/DownBar";
+import PreviewGiftCardMob from "../../components/PreviewGiftCardMob";
 const ProductDetail = () => {
   const navigate = useNavigate()
 
@@ -34,17 +35,9 @@ const ProductDetail = () => {
   })
   console.log(formFields);
   const [formToggle, setFormToggle] = useState("buy-for-self")
-  const [selectedOption, setSelectedOption] = useState('');
-  const [sendNowOrLater, setSendNowOrLater] = useState('');
-  const [selectedImage, setSelectedImage] = useState(0);
-
-  const handleOptionChange = (event) => {
-    setSelectedOption(event.target.value);
-    console.log(event.target.value);
-  };
-  const handleRadioChange = (index) => {
-    setSelectedImage(index);
-  };
+  const [isRPSMobOpen, setIsRPSMobOpen] = useState(false);
+  const [isPGOpen, setIsPGOpen] = useState(false);
+  
   const options = [
     { value: 'buy-for-self', label: 'Buy for Self' },
     { value: 'gift-to-someone', label: 'Gift to Someone' },
@@ -109,13 +102,12 @@ const ProductDetail = () => {
     selectedOption={formFields.sendLatterOrNow}
     options={[{ value: obj.value, label: obj.label }]}
     className={"byforself-pric"} />)
-  const GiftCategoryBtn = giftCategoryArr.map((ele) => <SwiperSlide>
-    <RadioBox onOptionChange={handleOptionChange}
-      selectedOption={selectedOption}
-      options={[{ value: ele.value, label: ele.label }]}
-      className={"byforself-pric"}
-    />
-  </SwiperSlide>)
+  const toggleSRPMob = () => {
+    setIsRPSMobOpen(!isRPSMobOpen);
+  };
+  const togglePGMob = () => {
+    setIsPGOpen(!isPGOpen);
+  };
   return (
     <>
       <div className="mainConatiner">
@@ -169,8 +161,12 @@ const ProductDetail = () => {
                     </div>
                   </div>
                   <div className={"form2"}>
-                    {/* <NetEffecttive /> */}
-                    <RewardSummaryDesk />
+                    <div className="ne-mobile">
+                      <NetEffecttive onClick={() => toggleSRPMob()} />
+                    </div>
+                    <div className="ne-desk">
+                      {/* <RewardSummaryDesk /> */}
+                    </div>
                   </div>
                 </div>
                 {formToggle === "gift-to-someone" ? <div className="row">
@@ -260,16 +256,6 @@ const ProductDetail = () => {
                   Select a Theme
                 </label>
                 <div className='radiobtn-group '>
-                  {/* <Swiper
-                  slidesPerView={3.1}
-                  spaceBetween={10}
-                  loop={true}
-                >
-                  <SwiperSlide><div className='each-slide-container'><CustomCard /></div></SwiperSlide>
-                  <SwiperSlide><div className='each-slide-container'><CustomCard /></div></SwiperSlide>
-                  <SwiperSlide><div className='each-slide-container'><CustomCard /></div></SwiperSlide>
-                  <SwiperSlide><div className='each-slide-container'><CustomCard /></div></SwiperSlide>
-                </Swiper> */}
                   <ImageCarouselRadioBtn onChange={(index) => setFormFields({ ...formFields, "giftCardTheme": index })} selectedImage={formFields.giftCardTheme} />
                 </div>
                 <CustomInput
@@ -290,7 +276,7 @@ const ProductDetail = () => {
                 />
 
                 <div className='form-btn'>
-                  <Button>Preview eGift Card</Button>
+                  <Button handleClick={() => togglePGMob()}>Preview eGift Card</Button>
                 </div>
               </> : null}
               <TermsAndCondition />
@@ -299,6 +285,19 @@ const ProductDetail = () => {
           </div>
         </div>
       </div>
+
+      {/* All pop comes from downs */}
+
+      <DownBar toggleDownbar={toggleSRPMob} state={isRPSMobOpen} customClass={"rps-mob-view"}>
+        <RewardSummaryDesk />
+        <Button handleClick={() => toggleSRPMob()} className={"rps-btn"}>Okay</Button>
+      </DownBar>
+      <DownBar toggleDownbar={togglePGMob} state={isPGOpen} customClass={"pg-mob-view"}>
+        <h3>Preview eGift Card</h3>
+        <PreviewGiftCardMob />
+        <Button handleClick={() => togglePGMob()} className={"rps-btn"}>Okay</Button>
+      </DownBar>
+      
     </>
   );
 };
