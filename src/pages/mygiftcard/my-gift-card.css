@@ -19,11 +19,11 @@
   font-size: 12px;
   font-weight: 400;
 }
-.card {
-  max-width: 400px; /* Adjust the max-width based on your design */
-  margin: 0 auto; /* Center the card */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow property */
-}
+/* .card {
+  max-width: 400px; 
+  margin: 0 auto; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+} */
 .profile-image {
   max-width: 80%;
   height: auto;
@@ -64,7 +64,7 @@
   vertical-align: middle;
 }
 .textright {
- text-align: right;
+  text-align: right;
 }
 .accelement {
   display: inline-flex;
@@ -77,6 +77,31 @@
   background: #fff;
   box-shadow: 0px 2px 2px 0px rgba(75, 65, 65, 0.05);
 }
-.label{
-  color: var(--Gray-Gray-500, #64748B);
+.label {
+  color: var(--Gray-Gray-500, #64748b);
+}
+
+.myGiftCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 16px;
+  width: 100%;
+  margin: 12px 0px;
+}
+.headerText {
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+}
+.headerText .headerTextTitle {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  margin-left: 12px;
+}
+.headerText img {
+  margin: 0px 10px;
+  width: 16px;
+  height: 16px;
 }
