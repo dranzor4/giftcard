@@ -30,12 +30,12 @@ const GiftCardDetails = () => {
     {
       key: "Voucher code",
       value: "6987009245612367",
-      icon:"copy.svg",
+      icon: "copy.svg",
     },
     {
       key: "PIN",
       value: "XXXXXX",
-      icon:"eye.svg",
+      icon: "eye.svg",
     },
   ];
   return (
@@ -51,7 +51,7 @@ const GiftCardDetails = () => {
           </div>
         </div>
         <GiftCard title={"Gift card details"} data={data} />
-        <GiftCard title={"Redeem Online"} data={data1}/>
+        <GiftCard title={"Redeem Online"} data={data1} />
         <div className="row">
           <div className="col">
             <button className={`${style.giftcard_btn}`}>Add To Myntra</button>

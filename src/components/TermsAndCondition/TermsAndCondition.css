@@ -32,7 +32,6 @@
   color: #334155;
 }
 
-
 .addToCartOrBuyNow {
   display: flex;
   align-items: center;
@@ -72,6 +71,9 @@
   line-height: 16px;
   text-transform: capitalize;
   width: 100%;
+}
+.iframeVideo {
+  border-radius: 20px;
 }
 @media screen and (min-width: 760px) {
   .tcContainer {
