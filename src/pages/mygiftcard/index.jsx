@@ -56,12 +56,11 @@ const MyGiftCard = () => {
                   </div>
                 </Col>
               </Row>
-              
             </Container>
           </Accordion.Header>
           {!isAccordionActive && (
             <Container>
-              <Row className="px-2 pb-3">
+              <Row className="mb-3">
                 <Col xs="7">
                   <div className={style.name}>Items available</div>
                 </Col>
@@ -79,20 +78,17 @@ const MyGiftCard = () => {
   );
 };
 
-const generateAccordionBody = (data, index, dataArrayLength) => {
+const generateAccordionBody = (data) => {
   const balanceColor = parseFloat(data.availableBalance) >= 0 ? "green" : "red";
   const balanceStyle = {
     color: balanceColor,
   };
-  const lastItemClass = index === dataArrayLength - 1 ? 'pb-3' : '';
-  console.log(index);
-  console.log(lastItemClass);
 
   return (
-    <Accordion.Body key={data.id} className={lastItemClass} >
+    <Accordion.Body key={data.id} className="py-2">
       <Card border="lightgrey" >
         <Card.Body>
-          <Container className="">
+          <Container>
             <Row className="align-items-center border-bottom pb-2">
               <Col xs="9">
                 <div className={style.name}>{data.cardTitle}</div>
@@ -104,14 +100,14 @@ const generateAccordionBody = (data, index, dataArrayLength) => {
           </Container>
         </Card.Body>
         <Container>
-          <Row className="mx-1 my-2">
+          <Row className="mb-2 px-3">
             <Col xs="6">
               <div className={`${style.name}  ${style.label}`} >Available Balance</div>
               <div className={`${style.name} `} style={balanceStyle}>
                 {data.availableBalance}
               </div>
             </Col>
-            <Col xs="6" className={`${style.textright}`}>
+            <Col xs="6" className={style.textright}>
               <div className={`${style.name}  ${style.label}`}>Expiry Date</div>
               <div className={style.name}>{data.expiryDate}</div>
             </Col>
