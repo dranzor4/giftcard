@@ -37,7 +37,7 @@ const ProductDetail = () => {
   const [formToggle, setFormToggle] = useState("buy-for-self")
   const [isRPSMobOpen, setIsRPSMobOpen] = useState(false);
   const [isPGOpen, setIsPGOpen] = useState(false);
-  
+
   const options = [
     { value: 'buy-for-self', label: 'Buy for Self' },
     { value: 'gift-to-someone', label: 'Gift to Someone' },
@@ -122,9 +122,9 @@ const ProductDetail = () => {
               <Redeemable />
               <Offers />
             </div>
-            <div className={`${"productForm"} | col-md-6 col-lg-8`}>
+            <div className={`${"product-form"} | col-md-6 col-lg-8`}>
               <div className={`row`}>
-                <div className={`${"gridForm"} row`}>
+                <div className={`product-form-grid row`}>
                   <div className="form-toggle ">
                     <div className="text-center line-height-0">
                       <RadioBox options={options}
@@ -133,7 +133,6 @@ const ProductDetail = () => {
                         className="product-selforgift-btn" />
                     </div>
                   </div>
-                  <div className="fomr-1">
                     <div className='form-price-section'>
                       <label className='form-label p-b-8'>
                         Select Gift Value
@@ -159,8 +158,7 @@ const ProductDetail = () => {
                       />
 
                     </div>
-                  </div>
-                  <div className={"form2"}>
+                  <div className="form-ne-section">
                     <div className="ne-mobile">
                       <NetEffecttive onClick={() => toggleSRPMob()} />
                     </div>
@@ -297,7 +295,7 @@ const ProductDetail = () => {
         <PreviewGiftCardMob />
         <Button handleClick={() => togglePGMob()} className={"rps-btn"}>Okay</Button>
       </DownBar>
-      
+
     </>
   );
 };
