@@ -10,7 +10,7 @@ const SearchBar1 = ({ customStyle }) => {
       <InputGroup className="searchBox">
         {modile && (
           <InputGroup.Text className="searchMobleBtn" id="search-bar">
-            <img src="/Images/Search.svg" alt="" />
+            <img src="/Images/Search.svg" alt="search-icon" />
           </InputGroup.Text>
         )}
         <Form.Control
