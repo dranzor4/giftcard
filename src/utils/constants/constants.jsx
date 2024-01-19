@@ -106,3 +106,9 @@ export const offers = [
     code: "SHOPs",
   },
 ];
+
+export const dropdownOptions = [
+  { value: "defaultOption", label: "Default option" },
+  { value: "someOption", label: "Some option" },
+  { value: "otherOption", label: "Other option" },
+];
