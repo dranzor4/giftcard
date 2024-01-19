@@ -22,7 +22,7 @@ const Carousel = (props) => {
         slidesPerView={3.5}
         rewind={true}
         onSlideChange={() => {}}
-        onSwiper={(swiper) => console.log(swiper)}
+        // onSwiper={(swiper) => console.log(swiper)}
         freeMode={true}
         effect={"fade"}
         modules={[FreeMode]}

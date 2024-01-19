@@ -44,7 +44,6 @@ const ProductDetail = () => {
     emailSubject: "",
     emailMessage: ""
   })
-  console.log(formFields);
   const [formToggle, setFormToggle] = useState("buy-for-self")
   const [selectedOption, setSelectedOption] = useState('');
   const [sendNowOrLater, setSendNowOrLater] = useState('');
