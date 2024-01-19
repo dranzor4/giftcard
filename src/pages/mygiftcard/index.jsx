@@ -4,6 +4,7 @@ import "./my-gift-card.css";
 import Accordion from "react-bootstrap/Accordion";
 import { myGiftCardsData } from "../../utils/constants/constants";
 import ButtonTab from "../../components/ButtonTab";
+import FilterSelect from "../../components/FilterSelect";
 
 const MyGiftCard = () => {
   const [isAccordionActive, setIsAccordionActive] = useState(false);
@@ -44,7 +45,9 @@ const MyGiftCard = () => {
           <img src="/Images/left-arrow.svg" alt="left-arrow" />
           <div className="headerTextTitle">My Gift Cards</div>
         </div>
-        <div className="headerDropdown">dropdown</div>
+        <div className="headerDropdown">
+          <FilterSelect />
+        </div>
       </div>
 
       <div className="buttonTab">
