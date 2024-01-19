@@ -103,10 +103,10 @@ const ProductDetail = () => {
     options={[{ value: obj.value, label: obj.label }]}
     className={"byforself-pric"} />)
   const toggleSRPMob = () => {
-    setIsRPSMobOpen(!isRPSMobOpen);
+    setIsRPSMobOpen((preState) => !preState);
   };
   const togglePGMob = () => {
-    setIsPGOpen(!isPGOpen);
+    setIsPGOpen((preState) => !preState);
   };
   return (
     <>
@@ -133,31 +133,29 @@ const ProductDetail = () => {
                         className="product-selforgift-btn" />
                     </div>
                   </div>
-                    <div className='form-price-section'>
-                      <label className='form-label p-b-8'>
-                        Select Gift Value
-                      </label>
-                      <div className='radiobtn-group'>
-                        <PriceRadioBtns />
-                      </div>
-                      <label className='form-label'>Or</label>
-                      <CustomInput
-                        label={"Enter Amount"}
-                        hintText={"Min: ₹100, Max: ₹1,00,000"}
-                        hintShow={true}
-                        onChange={(event) => setFormFields({ ...formFields, "giftPrice": event.target.value })}
-                        value={formFields.giftPrice}
-                      />
-
-                      <CustomInput
-                        label={"Quantity"}
-                        hintText={"Min: 1, Max: 10"}
-                        hintShow={true}
-                        onChange={(event) => setFormFields({ ...formFields, "giftQuantity": event.target.value })}
-                        value={formFields.giftQuantity}
-                      />
-
+                  <div className='form-price-section'>
+                    <label className='form-label p-b-8'>
+                      Select Gift Value
+                    </label>
+                    <div className='radiobtn-group'>
+                      <PriceRadioBtns />
                     </div>
+                    <label className='form-label'>Or</label>
+                    <CustomInput
+                      label={"Enter Amount"}
+                      hintText={"Min: ₹100, Max: ₹1,00,000"}
+                      hintShow={true}
+                      onChange={(event) => setFormFields({ ...formFields, "giftPrice": event.target.value })}
+                      value={formFields.giftPrice}
+                    />
+                    <CustomInput
+                      label={"Quantity"}
+                      hintText={"Min: 1, Max: 10"}
+                      hintShow={true}
+                      onChange={(event) => setFormFields({ ...formFields, "giftQuantity": event.target.value })}
+                      value={formFields.giftQuantity}
+                    />
+                  </div>
                   <div className="form-ne-section">
                     <div className="ne-mobile">
                       <NetEffecttive onClick={() => toggleSRPMob()} />
