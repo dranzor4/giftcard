@@ -1,0 +1,95 @@
+
+/* src/App.css */
+:root {
+  --label-color:#64748b;
+  --main-color:#1E293B;
+
+}
+.custom-container {
+  width: 100%;
+  height: auto; /* Set your desired height */
+  border-top: 1px solid #ddd; /* Light grey top border */
+  border-bottom: 1px solid #ddd; /* Light grey bottom border */
+  border-left: none; /* Remove left border */
+  border-right: none; /* Remove right border */
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  margin-bottom: 16px; /* Add some bottom margin for better spacing */
+}
+.text-right {
+  text-align: right;
+  
+ }
+ .text-left {
+  text-align: left;
+ }
+
+ 
+.fs-10 {
+  font-size: 10px;
+}
+
+.fs-11 {
+  font-size: 11px;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.fs-13 {
+  font-size: 13px;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.fs-15 {
+  font-size: 15px;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
+.fs-17 {
+  font-size: 17px;
+}
+
+.fs-18 {
+  font-size: 18px;
+}
+
+.fs-19 {
+  font-size: 19px;
+}
+
+.fs-20 {
+  font-size: 20px;
+}
+.label-grey{
+  color:var(--label-color)
+}
+.main-color{
+  color:var(--main-color)
+}
+.pad-10{
+  padding-bottom: 10px;
+}
+.cart-item{
+  border-bottom: 1px solid var(--label-color);
+  padding: 0px 16px 16px 16px;
+}
+
+.cart-data{
+  padding-right: 0;
+}
+.pad-l20 {
+  padding-left: 20px;
+}
+
+ 
+
+
