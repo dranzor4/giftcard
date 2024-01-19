@@ -1,0 +1,21 @@
+.first {
+  padding: 12px 16px;
+  border-radius: 8px !important;
+  border: 1px solid var(--Gray-Gray-200, #e2e8f0) !important;
+  background: #fff;
+}
+
+.gift_card_item {
+  padding: 10px 0px;
+  justify-content: space-between !important;
+  border-bottom: 1px solid var(--Gray-Gray-200, #e2e8f0);
+}
+
+.gift_card_item :last-child {
+  text-align: right;
+  font-weight: 500;
+}
+
+.first > .col :last-child {
+  border: none;
+}

@@ -34,24 +34,26 @@ const Offers = () => {
           </div>
         )}
       </div>
-      {data?.map((data) => {
-        return (
-          <div className="offers" key={data.id}>
-            <img src="/Images/offer.svg" alt="offer" />
-            <div className="offer-description">
-              <span className="offerSummary">{data.summary}</span>
-              <span className="code">{` ${data.code}`}</span>
+      <div className="offersCode">
+        {data?.map((data) => {
+          return (
+            <div className="offers" key={data.id}>
+              <img src="/Images/offer.svg" alt="offer" />
+              <div className="offer-description">
+                <span className="offerSummary">{data.summary}</span>
+                <span className="code">{data.code}</span>
+              </div>
+              <img
+                src="/Images/copy.svg"
+                alt="copy"
+                onClick={() => {
+                  navigator.clipboard.writeText(data.code);
+                }}
+              />
             </div>
-            <img
-              src="/Images/copy.svg"
-              alt="copy"
-              onClick={() => {
-                navigator.clipboard.writeText(data.code);
-              }}
-            />
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 };

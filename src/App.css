@@ -24,6 +24,9 @@ a, p, ul, li{
   margin: 0;
   padding: 0;
 }
+.card{
+  border: none;
+}
 .accordion-button:not(.collapsed) {
   background-color: #fff;
 }

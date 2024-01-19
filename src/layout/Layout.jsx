@@ -5,7 +5,6 @@ import DownBarLogin from "../components/DownBarLogin";
 import Sidebar from "../components/Sidebar";
 import Header from "../components/Header";
 import LoginModalComp from "../components/loginModal/LoginModalComp";
-import SignModalComp from "../components/loginModal/SignModalComp";
 
 const Layout = () => {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);

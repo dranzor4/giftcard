@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Sidebar from "../Sidebar";
 
 // import "./header.css"
-import Style from "./Header.module.css";
+import "./Header.css";
 import ProfileIcon from "../ProfileIcon";
 import SearchBar1 from "../SearchBar1/Index";
 import CartIcon from "../CartIcon";
@@ -23,26 +23,26 @@ const Header = ({ toggleSidebar }) => {
 
   return (
     <>
-      <header className={Style.header}>
-        <div className={Style.headerContainer}>
-          <div className={Style.mobileMenuWrap}>
+      <header className="header">
+        <div className="headerContainer">
+          <div className="mobileMenuWrap">
             <ProfileIcon hamburger={true} profileClick={toggleSidebar} />
           </div>
-          <div className={Style.logoWrap}>
+          <div className="logoWrap">
             <img src="/Images/Logo.svg" alt="" />
           </div>
-          <div className={Style.searchBarWrap}>
+          <div className="searchBarWrap">
             <SearchBar1 />
           </div>
-          <ul className={Style.headerNavwrap}>
-            <li className={Style.calculator}>
+          <ul className="headerNavwrap">
+            <li className="calculator">
               <img
                 src="/Images/calculator.png"
                 alt="calculator"
                 onClick={handleShow}
               />
             </li>
-            <li className={Style.NabLoginBox}>
+            <li className="NabLoginBox">
               <Link to="#">
                 <NavSignInSignUp />
               </Link>
@@ -57,8 +57,7 @@ const Header = ({ toggleSidebar }) => {
       </header>
       <></>
       <Sidebar toggleDrawer={toggleSidebar} state={state} />
-      <CalculatorModal show={showModal} handleClose={handleClose}/>
-      
+      <CalculatorModal show={showModal} handleClose={handleClose} />
     </>
   );
 };

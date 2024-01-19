@@ -1,0 +1,10 @@
+.normalInput input {
+  outline: none;
+  padding: 14px 16px 14px 16px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border: 1px solid var(--button-border-color);
+  font-size: 12px;
+  width: 100%;
+  line-height: 16px;
+}
