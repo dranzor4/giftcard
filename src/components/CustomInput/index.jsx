@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { memo } from 'react'
 import "./CustomInput.css"
 
 const CustomInput = ({ type = "text", onChange, label, error = false, value, hintText, }) => {
+  console.log("render input");
   return (
     <>
       {
@@ -35,4 +36,4 @@ const CustomInput = ({ type = "text", onChange, label, error = false, value, hin
   )
 }
 
-export default CustomInput
+export default memo(CustomInput) 

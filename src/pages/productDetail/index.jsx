@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import "./ProductDetail.css";
 import CustomCard from "../../components/CustomCard";
 import RadioBox from "../../components/RadioBox";
@@ -89,24 +89,39 @@ const ProductDetail = () => {
     }
   ];
 
-  const PriceRadioBtns = () => PriceRadioBtnArry.map((obj, index) => <RadioBox
-    key={index}
-    onOptionChange={(event) => setFormFields({ ...formFields, "giftPrice": event.target.value })}
+  const handlePrceChange = useCallback((event) => setFormFields((prevField) => ({ ...prevField, "giftPrice": event.target.value })), [formFields.giftPrice])
+  const handleQuantityChange = useCallback((event) => setFormFields((prevField) => ({ ...prevField, "giftQuantity": event.target.value })), [formFields.giftQuantity])
+  const handleEmailCheckboxChange = useCallback((event) => setFormFields((prevField) => ({ ...prevField, "onEmail": event.target.value })), [formFields.onEmail])
+  const handleSMSCheckboxChange = useCallback((event) => setFormFields((prevField) => ({ ...prevField, "onSms": event.target.value })), [formFields.onSms])
+  const handleSendORNowChange = useCallback((event) => setFormFields((prevField) => ({ ...prevField, "sendLatterOrNow": event.target.value })), [formFields.sendLatterOrNow])
+  const handleFirstNameChange = useCallback((event) => setFormFields((prevField) => ({ ...prevField, "firstNmae": event.target.value })), [formFields.firstNmae])
+  const handleLastNameChange = useCallback((event) => setFormFields((prevField) => ({ ...prevField, "lastNmae": event.target.value })), [formFields.lastNmae])
+  const handleEmialIDChange = useCallback((event) => setFormFields((prevField) => ({ ...prevField, "emailId": event.target.value })), [formFields.emailId])
+  const handleMobileNoChange = useCallback((event) => setFormFields((prevField) => ({ ...prevField, "mobileNo": event.target.value })), [formFields.mobileNo])
+  const handleGiftCategoryRadioBox = useCallback((event) => setFormFields((prevField) => ({ ...prevField, "giftCardCategory": event.target.value })), [formFields.giftCardCategory])
+  const hanldeGiftThemeRadioChange = useCallback((index) => setFormFields((prevField) => ({ ...prevField, "giftCardTheme": index })), [formFields.giftCardTheme])
+  const handleEmailSubChange = useCallback((event) => setFormFields((prevField) => ({ ...prevField, "emailSubject": event.target.value })), [formFields.emailSubject])
+  const handleEmaiTextChange = useCallback((event) => setFormFields((prevField) => ({ ...prevField, "emailMessage": event.target.value })), [formFields.emailMessage])
+
+  const PriceRadioBtns = () => PriceRadioBtnArry.map((obj) => <RadioBox
+    key={obj.value}
+    onOptionChange={handlePrceChange}
     selectedOption={formFields.giftPrice}
     options={[{ value: obj.value, label: obj.label }]}
     className={"byforself-pric"}
   />)
-  const SendNowOrLaterRadioBtns = () => sendNowOrLaterBtnArr.map((obj, index) => <RadioBox
-    key={index}
-    onOptionChange={(event) => setFormFields({ ...formFields, "sendLatterOrNow": event.target.value })}
+  const SendNowOrLaterRadioBtns = () => sendNowOrLaterBtnArr.map((obj) => <RadioBox
+    key={obj.value}
+    onOptionChange={handleSendORNowChange}
     selectedOption={formFields.sendLatterOrNow}
     options={[{ value: obj.value, label: obj.label }]}
     className={"byforself-pric"} />)
+
   const toggleSRPMob = () => {
-    setIsRPSMobOpen((preState) => !preState);
+    setIsRPSMobOpen((prevState) => !prevState);
   };
   const togglePGMob = () => {
-    setIsPGOpen((preState) => !preState);
+    setIsPGOpen((prevState) => !prevState);
   };
   return (
     <>
@@ -145,14 +160,14 @@ const ProductDetail = () => {
                       label={"Enter Amount"}
                       hintText={"Min: ₹100, Max: ₹1,00,000"}
                       hintShow={true}
-                      onChange={(event) => setFormFields({ ...formFields, "giftPrice": event.target.value })}
+                      onChange={handlePrceChange}
                       value={formFields.giftPrice}
                     />
                     <CustomInput
                       label={"Quantity"}
                       hintText={"Min: 1, Max: 10"}
                       hintShow={true}
-                      onChange={(event) => setFormFields({ ...formFields, "giftQuantity": event.target.value })}
+                      onChange={handleQuantityChange}
                       value={formFields.giftQuantity}
                     />
                   </div>
@@ -179,14 +194,14 @@ const ProductDetail = () => {
                             id={`default-checkbox`}
                             name="onEmail"
                             label={`Email`}
-                            onChange={(event) => setFormFields({ ...formFields, "onEmail": event.target.value })}
+                            onChange={handleEmailCheckboxChange}
                           />
                           <Form.Check
                             type={"checkbox"}
                             id={`default-checkbox`}
                             name="emialOrSms"
                             label={`onSms`}
-                            onChange={(event) => setFormFields({ ...formFields, "onSms": event.target.value })}
+                            onChange={handleSMSCheckboxChange}
                           />
                         </div>
                         <p className='form-light-text'>Gift card will be delivered to this Mobile number and Email ID <span><img src="/Images/whatsapp-icon.svg" alt="" /></span></p>
@@ -198,22 +213,22 @@ const ProductDetail = () => {
                         <p className='form-light-text'>Gift card will be delivered to this Mobile number and Email ID</p>
                         <CustomInput
                           label={"First Name"}
-                          onChange={(event) => setFormFields({ ...formFields, "firstNmae": event.target.value })}
+                          onChange={handleFirstNameChange}
                           value={formFields.firstNmae}
                         />
                         <CustomInput
                           label={"last Name"}
-                          onChange={(event) => setFormFields({ ...formFields, "lastNmae": event.target.value })}
+                          onChange={handleLastNameChange}
                           value={formFields.lastNmae}
                         />
                         <CustomInput
                           label={"Email ID"}
-                          onChange={(event) => setFormFields({ ...formFields, "emailId": event.target.value })}
+                          onChange={handleEmialIDChange}
                           value={formFields.emailId}
                         />
                         <CustomInput
                           label={"Mobile Number"}
-                          onChange={(event) => setFormFields({ ...formFields, "mobileNo": event.target.value })}
+                          onChange={handleMobileNoChange}
                           value={formFields.mobileNo}
                           type="number"
                         />
@@ -230,7 +245,8 @@ const ProductDetail = () => {
                 <div className='form-divider'>
                   <h3><span>Personalise your Gift Card</span></h3>
                 </div>
-              </> : null
+              </> :
+                null
             }
             <div className="col-md-6"></div>
             <div className='form-personalise-section col-md-6'>
@@ -244,7 +260,7 @@ const ProductDetail = () => {
                     loop={true}
                   >
                     {
-                      giftCategoryArr.map((ele) => <SwiperSlide><RadioBox onOptionChange={(event) => setFormFields({ ...formFields, "giftCardCategory": event.target.value })} selectedOption={formFields.giftCardCategory} options={[{ value: ele.value, label: ele.label }]} className={"byforself-pric"} /></SwiperSlide>)
+                      giftCategoryArr.map((ele) => <SwiperSlide key={ele.value}><RadioBox onOptionChange={handleGiftCategoryRadioBox} selectedOption={formFields.giftCardCategory} options={[{ value: ele.value, label: ele.label }]} className={"byforself-pric"} /></SwiperSlide>)
                     }
                   </Swiper>
                 </div>
@@ -252,13 +268,13 @@ const ProductDetail = () => {
                   Select a Theme
                 </label>
                 <div className='radiobtn-group '>
-                  <ImageCarouselRadioBtn onChange={(index) => setFormFields({ ...formFields, "giftCardTheme": index })} selectedImage={formFields.giftCardTheme} />
+                  <ImageCarouselRadioBtn onChange={hanldeGiftThemeRadioChange} selectedImage={formFields.giftCardTheme} />
                 </div>
                 <CustomInput
                   label={"Email Subject"}
                   hintText={"Max 24 characters"}
                   hintShow={true}
-                  onChange={(event) => setFormFields({ ...formFields, "emailSubject": event.target.value })}
+                  onChange={handleEmailSubChange}
                   value={formFields.emailSubject}
                 />
 
@@ -267,7 +283,7 @@ const ProductDetail = () => {
                   label={"Personal Message"}
                   hintText={"Min: ₹100, Max: ₹1,00,000"}
                   hintShow={true}
-                  onChange={(event) => setFormFields({ ...formFields, "emailMessage": event.target.value })}
+                  onChange={handleEmaiTextChange}
                   value={formFields.emailMessage}
                 />
 
