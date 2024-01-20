@@ -7,7 +7,7 @@ const DownBarLogin = ({ toggleDownbar, state }) => {
   return (
     <>
       <DownBar toggleDownbar={toggleDownbar} state={state}>
-      <p>Are you sure you want to log out?</p>
+      <p className="login-text">Are you sure you want to log out?</p>
           <div className="LogoutBtnGrp">
             <Button handleClick={toggleDownbar} className="logoutCancelBtn">
               Cancel

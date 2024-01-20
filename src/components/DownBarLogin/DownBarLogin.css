@@ -1,17 +1,20 @@
 
-.downbar .DownBarContent p {
+.downbar .DownBarContent .login-text {
     padding-bottom: 40px;
-    width: 50%;
+    width: 65%;
     margin: 0 auto;
+    margin-top: 10px;
     font-weight: 600;
     font-weight: 24px;
     text-align: center;
+
 }
 
 .LogoutBtnGrp {
     display: flex;
     justify-content: center;
     gap: 12px;
+    margin-bottom: 10px;
 }
 
 .LogoutBtnGrp button {
