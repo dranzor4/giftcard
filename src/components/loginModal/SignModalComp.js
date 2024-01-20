@@ -79,11 +79,11 @@ const SignModalComp = ({ show, handleClose }) => {
     <BootstrapModal show={show} onHide={handleClose} centered>
       {welcomeform ? (
         <div className="welcome-header">
-        <div className="welcome-header-one">
-        <div></div>
-          <div>Account Created Successfully</div>
+          <div className="welcome-header-one">
+            <div></div>
+            <div>Account Created Successfully</div>
+          </div>
         </div>
-      </div>
       ) : (
         <div className="modall-header">
           <div className="modal-header-first">
@@ -95,14 +95,17 @@ const SignModalComp = ({ show, handleClose }) => {
                 >
                   <div className="login-header-first">
                     <div>Welcome to Woohoo</div>
-                    <div>Create a new account</div>
+                    <div>Create new account</div>
                   </div>
                 </Modal.Header>
               </div>
               <div className="login-header-two">
                 <Modal.Body style={{ width: "-webkit-fill-available" }}>
                   <Form
-                    style={{ width: "-webkit-fill-available" }}
+                    style={{
+                      width: "-webkit-fill-available",
+                      paddingTop: "0px",
+                    }}
                     onSubmit={SignUpFormSubmit}
                   >
                     <div>
@@ -132,27 +135,28 @@ const SignModalComp = ({ show, handleClose }) => {
                       <InputGroup className="mb-3">
                         <InputGroup.Text
                           id="mobile-prefix"
-                          style={{
-                            backgroundColor: "white",
-                            fontSize: "small",
-                          }}
+                          className="mobile-country-code"
                         >
                           +91
                         </InputGroup.Text>
                         <Form.Control
                           type="tel"
-                          placeholder="Mobile number"
+                          placeholder="Mobile Number"
                           aria-label="Mobile Number"
                           aria-describedby="mobile-prefix"
                           style={{
                             fontSize: "small",
                             borderLeft: "none",
-                            borderRight: "none",
                           }}
                           value={mobileNumber}
                           required
-                          onChange={(e) => {const onlyDigits = e.target.value.replace(/\D/g, ''); // Remove non-numeric characters
-                          setMobileNumber(onlyDigits);}}
+                          onChange={(e) => {
+                            const onlyDigits = e.target.value.replace(
+                              /\D/g,
+                              ""
+                            ); // Remove non-numeric characters
+                            setMobileNumber(onlyDigits);
+                          }}
                         />{" "}
                         {mobileNumberVerified && (
                           <InputGroup.Text
@@ -180,6 +184,7 @@ const SignModalComp = ({ show, handleClose }) => {
                               id="verify-number"
                               className="otp-generation-style"
                               onClick={generateOtp}
+                              style={{ borderLeft: "none" }}
                             >
                               Verify
                             </InputGroup.Text>
@@ -189,7 +194,6 @@ const SignModalComp = ({ show, handleClose }) => {
                             id="verify-number"
                             onClick={generateOtp}
                             className="otp-generation-style"
-                      
                           >
                             Resend OTP
                           </InputGroup.Text>
@@ -208,7 +212,11 @@ const SignModalComp = ({ show, handleClose }) => {
                             type="text"
                             placeholder="Enter OTP"
                             value={otp}
-                            style={{ borderLeft: "none", borderRight: "none", fontSize: "small" }}
+                            style={{
+                              borderLeft: "none",
+                              borderRight: "none",
+                              fontSize: "small",
+                            }}
                             onChange={(e) => setOtp(e.target.value)}
                           />
 
@@ -229,8 +237,6 @@ const SignModalComp = ({ show, handleClose }) => {
                           value={email}
                           style={{
                             fontSize: "small",
-                            borderLeft: "none",
-                            borderRight: "none",
                           }}
                           required
                           onChange={(e) => setEmail(e.target.value)}
@@ -244,7 +250,7 @@ const SignModalComp = ({ show, handleClose }) => {
                     </div>
                     <div className="login-otp-button">
                       <Button
-                      style={{fontSize:"small"}}
+                        style={{ fontSize: "small" }}
                         variant="primary"
                         className="custom-width-btn"
                         // onClick={handleSendOTP}
@@ -274,10 +280,8 @@ const SignModalComp = ({ show, handleClose }) => {
           </div>
           <div className="modal-header-second">
             This site is protected by reCAPTCHA and the{" "}
-            <a href="#">
-              Google Privacy <br /> Policy
-            </a>{" "}
-            and <a href="#">Terms of Service</a> apply.
+            <a href="#">Google Privacy Policy</a> and{" "}
+            <a href="#">Terms of Service</a> apply.
           </div>
         </div>
       )}

@@ -14,11 +14,15 @@
 }
 
 .downbar .DownBarheader {
-    padding: 12px 0;
+    padding: 12px 0 17px 0;
     text-align: center;
+    line-height: 0;
 }
 
 .downbar .DownBarContent {
-    padding: 16px;
+    padding: 10px 16px 15px 16px;
+}
+.downbarLoginOverlay{
+    z-index: 99998;
 }
 
