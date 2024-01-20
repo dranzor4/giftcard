@@ -45,11 +45,12 @@
   padding-bottom: 40px;
 }
 .orderDetailContainer {
-  padding: 20px 16px;
+  padding: 20px 0px;
+  margin: 0px 16px;
   border-bottom: 1px solid var(--button-border-color);
 }
 .totalPayableDetail {
-  padding: 20px 16px 0 16px; 
+  padding: 20px 16px 0 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -79,7 +80,7 @@
   color: var(--header-text-color);
 }
 
-.crps-container{
+.crps-container {
   padding: 20px 16px 40px 16px;
-  border-bottom: 1px solid #CBD5E1;
+  border-bottom: 1px solid #cbd5e1;
 }

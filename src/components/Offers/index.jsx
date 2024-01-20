@@ -45,6 +45,7 @@ const Offers = () => {
               </div>
               <img
                 src="/Images/copy.svg"
+                className="copy"
                 alt="copy"
                 onClick={() => {
                   navigator.clipboard.writeText(data.code);
