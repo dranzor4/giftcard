@@ -1,5 +1,5 @@
 import React from "react";
-import "./Sidebar.css";
+import "./sidebar.css";
 import ProfileIcon from "../ProfileIcon";
 import TransparentOverlay from "../TransparentOverlay/index";
 
