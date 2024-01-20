@@ -81,6 +81,15 @@
 }
 
 .crps-container {
-  padding: 20px 16px 40px 16px;
+  padding: 20px 16px 32px 16px;
   border-bottom: 1px solid #cbd5e1;
 }
+/* rps-footer .net-effective */
+.crps-container .reward-point-summery .rps-header,
+.crps-container .reward-point-summery .rps-body {
+  padding: 0 20px;
+}
+.crps-container .reward-point-summery .rps-header .custom-select {
+  margin-top: 12px;
+}
+/* .crps-container .reward-point-summery  */

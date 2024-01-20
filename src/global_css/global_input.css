@@ -19,7 +19,7 @@
 .input-box input[type="textarea"]{
     height: 100px;
 }
-.input-box span {
+.input-box .input-box-label {
     position: absolute;
     top: 0;
     left: 5px;
@@ -28,11 +28,12 @@
     transition: 0.4s ease-in-out;
     z-index: -1;
     font-weight: 400;
+    font-size: 14px;
 }
-.input-box input:valid ~ span,
-.input-box input:focus ~ span,
-.input-box textarea:valid ~ span,
-.input-box textarea:focus ~ span
+.input-box input:valid ~ .input-box-label,
+.input-box input:focus ~ .input-box-label,
+.input-box textarea:valid ~ .input-box-label,
+.input-box textarea:focus ~ .input-box-label
 {
     color: #64748B;
     transform: translateX(7px) translateY(-9px);
@@ -51,6 +52,8 @@
     list-style: 14px;
 }
 
+/* ------------------- ERROR HANDLING ----------------*/
+
 .input-box .input-tip.error{
     color: #D00;
 }
@@ -59,9 +62,9 @@
     border: 1px solid #D00;
 }
 
-.input-box.error input:valid ~ span,
-.input-box.error input:focus ~ span,
-.input-box.error textarea:valid ~ span,
-.input-box.error textarea:focus ~ span{
+.input-box.error input:valid ~ .input-box-label,
+.input-box.error input:focus ~ .input-box-label,
+.input-box.error textarea:valid ~ .input-box-label,
+.input-box.error textarea:focus ~ .input-box-label{
     color: #D00;
 }

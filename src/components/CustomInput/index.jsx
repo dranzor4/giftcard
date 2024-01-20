@@ -1,5 +1,5 @@
 import React, { memo } from 'react'
-import "./CustomInput.css"
+import "../../global_css/global_input.css"
 
 const CustomInput = ({ type = "text", onChange, label, error = false, value, hintText, }) => {
   console.log("render input");
@@ -10,7 +10,7 @@ const CustomInput = ({ type = "text", onChange, label, error = false, value, hin
           <div className={`input-box ${error}`}>
 
             <input type={type} required onChange={onChange} value={value} />
-            <span>{label}</span>
+            <span className='input-box-label'>{label}</span>
             {hintText && <p className={`input-tip  ${error}`}>{hintText}</p>}
           </div></>
       }
@@ -18,7 +18,7 @@ const CustomInput = ({ type = "text", onChange, label, error = false, value, hin
         type === "textarea" && <>
           <div className='input-box'>
             <textarea required cols="30" rows="3"></textarea>
-            <span>{label}</span>
+            <span className='input-box-label'>{label}</span>
             {/* {error === "" ? hintShow ? <p className='input-tip'>{hintText}</p> : "" : <p className='input-error'>{error}</p>} */}
             {hintText && <p className='input-tip'>{hintText}</p>}
           </div>
@@ -26,9 +26,9 @@ const CustomInput = ({ type = "text", onChange, label, error = false, value, hin
       }
       {
         type === "number" && <>
-          <div className={`input-box ${error} number`}>
-            <input type={type} required onChange={onChange} value={value} placeholder='+91' />
-            <span>{label}</span>
+          <div className={`input-box ${error}`}>
+            <input type={type} required onChange={onChange} value={value}  />
+            <span className='input-box-label'>{label}</span>
             {hintText && <p className={`input-tip  ${error}`}>{hintText}</p>}
           </div></>
       }
