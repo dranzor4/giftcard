@@ -20,6 +20,9 @@
 .form2 {
   padding-top: 12px;
 }
+.form-ne-section{
+  margin-top: 12px;
+}
 
 
 @media(min-width: 768px) {
@@ -97,9 +100,6 @@
 
 /* form default style  end */
 
-form {
-  padding-top: 24px;
-}
 
 .form-price-section {
   display: flex;
@@ -234,32 +234,39 @@ form {
 /* reward point summary downbar----------- */
 
 .rps-mob-view .rps-header,
-.rps-mob-view .rps-ul,
+.rps-mob-view .rps-body{
+  padding: 0 20px
+}
 .rps-mob-view .rps-footer .net-effective{
   padding: 8px 20px;
 }
 .rps-mob-view .reward-point-summery {
+  margin-top: 16px;
   padding: 20px 0;
 }
 .rps-mob-view .reward-point-summery .rps-header h2{
   font-size: 16px;
   font-weight: 600;
+  line-height: 24px;
 }
 .rps-mob-view .reward-point-summery .custom-select{
   margin-top: 12px;
+  width: 100%;
 }
 .rps-mob-view .reward-point-summery .rps-body{
   margin-top: 24px;
 }
 
-.rps-btn{
-  margin-top: 10px;
+.okay-btn{
   background-color: #1D86FF;
   color: #ffffff;
   width: 100%;
   border-radius: 8px;
   padding: 14px 24px;
   font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 16px 0;
 }
 
 
@@ -272,4 +279,6 @@ form {
   font-size: 18px;
   font-weight: 600;
   line-height: 24px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }

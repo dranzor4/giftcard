@@ -15,6 +15,7 @@ import ImageCarouselRadioBtn from "../../components/ImageCarouselRadioBtn";
 import RewardSummaryDesk from "../../components/RewardSummaryDesk";
 import DownBar from "../../components/DownBar";
 import PreviewGiftCardMob from "../../components/PreviewGiftCardMob";
+import CustomMobNoInput from "../../components/CustomMobNoInput";
 const ProductDetail = () => {
   const navigate = useNavigate()
 
@@ -89,7 +90,7 @@ const ProductDetail = () => {
     }
   ];
 
-  const handlePrceChange = useCallback((event) => setFormFields((prevField) => ({ ...prevField, "giftPrice": event.target.value })), [formFields.giftPrice])
+  const handlePrceChange = useCallback((event) => setFormFields((prevField) => ({ ...prevField, "giftPrice":  event.target.value })), [formFields.giftPrice])
   const handleQuantityChange = useCallback((event) => setFormFields((prevField) => ({ ...prevField, "giftQuantity": event.target.value })), [formFields.giftQuantity])
   const handleEmailCheckboxChange = useCallback((event) => setFormFields((prevField) => ({ ...prevField, "onEmail": event.target.value })), [formFields.onEmail])
   const handleSMSCheckboxChange = useCallback((event) => setFormFields((prevField) => ({ ...prevField, "onSms": event.target.value })), [formFields.onSms])
@@ -162,6 +163,7 @@ const ProductDetail = () => {
                       hintShow={true}
                       onChange={handlePrceChange}
                       value={formFields.giftPrice}
+                      type="number"
                     />
                     <CustomInput
                       label={"Quantity"}
@@ -169,6 +171,7 @@ const ProductDetail = () => {
                       hintShow={true}
                       onChange={handleQuantityChange}
                       value={formFields.giftQuantity}
+                      type="number"
                     />
                   </div>
                   <div className="form-ne-section">
@@ -226,11 +229,12 @@ const ProductDetail = () => {
                           onChange={handleEmialIDChange}
                           value={formFields.emailId}
                         />
-                        <CustomInput
+                        <CustomMobNoInput
                           label={"Mobile Number"}
                           onChange={handleMobileNoChange}
                           value={formFields.mobileNo}
                           type="number"
+                          countryCode={"+91"}
                         />
                       </div>
                     </div>
@@ -302,12 +306,12 @@ const ProductDetail = () => {
 
       <DownBar toggleDownbar={toggleSRPMob} state={isRPSMobOpen} customClass={"rps-mob-view"}>
         <RewardSummaryDesk />
-        <Button handleClick={() => toggleSRPMob()} className={"rps-btn"}>Okay</Button>
+        <Button handleClick={() => toggleSRPMob()} className={"okay-btn"}>Okay</Button>
       </DownBar>
       <DownBar toggleDownbar={togglePGMob} state={isPGOpen} customClass={"pg-mob-view"}>
         <h3>Preview eGift Card</h3>
         <PreviewGiftCardMob />
-        <Button handleClick={() => togglePGMob()} className={"rps-btn"}>Okay</Button>
+        <Button handleClick={() => togglePGMob()} className={"okay-btn"}>Okay</Button>
       </DownBar>
 
     </>
