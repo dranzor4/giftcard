@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { memo, useState } from 'react';
 import Button from '../Button';
 import"./Redeemable.css"
 const Redeemable = () => {
@@ -13,4 +13,4 @@ const Redeemable = () => {
   )
 }
 
-export default Redeemable
+export default memo(Redeemable)
