@@ -47,9 +47,11 @@ const LoginModalComp = ({ show, handleClose }) => {
       setShowOTPForm(true);
       setOtpError("");
       console.log("Sending OTP...");
+      setShowLabel(false)
     } else {
       setMobileNumber("");
       alert("Please enter a valid 10-digit mobile number.");
+      setShowLabel(false)
     }
     
   };
