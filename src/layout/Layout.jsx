@@ -3,7 +3,7 @@ import Routers from "../routes/Routes";
 import DownBarLogin from "../components/DownBarLogin";
 import Sidebar from "../components/Sidebar";
 import LoginModalComp from "../components/loginModal/LoginModalComp";
-import Header from "../components/header/index";
+import Header from "../components/Header/index";
 
 const Layout = () => {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
