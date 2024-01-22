@@ -14,11 +14,11 @@ a{
   --bs-gutter-x: 0;
 }
 
-@font-face {
-  font-family: "Poppins";   /*Can be any text*/
+/* @font-face {
+  font-family: "Poppins";
   src: local("Poppins-Regular"),
     url("./fonts/Poppins-Regular.ttf") format("truetype");
-}
+} */
 
 a, p, ul, li{
   margin: 0;
