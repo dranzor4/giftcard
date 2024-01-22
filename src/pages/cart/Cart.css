@@ -1,0 +1,30 @@
+.cart-item {
+  border-bottom: 1px solid var(--Gray-Gray-400, #94a3b8);
+  padding: 0px 16px 16px 16px;
+}
+
+.cart-data {
+  padding-right: 0;
+}
+
+.cart-add-del > .btn-edit {
+  border-right: 1px solid #cbd5e1;
+}
+
+.cart-add-del button {
+  background: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+}
+
+.cart-select {
+  display: flex;
+  padding: 8px 12px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 6px;
+  border: 1px solid var(--Gray-Gray-300, #cbd5e1);
+  background: var(--Shades-White, #fff);
+}

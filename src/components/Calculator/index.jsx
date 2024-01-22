@@ -8,9 +8,9 @@ const CalculatorModal = ({ show, handleClose }) => {
         <Modal.Body>
           <div className="modal_cont">
             <div className="modal_items">
-            <p><img src="images/Close.svg" alt="" onClick={handleClose}/></p>
+            <img src="images/Close.svg" alt="" onClick={handleClose}/>
               <div className="calculator_title">
-                <i><img src="images/fa-solid_gifts.svg" alt="" /></i>
+                <img src="images/fa-solid_gifts.svg" alt="" />
                 <span className="title_text">Reward Points Calculator</span>
               </div>
             </div>

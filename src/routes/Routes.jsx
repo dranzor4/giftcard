@@ -8,6 +8,7 @@ import CalculatorModal from '../components/Calculator';
 import GiftCard from '../pages/giftCardDetails';
 import MyGiftCard from '../pages/mygiftcard';
 import Checkout from '../pages/checkout';
+import Cart from '../pages/cart';
 
 
 
@@ -22,6 +23,7 @@ const Routers = () => {
                 <Route path="/checkout" element={<Checkout/>}/>
                 <Route path="/my-gift-card" element={<MyGiftCard/> }/>
                 <Route  path="/checkout" element={<Checkout/>} />
+                <Route  path="/cart" element={<Cart/>} />
 
             </Routes>
     );

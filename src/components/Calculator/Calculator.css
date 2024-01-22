@@ -134,14 +134,14 @@ select {
   color: #1d86ff;
 }
 
-i > img {
+.calculator_title > img {
   width: 24px;
   height: 19.2px;
   position: relative;
   top: 0;
 }
 
-p > img {
+.modal_items > img {
   width: 24px;
   height: 24px;
   position: absolute;

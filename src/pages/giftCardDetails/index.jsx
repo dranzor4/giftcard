@@ -55,6 +55,7 @@ const GiftCardDetails = () => {
         <div className="row">
           <div className="col">
             <button className={`${style.giftcard_btn}`}>Add To Myntra</button>
+            
           </div>
         </div>
       </main>
