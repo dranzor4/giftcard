@@ -1,6 +1,5 @@
-
 .backBtn {
-  color: #1E293B;
+  color: #1e293b;
   display: flex;
   justify-content: space-between;
   padding: 22px 0 34px 0;
@@ -20,12 +19,11 @@
 .form2 {
   padding-top: 12px;
 }
-.form-ne-section{
+.form-ne-section {
   margin-top: 12px;
 }
 
-
-@media(min-width: 768px) {
+@media (min-width: 768px) {
   .mainConatiner {
     padding: 0 40px;
   }
@@ -36,8 +34,7 @@
   }
 }
 
-
-@media(min-width: 768px) {
+@media (min-width: 768px) {
   .product-form {
     padding-left: 60px;
   }
@@ -47,7 +44,7 @@
   }
 }
 
-@media(min-width: 1024px) {
+@media (min-width: 1024px) {
   .mainConatiner {
     padding: 0 60px;
   }
@@ -65,17 +62,15 @@
   }
 }
 
-@media(min-width: 1440px) {
-
+@media (min-width: 1440px) {
   .mainConatiner {
     padding: 0 80px;
   }
 }
 
-
 /* form default style  start */
 .form-label {
-  color: #181C2D;
+  color: #181c2d;
   font-size: 14px;
   font-weight: 600;
   margin: 0;
@@ -92,25 +87,22 @@
 }
 
 .form-light-text {
-  color: #64748B;
+  color: #64748b;
   font-size: 12px;
   font-weight: 400;
 }
 
-
 /* form default style  end */
-
 
 .form-price-section {
   display: flex;
   flex-direction: column;
   gap: 12px;
   margin-top: 24px;
-
 }
 
-.form-net-effetive-setion {}
-
+.form-net-effetive-setion {
+}
 
 .radiobtn-group {
   display: flex;
@@ -135,9 +127,8 @@
 .form-light-label {
   font-size: 12px;
   font-weight: 400;
-  color: #64748B;
+  color: #64748b;
 }
-
 
 /* form sms or mail section */
 
@@ -149,12 +140,11 @@
 
 .checkbox-group .form-check input {
   margin-right: 12px;
-
 }
 
 .checkbox-group .form-check label {
   font-size: 14px;
-  color: #181C2D;
+  color: #181c2d;
   font-weight: 400;
 }
 
@@ -222,11 +212,10 @@
   text-align: center;
 }
 
-
 .form-personalise-section button {
-  border: 1px solid #1D86FF;
-  Padding: 10px, 18px, 10px, 18px;
-  color: #1D86FF;
+  border: 1px solid #1d86ff;
+  padding: 10px, 18px, 10px, 18px;
+  color: #1d86ff;
   font-weight: 600;
   border-radius: 6px;
 }
@@ -234,31 +223,31 @@
 /* reward point summary downbar----------- */
 
 .rps-mob-view .rps-header,
-.rps-mob-view .rps-body{
-  padding: 0 20px
+.rps-mob-view .rps-body {
+  padding: 0 20px;
 }
-.rps-mob-view .rps-footer .net-effective{
+.rps-mob-view .rps-footer .net-effective {
   padding: 8px 20px;
 }
 .rps-mob-view .reward-point-summery {
   margin-top: 16px;
   padding: 20px 0;
 }
-.rps-mob-view .reward-point-summery .rps-header h2{
+.rps-mob-view .reward-point-summery .rps-header h2 {
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
 }
-.rps-mob-view .reward-point-summery .custom-select{
+.rps-mob-view .reward-point-summery .custom-select {
   margin-top: 12px;
   width: 100%;
 }
-.rps-mob-view .reward-point-summery .rps-body{
+.rps-mob-view .reward-point-summery .rps-body {
   margin-top: 24px;
 }
 
-.okay-btn{
-  background-color: #1D86FF;
+.okay-btn {
+  background-color: #1d86ff;
   color: #ffffff;
   width: 100%;
   border-radius: 8px;
@@ -269,13 +258,12 @@
   margin: 16px 0;
 }
 
-
 /* preview gift card downbar----------- */
 
-.pg-mob-view .DownBarContent  img{ 
+.pg-mob-view .DownBarContent img {
   width: 100%;
 }
-.pg-mob-view h3{
+.pg-mob-view h3 {
   font-size: 18px;
   font-weight: 600;
   line-height: 24px;
