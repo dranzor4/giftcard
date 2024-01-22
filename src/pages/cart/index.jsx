@@ -1,3 +1,4 @@
+import Button from "../../components/Button";
 import arrowDown from "../../assests/images/icon/down-arrow.svg";
 import "./Cart.css";
 const Cart = () => {
@@ -29,7 +30,7 @@ const Cart = () => {
           <div className="col-7 text-center">
             <div className="row">
               <div className="col-5 cart-select">
-              <label htmlFor="cart-qty">Qty:</label>
+                <label htmlFor="cart-qty">Qty:</label>
                 <select name="" id="cart-qty" className="h12">
                   <option value="">1</option>
                   <option value="">1</option>
@@ -42,6 +43,16 @@ const Cart = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="row mx-0 my-2">
+        <div className="col-5 px-4">
+          <p>Sub total</p>
+          <h4>₹2000</h4>
+        </div>
+        <div className="col-7  p-0 cart-btn">
+        <button type="button" className="btn btn-primary w-100 h-100">Proceed to Buy</button> 
         </div>
       </div>
     </>

@@ -28,3 +28,7 @@
   border: 1px solid var(--Gray-Gray-300, #cbd5e1);
   background: var(--Shades-White, #fff);
 }
+
+.cart-btn>button{
+    padding: 14px 24px;
+}
