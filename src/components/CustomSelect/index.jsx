@@ -37,7 +37,7 @@ const CustomSelect = () => {
         }),
         placeholder: (provided, state) => ({
             ...provided,
-            transform: `scale(${state.isFocused || selectedOption ? .85 : 1}) translateY(${state.isFocused || selectedOption ? '-125%' : '0'}) translateX(${state.isFocused || selectedOption ? '-10%' : '0'})`,
+            transform: `scale(${state.isFocused || selectedOption ? .85 : 1}) translateY(${state.isFocused || selectedOption ? '-100%' : '0'}) translateX(${state.isFocused || selectedOption ? '-5%' : '0'})`,
             transformOrigin: 'left bottom',
             transition: 'transform 0.3s ease-in-out',
             background: "#ffffff",

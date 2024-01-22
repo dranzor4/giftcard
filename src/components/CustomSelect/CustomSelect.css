@@ -37,3 +37,15 @@
     margin: 0;
     padding: 0;
 }
+.custom-select .css-xoikdz-control{
+    min-height: 0 !important;
+    padding: 0;
+    padding: 8px 12px;
+}
+.custom-select .css-1omjyvv-control{
+    min-height: 0;
+    padding: 8px 12px;
+}
+.custom-select .css-1fdsijx-ValueContainer{
+    padding: 0;
+}
