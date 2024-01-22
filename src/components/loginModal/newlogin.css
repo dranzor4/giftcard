@@ -157,6 +157,36 @@
     align-items: flex-start;
 }
 
+/* floatlabel */
+.active {
+    transform: translateY(-1.25rem) scale(0.75);
+    transform-origin: top left;
+    font-size: small;
+    transition: all 0.3s ease;
+    margin-left: 12px;
+    margin-top: 12px;
+    background: white;
+    z-index: 2;
+    color: var(--Gray-Gray-500, #64748B);
+    font-family: Poppins;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  /* input text size */
+.custom-form-control{
+    color: var(--Gray-Gray-900, #181C2D);
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    z-index: 0 !important;
+    box-shadow: none !important;
+    outline: none;
+}
+
 .login-header-first div:first-child {
     color: var(--Gray-Gray-700, #334155);
     font-family: Poppins;
