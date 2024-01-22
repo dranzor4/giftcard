@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-// import Header from "../components/Header";
 import Routers from "../routes/Routes";
 import DownBarLogin from "../components/DownBarLogin";
 import Sidebar from "../components/Sidebar";
-import Header from "../components/Header/index";
 import LoginModalComp from "../components/loginModal/LoginModalComp";
+import Header from "../components/header/index";
 
 const Layout = () => {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
