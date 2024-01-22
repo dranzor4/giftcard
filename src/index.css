@@ -1,6 +1,87 @@
+/* add font face rule for Poppins Font */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Poppins-Regular"),
+    url("../src/assets/fonts/poppins/poppins-regular-webfont.woff"),
+    url("../src/assets/fonts/poppins/poppins-regular-webfont.woff2");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Poppins-Medium"),
+    url("../src/assets/fonts/poppins/poppins-medium-webfont.woff"),
+    url("../src/assets/fonts/poppins/poppins-medium-webfont.woff2");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Poppins-SemiBold"),
+    url("../src/assets/fonts/poppins/poppins-semibold-webfont.woff"),
+    url("../src/assets/fonts/poppins/poppins-semibold-webfont.woff2");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Poppins-Bold"),
+    url("../src/assets/fonts/poppins/poppins-bold-webfont.woff"),
+    url("../src/assets/fonts/poppins/poppins-bold-webfont.woff2");
+}
+
+/* add font face rule for Epilogue Font */
+@font-face {
+  font-family: "Epilogue";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Epilogue-Light"),
+    url("../src/assets/fonts/Epilogue/Epilogue-Light.woff"),
+}
+
+@font-face {
+  font-family: "Epilogue";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Epilogue-Regular"),
+    url("../src/assets/fonts/Epilogue/Epilogue-Regular.woff"),
+}
+
+@font-face {
+  font-family: "Epilogue";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Epilogue-Medium"),
+    url("../src/assets/fonts/Epilogue/Epilogue-Medium.woff"),
+}
+
+@font-face {
+  font-family: "Epilogue";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Epilogue-SemiBold"),
+    url("../src/assets/fonts/Epilogue/Epilogue-SemiBold.woff"),
+}
+
+@font-face {
+  font-family: "Epilogue";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Epilogue-Bold"),
+    url("../src/assets/fonts/Epilogue/Epilogue-Bold.woff"),
+}
+
+
+
+
+
 body {
   margin: 0;
-  font-family: poppins;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -9,28 +90,31 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.h12{
+
+.h12 {
   font-size: 12px;
 }
+
 /* Normal text for normal content */
-.h14{
+.h14 {
   font-size: 14px;
   font-weight: 400;
   color: var(--Gray-Gray-700, #334155);
 }
 
-.h16{
+.h16 {
   font-size: 16px;
 }
-.h18{
+
+.h18 {
   font-size: 18px;
 }
 
-.card-background{
+.card-background {
   background: #fff;
 }
 
-.main-bg{
+.main-bg {
   background: rgba(241, 245, 249, 0.50);
 
 }

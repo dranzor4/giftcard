@@ -11,7 +11,7 @@ const ProfileIcon = ({ hamburger, profileClick }) => {
         //             </div>
         //     }
         // </div>
-        <div className={Style.avatar} onClick={() => profileClick()}>
+        <div className={`${Style.avatar} ${!hamburger ?  Style.sidebar : ""}`} onClick={() => profileClick()}>
             <div className={`${Style.avatarCircle} ${!hamburger ?  Style.sidebar : ""}`}>
                 {/* <img className={Style.avatarImg} src="https://picsum.photos/id/237/200/300" alt="" /> */}
                 <span className={Style.avatarText}> A</span>

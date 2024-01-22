@@ -26,9 +26,8 @@ const ImageCarouselRadioBtn = ({selectedImage, onChange}) => {
             {
                 images.map((image, index) => {
                     return (
-                        <div>
-                            <SwiperSlide>
-                                <label key={index} className={` img-carousel-btn ${selectedImage === index ? "selected" : ""}`}>
+                            <SwiperSlide key={image + "_"+ index}>
+                                <label className={` img-carousel-btn ${selectedImage === index ? "selected" : ""}`}>
                                     <input
                                         type="radio"
                                         name="imageSelector"
@@ -41,7 +40,6 @@ const ImageCarouselRadioBtn = ({selectedImage, onChange}) => {
                                 </label>
                             </SwiperSlide>
 
-                        </div>
                     )
                 })
             }

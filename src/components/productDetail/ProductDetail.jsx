@@ -13,20 +13,8 @@ import Button from "../Button";
 import TermsAndCondition from "../TermsAndCondition";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ImageCarouselRadioBtn from "../ImageCarouselRadioBtn";
+import RewardSummaryDesk from "../RewardSummaryDesk";
 const ProductDetail = () => {
-  // const { productIndex } = useParams();
-  // const navigate=useNavigate();
-  // const data = cardData[productIndex];
-  // let customClass = {
-  //   product: styles.product,
-  //   card: styles.card,
-  //   cardHeader: styles.cardHeader,
-  //   cardContent: styles.cardContent,
-  //   cardImage: styles.cardImage,
-  //   cardBadge: styles.cardBadge,
-  //   validityText: styles.validityText,
-  // };
-
   const navigate = useNavigate()
 
   const [formFields, setFormFields] = useState({
@@ -44,18 +32,12 @@ const ProductDetail = () => {
     emailSubject: "",
     emailMessage: ""
   })
-  console.log(formFields);
   const [formToggle, setFormToggle] = useState("buy-for-self")
   const [selectedOption, setSelectedOption] = useState('');
-  const [sendNowOrLater, setSendNowOrLater] = useState('');
-  const [selectedImage, setSelectedImage] = useState(0);
 
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
     console.log(event.target.value);
-  };
-  const handleRadioChange = (index) => {
-    setSelectedImage(index);
   };
   const options = [
     { value: 'buy-for-self', label: 'Buy for Self' },
@@ -106,10 +88,7 @@ const ProductDetail = () => {
       value: "anniversary",
       label: "Anniversary"
     }
-  ]
-  const handlesetSendNowOrLaterChange = (event) => {
-    setSendNowOrLater(event.target.value);
-  };
+  ];
 
   const PriceRadioBtns = () => PriceRadioBtnArry.map((obj, index) => <RadioBox
     key={index}
@@ -184,7 +163,8 @@ const ProductDetail = () => {
                     </div>
                   </div>
                   <div className={"form2"}>
-                    <NetEffecttive />
+                    {/* <NetEffecttive /> */}
+                    <RewardSummaryDesk />
                   </div>
                 </div>
                 {formToggle === "gift-to-someone" ? <div className="row">
@@ -192,7 +172,6 @@ const ProductDetail = () => {
                     <div className='form-divider'>
                       <h3><span>Delivery Details</span></h3>
                     </div>
-
                     <div className="row">
                       <div className='form-sms-or-mail-section col-lg-6'>
                         <label className='form-label'>How would you like to send it?</label>
@@ -250,64 +229,54 @@ const ProductDetail = () => {
           <div className="row col-md-9">
             {
               formToggle === "gift-to-someone" ? <>
-              <div className='form-divider'>
-              <h3><span>Personalise your Gift Card</span></h3>
-            </div>
-            </> : null
+                <div className='form-divider'>
+                  <h3><span>Personalise your Gift Card</span></h3>
+                </div>
+              </> : null
             }
             <div className="col-md-6"></div>
             <div className='form-personalise-section col-md-6'>
-              {formToggle === "gift-to-someone" ?<>
-              <label className='form-label'>
-                Choose Category
-              </label>
-              <div className='radiobtn-group'>
-                <Swiper
-                  slidesPerView={3.2}
-                  loop={true}
-                >
-                  {
-                    giftCategoryArr.map((ele) => <SwiperSlide><RadioBox onOptionChange={(event) => setFormFields({ ...formFields, "giftCardCategory": event.target.value })} selectedOption={formFields.giftCardCategory} options={[{ value: ele.value, label: ele.label }]} className={"byforself-pric"} /></SwiperSlide>)
-                  }
-                </Swiper>
-              </div>
-              <label className='form-label'>
-                Select a Theme
-              </label>
-              <div className='radiobtn-group '>
-                {/* <Swiper
-                  slidesPerView={3.1}
-                  spaceBetween={10}
-                  loop={true}
-                >
-                  <SwiperSlide><div className='each-slide-container'><CustomCard /></div></SwiperSlide>
-                  <SwiperSlide><div className='each-slide-container'><CustomCard /></div></SwiperSlide>
-                  <SwiperSlide><div className='each-slide-container'><CustomCard /></div></SwiperSlide>
-                  <SwiperSlide><div className='each-slide-container'><CustomCard /></div></SwiperSlide>
-                </Swiper> */}
-                <ImageCarouselRadioBtn onChange={(index) => setFormFields({ ...formFields, "giftCardTheme": index })} selectedImage={formFields.giftCardTheme} />
-              </div>
-              <CustomInput
-                label={"Email Subject"}
-                hintText={"Max 24 characters"}
-                hintShow={true}
-                onChange={(event) => setFormFields({ ...formFields, "emailSubject": event.target.value })}
-                value={formFields.emailSubject}
-              />
+              {formToggle === "gift-to-someone" ? <>
+                <label className='form-label'>
+                  Choose Category
+                </label>
+                <div className='radiobtn-group'>
+                  <Swiper
+                    slidesPerView={3.2}
+                    loop={true}
+                  >
+                    {
+                      giftCategoryArr.map((ele) => <SwiperSlide><RadioBox onOptionChange={(event) => setFormFields({ ...formFields, "giftCardCategory": event.target.value })} selectedOption={formFields.giftCardCategory} options={[{ value: ele.value, label: ele.label }]} className={"byforself-pric"} /></SwiperSlide>)
+                    }
+                  </Swiper>
+                </div>
+                <label className='form-label'>
+                  Select a Theme
+                </label>
+                <div className='radiobtn-group '>
+                  <ImageCarouselRadioBtn onChange={(index) => setFormFields({ ...formFields, "giftCardTheme": index })} selectedImage={formFields.giftCardTheme} />
+                </div>
+                <CustomInput
+                  label={"Email Subject"}
+                  hintText={"Max 24 characters"}
+                  hintShow={true}
+                  onChange={(event) => setFormFields({ ...formFields, "emailSubject": event.target.value })}
+                  value={formFields.emailSubject}
+                />
 
-              <CustomInput
-                type='textarea'
-                label={"Personal Message"}
-                hintText={"Min: ₹100, Max: ₹1,00,000"}
-                hintShow={true}
-                onChange={(event) => setFormFields({ ...formFields, "emailMessage": event.target.value })}
-                value={formFields.emailMessage}
-              />
+                <CustomInput
+                  type='textarea'
+                  label={"Personal Message"}
+                  hintText={"Min: ₹100, Max: ₹1,00,000"}
+                  hintShow={true}
+                  onChange={(event) => setFormFields({ ...formFields, "emailMessage": event.target.value })}
+                  value={formFields.emailMessage}
+                />
 
-              <div className='form-btn'>
-                <Button>Preview eGift Card</Button>
-              </div>
-              </> : null} 
+                <div className='form-btn'>
+                  <Button>Preview eGift Card</Button>
+                </div>
+              </> : null}
               <TermsAndCondition />
             </div>
 

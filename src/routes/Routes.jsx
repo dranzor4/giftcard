@@ -13,20 +13,21 @@ import Cart from '../pages/cart';
 
 
 const Routers = () => {
-    return (
-            <Routes>
-                <Route exact path="/" element={<Home/>} />
-                <Route exact path="/productDetail/:productIndex" element={<ProductDetail/>}/>
-                <Route exact path="/my-profile" element={<MyProfile/> }/>
-                <Route path="/calculator" element={<CalculatorModal/> }/>
-                <Route path="/gifts" element={<GiftCard/> }/>
-                <Route path="/checkout" element={<Checkout/>}/>
-                <Route path="/my-gift-card" element={<MyGiftCard/> }/>
-                <Route  path="/checkout" element={<Checkout/>} />
+  return (
+    <Routes>
+      <Route exact path="/" element={<Home />} />
+      <Route
+        exact
+        path="/productDetail/:productIndex"
+        element={<ProductDetail />}
+      />
+      <Route exact path="/my-profile" element={<MyProfile />} />
+      <Route path="/calculator" element={<CalculatorModal />} />
+      <Route path="/checkout" element={<Checkout />} />
+      <Route path="/my-gift-card" element={<MyGiftCard />} />
                 <Route  path="/cart" element={<Cart/>} />
-
-            </Routes>
-    );
+    </Routes>
+  );
 };
 
 export default Routers;

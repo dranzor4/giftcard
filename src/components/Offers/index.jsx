@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import { offers } from "../../utils/constants/constants";
 import useIsMobile from "../../customHooks/useIsMobile";
 import "./Offers.css";
@@ -34,26 +34,29 @@ const Offers = () => {
           </div>
         )}
       </div>
-      {data?.map((data) => {
-        return (
-          <div className="offers" key={data.id}>
-            <img src="/Images/offer.svg" alt="offer" />
-            <div className="offer-description">
-              <span className="offerSummary">{data.summary}</span>
-              <span className="code">{` ${data.code}`}</span>
+      <div className="offersCode">
+        {data?.map((data) => {
+          return (
+            <div className="offers" key={data.id}>
+              <img src="/Images/offer.svg" alt="offer" />
+              <div className="offer-description">
+                <span className="offerSummary">{data.summary}</span>
+                <span className="code">{data.code}</span>
+              </div>
+              <img
+                src="/Images/copy.svg"
+                className="copy"
+                alt="copy"
+                onClick={() => {
+                  navigator.clipboard.writeText(data.code);
+                }}
+              />
             </div>
-            <img
-              src="/Images/copy.svg"
-              alt="copy"
-              onClick={() => {
-                navigator.clipboard.writeText(data.code);
-              }}
-            />
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 };
 
-export default Offers;
+export default memo(Offers);
