@@ -126,6 +126,31 @@
 .pad-l20 {
   padding-left: 20px;
 }
+.pad-l10 {
+  padding-left: 10px;
+}
+.label-container>.image-icon{
+  object-fit: cover;
+  width: 24px;
+  height: auto;
+}
+.toggle-button {
+  color: inherit; /* Maintain the original text color */
+  text-decoration: none; /* Remove default link underline */
+  cursor: pointer;
+}
+
+.toggle-arrow {
+  color: blue; /* Set the arrow color to blue */
+  margin-left: 4px; /* Adjust the spacing between text and arrow */
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+.toggle-arrow.open {
+  transform: rotate(180deg); /* Rotate the arrow when the content is open */
+}
+
+
 
  
 
