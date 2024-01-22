@@ -1,4 +1,3 @@
-import Button from "../../components/Button";
 import arrowDown from "../../assests/images/icon/down-arrow.svg";
 import "./Cart.css";
 const Cart = () => {
@@ -8,17 +7,21 @@ const Cart = () => {
   return (
     <>
       <div className="container cart-item">
+
         <div className="row m-0">
           <div className="col-5 p-0">
             <img src="Images/amazon-card.png" alt="" className="img-fluid" />
           </div>
+
           <div className="col-7 cart-data">
             <p className="h14">Amazon Shopping Voucher</p>
             <p className="h16">₹1000</p>
             <p className="h12">Value of Reward Points: ₹150</p>
           </div>
         </div>
+          
         <div className="row mx-0 mt-3">
+         
           <div className="col-5 p-0">
             <p className="h12 text-primary">
               View more details
@@ -27,6 +30,7 @@ const Cart = () => {
               </i>
             </p>
           </div>
+
           <div className="col-7 text-center">
             <div className="row">
               <div className="col-5 cart-select">
@@ -43,20 +47,20 @@ const Cart = () => {
               </div>
             </div>
           </div>
+
         </div>
       </div>
 
       <div className="row mx-0 my-2">
-        <div className="col-5 px-4">
-          <p>Sub total</p>
-          <h4>₹2000</h4>
+        <div className="col-5">
+          <p className="h12">Sub total</p>
+          <p className="h18">₹2000</p>
         </div>
-        <div className="col-7  p-0 cart-btn">
+        <div className="col-7 px-2 cart-btn">
         <button type="button" className="btn btn-primary w-100 h-100">Proceed to Buy</button> 
         </div>
       </div>
     </>
   );
 };
-
 export default Cart;
