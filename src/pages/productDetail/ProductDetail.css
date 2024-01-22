@@ -17,6 +17,10 @@
   margin-top: 40px;
 }
 
+.product-form .row{
+  --bs-gutter-x: 0;
+}
+
 .form2 {
   padding-top: 12px;
 }
