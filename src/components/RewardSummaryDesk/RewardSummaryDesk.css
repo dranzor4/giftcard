@@ -2,23 +2,20 @@
 
 .reward-point-summery {
     background-color: #F8FAFC;
-    border-radius: 20px;
+    border-radius: 8px;
     border: 1px solid #CBD5E1;
-    padding: 40px 0;
-  }
-  
-  .rps-header {
-    padding: 0 40px;
+    padding: 20px 0;
   }
   
   .rps-header h2 {
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 600;
     line-height: 24px;
   }
   
   .rps-header .custom-select {
     margin-top: 20px;
+    width: 100%;
   }
   
   .rps-body {
@@ -27,23 +24,22 @@
   
   .rps-ul {
     list-style: none;
-    padding: 0 40px;
   }
   
   .rps-li {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 400;
     color: #64748B;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
+    line-height: 20px;
   }
   
   .rps-footer {
-    margin-top: 10px;
+    margin-top: 8px;
   }
   
   .rps-footer .net-effective {
-    padding: 8px 40px;
     background-color: #E6F2E7;
   }

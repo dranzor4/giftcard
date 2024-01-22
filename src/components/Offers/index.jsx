@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import { offers } from "../../utils/constants/constants";
 import useIsMobile from "../../customHooks/useIsMobile";
 import "./Offers.css";
@@ -45,6 +45,7 @@ const Offers = () => {
               </div>
               <img
                 src="/Images/copy.svg"
+                className="copy"
                 alt="copy"
                 onClick={() => {
                   navigator.clipboard.writeText(data.code);
@@ -58,4 +59,4 @@ const Offers = () => {
   );
 };
 
-export default Offers;
+export default memo(Offers);

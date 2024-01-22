@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import "./CustomCard.css";
 
 const CustomCard = ({ label, tag = false }) => {
@@ -25,4 +25,4 @@ const CustomCard = ({ label, tag = false }) => {
   );
 };
 
-export default CustomCard;
+export default memo(CustomCard);

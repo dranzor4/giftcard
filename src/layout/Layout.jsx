@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Routers from "../routes/Routes";
 import DownBarLogin from "../components/DownBarLogin";
 import Sidebar from "../components/Sidebar";
-import Header from "../components/Header";
+import Header from "../components/Header/index";
 import LoginModalComp from "../components/loginModal/LoginModalComp";
 
 const Layout = () => {

@@ -25,29 +25,31 @@ const CheckoutCmp = () => {
           <div className="orderDetailContainer">
             <div className="orderAmountDetail">
               <div className="totalOrder">Total Order Amount</div>
-              <div className="totalOrder">2000</div>
+              <div className="totalOrder">₹2000</div>
             </div>
             <div className="orderAmountDetail">
               <div className="lightTotalOrder">Total Order Quantity</div>
               <div className="totalOrder">2</div>
             </div>
             <div className="orderAmountDetail">
-              <div className="lightTotalOrder">Processing Fee(1.25% + GST)</div>
-              <div className="totalOrder">15</div>
+              <div className="lightTotalOrder">
+                Processing Fee (1.25% + GST){"      "}
+                <img src="/Images/info-circle.svg" alt="Info-circle" />
+              </div>
+              <div className="totalOrder">₹15</div>
             </div>
           </div>
 
-
           <div className="totalPayableDetail">
             <div className="totalOrder">Total Payable</div>
-            <div className="totalOrder">2015</div>
+            <div className="totalOrder">₹2015</div>
           </div>
         </div>
         <div className="crps-container">
           <RewardSummaryDesk />
         </div>
         <div>
-        <CheckoutCmpBase />
+          <CheckoutCmpBase />
         </div>
       </div>
     </div>
