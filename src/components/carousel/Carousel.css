@@ -7,9 +7,6 @@
   width: 100%;
   margin-top: 15px;
 }
-.FadeCarouselContainer .swiper-pagination span {
-  background-color: var(--white-color);
-}
 .carousel {
   display: flex;
   flex-direction: row;
@@ -50,16 +47,16 @@
   text-decoration: none;
   width: 157px;
 }
-/* .cardParentContainer {
+.cardParentContainer {
   width: 157px;
-} */
-.imageContainer {
+}
+.imageContainer{
   width: 238px;
   height: 146px;
   border-radius: 20px;
 }
-.imageContainer img {
-  width: 100%;
+.imageContainer img{
+  width:100%;
   height: 100%;
   border-radius: 20px;
 }

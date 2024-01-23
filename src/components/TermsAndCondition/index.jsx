@@ -50,36 +50,6 @@ const TermsAndCondition = () => {
             </ol>
           </div>
         )}
-
-        {selected === 2 && (
-          <div>
-            {" "}
-            <div className="description">T&C</div>
-            <ol>
-              <li>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
-              </li>
-              <li>
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type.
-              </li>
-              <li>Scrambled it to make a type specimen book.</li>
-            </ol>
-          </div>
-        )}
-        {selected === 3 && (
-          <iframe
-            width="248"
-            className="iframeVideo"
-            src="https://www.youtube.com/embed/mZ9DxDVuEZM?si=_yv_z8CstNypKqWq"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-        )}
-
         <div className="addToCartOrBuyNow">
           <Button className="addToCart">Add To Cart</Button>
           <Button className="buyNow text-white">Buy Now</Button>

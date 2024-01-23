@@ -11,11 +11,16 @@
   border-bottom: 1px solid var(--Gray-Gray-200, #e2e8f0);
 }
 
-.gift_card_item :last-child {
+.gift_card_item :last-child{
   text-align: right;
   font-weight: 500;
 }
 
-.first > .col :last-child {
+.first > .col :last-child{
+  border:none;
+}
+
+button{
   border: none;
+  width: 100%;
 }

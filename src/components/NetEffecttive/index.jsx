@@ -1,11 +1,10 @@
 import React from 'react'
 import "./NetEffecttive.css"
-const NetEffecttive = ({onClick, price}) => {
+const NetEffecttive = () => {
   return (
     <div className='net-effective'>
-        <p className='text'>Net Effective Price <img src='/Images/tooltips.svg' /> </p>
-        {price ? <p className='text'>{price}</p> : <button className='button' onClick={onClick}>Know How</button>}
-        
+        <p className=''>Net Effective Price: ₹850 </p>
+        <button className='button'>Know How</button>
     </div>
   )
 }

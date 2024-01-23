@@ -1,14 +1,9 @@
-import React from "react";
-import "./TransparentOverlay.css";
-const index = ({ handleClick, isOpen, customeClass }) => {
+import React from 'react'
+import Style from "./TransparentOverlay.module.css"
+const index = ({handleClick, isOpen,customeClass}) => {
   return (
-    <div
-      onClick={() => handleClick()}
-      className={`transparentOverlay ${
-        isOpen ? "active" : ""
-      }  ${customeClass}`}
-    ></div>
-  );
-};
+    <div onClick={() => handleClick()} className={`${Style.transparentOverlay} ${isOpen ? Style.active : ""}  ${customeClass}`}></div>
+  )
+}
 
-export default index;
+export default index

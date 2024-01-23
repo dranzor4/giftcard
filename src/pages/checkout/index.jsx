@@ -1,12 +1,11 @@
 import React from "react";
 import CheckoutCmp from "../../components/CheckoutCmp";
-import "./checkout.css";
 import CheckoutCmpBase from "../../components/CheckoutCmpBase";
 const Checkout = () => {
   return (
-    <div className="checkoutPage">
+    <div>
       <CheckoutCmp />
-      {/* <CheckoutCmpBase /> */}
+      <CheckoutCmpBase />
     </div>
   );
 };

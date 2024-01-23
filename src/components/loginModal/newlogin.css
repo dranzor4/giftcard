@@ -26,7 +26,6 @@
     /* Body/Paragraph-2/Regular */
     font-size: 16px;
     font-style: normal;
-    font-family: Poppins;
     font-weight: 400;
     line-height: 24px;
     /* 150% */
@@ -35,7 +34,6 @@
 .welcome-header-one div:nth-child(2) {
     color: var(--Gray-Gray-800, #1E293B);
     text-align: center;
-    font-family: Poppins;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -43,12 +41,12 @@
     /* 133.333% */
 }
 
-.modal-header {
+.modal-header{
     padding: 0px !important;
     justify-content: space-around !important;
 }
 
-.btn-close {
+.btn-close{
     position: absolute;
     top: 25px;
     right: 23px;
@@ -75,27 +73,13 @@
 
 }
 
-
 .modal-header-first-one {
     display: flex;
     /* height: 228px; */
     flex-direction: column;
     align-items: flex-start;
-    /* padding-bottom: 16px; */
-    gap: 30px;
+    gap: 20px;
     align-self: stretch;
-}
-
-.mobile-country-code {
-    color: var(--Gray-Gray-900, #181C2D);
-    font-family: Poppins;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px;
-    /* 166.667% */
-    background-color: #FFF;
-    border-right: none;
 }
 
 .modal-header-first-two {
@@ -128,8 +112,6 @@
 .create-new-account div {
     font-weight: 400;
     text-align: center;
-    font-style: normal;
-    font-family: Poppins;
     font-size: 12px;
     line-height: 20px;
 }
@@ -159,7 +141,6 @@
 
 .login-header-first div:first-child {
     color: var(--Gray-Gray-700, #334155);
-    font-family: Poppins;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -169,8 +150,7 @@
 
 .login-header-first div:nth-child(2) {
     color: var(--Gray-Gray-800, #1E293B);
-    font-family: Epilogue;
-    font-size: 20px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 700;
     line-height: 32px;
@@ -178,20 +158,9 @@
     letter-spacing: -0.48px;
 }
 
-.login-header-otp-text {
-    align-self: stretch;
-    color: var(--Gray-Gray-500, #64748B);
-    font-family: Poppins;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 18px;
-}
-
 .otp-change-label {
     display: flex;
     align-items: center;
-    margin-top: -10px;
     margin-bottom: 20px;
     gap: 10px;
 }
@@ -229,16 +198,10 @@
     font-style: normal;
     font-weight: 400;
     line-height: 18px;
-    padding-bottom: 20px;
 }
 
-.login-otp-button Button {
+.login-otp-button Button{
     width: -webkit-fill-available !important;
-    font-size: 12px;
-    font-style: normal;
-font-weight: 500;
-line-height: 16px; /* 133.333% */
-text-transform: capitalize;
 }
 
 

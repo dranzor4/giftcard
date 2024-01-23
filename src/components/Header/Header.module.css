@@ -1,6 +1,5 @@
 .header {
-    z-index: 99997;
-    box-shadow: 0px 1px 8px 0px rgba(0, 74, 143, 0.08);
+    z-index: 99997
 }
 
 /* header grid */

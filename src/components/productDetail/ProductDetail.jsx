@@ -13,9 +13,25 @@ import Button from "../Button";
 import TermsAndCondition from "../TermsAndCondition";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ImageCarouselRadioBtn from "../ImageCarouselRadioBtn";
-import RewardSummaryDesk from "../RewardSummaryDesk";
 const ProductDetail = () => {
+<<<<<<< HEAD
   const navigate = useNavigate();
+=======
+  // const { productIndex } = useParams();
+  // const navigate=useNavigate();
+  // const data = cardData[productIndex];
+  // let customClass = {
+  //   product: styles.product,
+  //   card: styles.card,
+  //   cardHeader: styles.cardHeader,
+  //   cardContent: styles.cardContent,
+  //   cardImage: styles.cardImage,
+  //   cardBadge: styles.cardBadge,
+  //   validityText: styles.validityText,
+  // };
+
+  const navigate = useNavigate()
+>>>>>>> parent of 9edd226 (Merge branch 'main' into Uzair-Gift-Card)
 
   const [formFields, setFormFields] = useState({
     giftPrice: "",
@@ -30,14 +46,27 @@ const ProductDetail = () => {
     giftCardCategory: "",
     giftCardTheme: 0,
     emailSubject: "",
+<<<<<<< HEAD
     emailMessage: "",
   });
   const [formToggle, setFormToggle] = useState("buy-for-self");
   const [selectedOption, setSelectedOption] = useState("");
+=======
+    emailMessage: ""
+  })
+  console.log(formFields);
+  const [formToggle, setFormToggle] = useState("buy-for-self")
+  const [selectedOption, setSelectedOption] = useState('');
+  const [sendNowOrLater, setSendNowOrLater] = useState('');
+  const [selectedImage, setSelectedImage] = useState(0);
+>>>>>>> parent of 9edd226 (Merge branch 'main' into Uzair-Gift-Card)
 
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
     console.log(event.target.value);
+  };
+  const handleRadioChange = (index) => {
+    setSelectedImage(index);
   };
   const options = [
     { value: "buy-for-self", label: "Buy for Self" },
@@ -86,9 +115,18 @@ const ProductDetail = () => {
     },
     {
       value: "anniversary",
+<<<<<<< HEAD
       label: "Anniversary",
     },
   ];
+=======
+      label: "Anniversary"
+    }
+  ]
+  const handlesetSendNowOrLaterChange = (event) => {
+    setSendNowOrLater(event.target.value);
+  };
+>>>>>>> parent of 9edd226 (Merge branch 'main' into Uzair-Gift-Card)
 
   const PriceRadioBtns = () =>
     PriceRadioBtnArry.map((obj, index) => (
@@ -196,10 +234,10 @@ const ProductDetail = () => {
                     </div>
                   </div>
                   <div className={"form2"}>
-                    {/* <NetEffecttive /> */}
-                    <RewardSummaryDesk />
+                    <NetEffecttive />
                   </div>
                 </div>
+<<<<<<< HEAD
                 {formToggle === "gift-to-someone" ? (
                   <div className="row">
                     <div className="form-delivery-details-section ">
@@ -268,6 +306,24 @@ const ProductDetail = () => {
                               })
                             }
                             value={formFields.firstNmae}
+=======
+                {formToggle === "gift-to-someone" ? <div className="row">
+                  <div className='form-delivery-details-section '>
+                    <div className='form-divider'>
+                      <h3><span>Delivery Details</span></h3>
+                    </div>
+
+                    <div className="row">
+                      <div className='form-sms-or-mail-section col-lg-6'>
+                        <label className='form-label'>How would you like to send it?</label>
+                        <div className='checkbox-group'>
+                          <Form.Check
+                            type={"checkbox"}
+                            id={`default-checkbox`}
+                            name="onEmail"
+                            label={`Email`}
+                            onChange={(event) => setFormFields({ ...formFields, "onEmail": event.target.value })}
+>>>>>>> parent of 9edd226 (Merge branch 'main' into Uzair-Gift-Card)
                           />
                           <CustomInput
                             label={"last Name"}
@@ -309,6 +365,7 @@ const ProductDetail = () => {
             </div>
           </div>
           <div className="row col-md-9">
+<<<<<<< HEAD
             {formToggle === "gift-to-someone" ? (
               <>
                 <div className="form-divider">
@@ -383,6 +440,68 @@ const ProductDetail = () => {
                   </div>
                 </>
               ) : null}
+=======
+            {
+              formToggle === "gift-to-someone" ? <>
+              <div className='form-divider'>
+              <h3><span>Personalise your Gift Card</span></h3>
+            </div>
+            </> : null
+            }
+            <div className="col-md-6"></div>
+            <div className='form-personalise-section col-md-6'>
+              {formToggle === "gift-to-someone" ?<>
+              <label className='form-label'>
+                Choose Category
+              </label>
+              <div className='radiobtn-group'>
+                <Swiper
+                  slidesPerView={3.2}
+                  loop={true}
+                >
+                  {
+                    giftCategoryArr.map((ele) => <SwiperSlide><RadioBox onOptionChange={(event) => setFormFields({ ...formFields, "giftCardCategory": event.target.value })} selectedOption={formFields.giftCardCategory} options={[{ value: ele.value, label: ele.label }]} className={"byforself-pric"} /></SwiperSlide>)
+                  }
+                </Swiper>
+              </div>
+              <label className='form-label'>
+                Select a Theme
+              </label>
+              <div className='radiobtn-group '>
+                {/* <Swiper
+                  slidesPerView={3.1}
+                  spaceBetween={10}
+                  loop={true}
+                >
+                  <SwiperSlide><div className='each-slide-container'><CustomCard /></div></SwiperSlide>
+                  <SwiperSlide><div className='each-slide-container'><CustomCard /></div></SwiperSlide>
+                  <SwiperSlide><div className='each-slide-container'><CustomCard /></div></SwiperSlide>
+                  <SwiperSlide><div className='each-slide-container'><CustomCard /></div></SwiperSlide>
+                </Swiper> */}
+                <ImageCarouselRadioBtn onChange={(index) => setFormFields({ ...formFields, "giftCardTheme": index })} selectedImage={formFields.giftCardTheme} />
+              </div>
+              <CustomInput
+                label={"Email Subject"}
+                hintText={"Max 24 characters"}
+                hintShow={true}
+                onChange={(event) => setFormFields({ ...formFields, "emailSubject": event.target.value })}
+                value={formFields.emailSubject}
+              />
+
+              <CustomInput
+                type='textarea'
+                label={"Personal Message"}
+                hintText={"Min: ₹100, Max: ₹1,00,000"}
+                hintShow={true}
+                onChange={(event) => setFormFields({ ...formFields, "emailMessage": event.target.value })}
+                value={formFields.emailMessage}
+              />
+
+              <div className='form-btn'>
+                <Button>Preview eGift Card</Button>
+              </div>
+              </> : null} 
+>>>>>>> parent of 9edd226 (Merge branch 'main' into Uzair-Gift-Card)
               <TermsAndCondition />
             </div>
           </div>

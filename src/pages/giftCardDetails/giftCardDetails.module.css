@@ -1,10 +1,10 @@
-.first {
+.first{
   padding: 16px;
   border-radius: 8px !important;
   border: 1px solid var(--Gray-Gray-200, #e2e8f0) !important;
   background: #fff;
 }
-.logo {
+.logo{
   display: flex;
   width: 48px;
   height: 48px;

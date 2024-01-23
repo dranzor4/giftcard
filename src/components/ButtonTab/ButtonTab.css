@@ -10,7 +10,7 @@
   border-radius: 100px;
 }
 .buttonTabContainer .buttonContainer .initial {
-  font-size: 12px;
+  font-size: 14px;
   background-color: transparent;
   color: var(--bg-blue-color);
   border: none;
@@ -20,12 +20,12 @@
   line-height: 20px;
   font-style: normal;
 }
-.buttonTabContainer .buttonContainer .afterClick {
-  font-size: 12px;
+.afterClick {
+  font-size: 14px;
   background-color: var(--bg-blue-color);
   color: var(--white-color);
   border: none;
-  border-radius: 50px;
+  border-radius: 8px;
   padding: 8px 20px;
   font-weight: 500;
   line-height: 20px;
@@ -51,6 +51,7 @@
   font-weight: 500;
   line-height: 20px;
 }
+
 
 @media screen and (min-width: 760px) {
   .buttonContainer {

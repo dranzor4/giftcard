@@ -1,5 +1,5 @@
 import React from "react";
-import "./Card.css";
+import styles from "./Card.module.css";
 
 export const Card = ({ data, className, validity }) => {
   return (
@@ -29,12 +29,27 @@ export const Card = ({ data, className, validity }) => {
           <div>off</div>
         </div>
       </div>
-        <h2 className={`${styles.cardHeader} ${className?.cardHeader ? className.cardHeader : styles.cardHeader}`}>{data?.header}</h2>
-      {validity ? <div className={className?.validityText && className.validityText}>Validity: 1 year from the date of issue</div>:
-      <div className={`${styles.cardContent} ${className?.cardContent ? className.cardContent : styles.cardContent}`}> 
-      <p className={`${styles.cardParagraph}`}>{`${data?.paragraph} | `}</p>
-      <p className={`${styles.cardLink}`}>{ data?.link}</p>
-      </div>}
+      <h2
+        className={`${styles.cardHeader} ${
+          className?.cardHeader ? className.cardHeader : styles.cardHeader
+        }`}
+      >
+        {data?.header}
+      </h2>
+      {validity ? (
+        <div className={className?.validityText && className.validityText}>
+          Validity: 1 year from the date of issue
+        </div>
+      ) : (
+        <div
+          className={`${styles.cardContent} ${
+            className?.cardContent ? className.cardContent : styles.cardContent
+          }`}
+        >
+          <p className={`${styles.cardParagraph}`}>{`${data?.paragraph} | `}</p>
+          <p className={`${styles.cardLink}`}>{data?.link}</p>
+        </div>
+      )}
     </div>
   );
 };

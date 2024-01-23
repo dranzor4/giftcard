@@ -47,16 +47,21 @@
   display: flex;
   cursor: pointer;
 }
-.offersContainer .offersCode {
-  border-top: 1px solid var(--button-border-color);
-}
 .offersContainer .offers {
   /* display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+<<<<<<< HEAD
   gap: 20px; */
   border-bottom: 1px solid var(--button-border-color);
   /* padding: 12px 0; */
+=======
+  gap: 20px;
+  margin-top: 16px;
+  border-top: 1px solid #CBD5E1;
+  border-bottom: 1px solid #CBD5E1;
+  padding: 12px 0;
+>>>>>>> parent of 9edd226 (Merge branch 'main' into Uzair-Gift-Card)
 }
 .offersContainer .offers img {
   height: 24px;
@@ -80,6 +85,7 @@
   line-height: 20px;
   cursor: pointer;
 }
+<<<<<<< HEAD
 .copy {
   cursor: pointer;
 }
@@ -90,3 +96,5 @@
     margin: 0px;
   }
 }
+=======
+>>>>>>> parent of 9edd226 (Merge branch 'main' into Uzair-Gift-Card)

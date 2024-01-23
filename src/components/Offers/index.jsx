@@ -1,4 +1,4 @@
-import React, { memo, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { offers } from "../../utils/constants/constants";
 import useIsMobile from "../../customHooks/useIsMobile";
 import "./Offers.css";
@@ -34,6 +34,7 @@ const Offers = () => {
           </div>
         )}
       </div>
+<<<<<<< HEAD
       <div className="offersCode">
         {data?.map((data) => {
           return (
@@ -53,12 +54,28 @@ const Offers = () => {
                   }}
                 />
               </div>
+=======
+      {data?.map((data) => {
+        return (
+          <div className="offers" key={data.id}>
+            <img src="/Images/offer.svg" alt="offer" />
+            <div className="offer-description">
+              <span className="offerSummary">{data.summary}</span>
+              <span className="code">{` ${data.code}`}</span>
+>>>>>>> parent of 9edd226 (Merge branch 'main' into Uzair-Gift-Card)
             </div>
-          );
-        })}
-      </div>
+            <img
+              src="/Images/copy.svg"
+              alt="copy"
+              onClick={() => {
+                navigator.clipboard.writeText(data.code);
+              }}
+            />
+          </div>
+        );
+      })}
     </div>
   );
 };
 
-export default memo(Offers);
+export default Offers;

@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import { Card, Container, Row, Col } from "react-bootstrap";
-import "./my-gift-card.css";
+import style from "./my-gift-card.module.css";
 import Accordion from "react-bootstrap/Accordion";
-import { myGiftCardsData } from "../../utils/constants/constants";
-import ButtonTab from "../../components/ButtonTab";
-import FilterSelect from "../../components/FilterSelect";
 
 const MyGiftCard = () => {
   const [isAccordionActive, setIsAccordionActive] = useState(false);
@@ -37,25 +34,8 @@ const MyGiftCard = () => {
     },
     // Add more data sets as needed
   ];
-
   return (
     <div>
-      <div className="myGiftCardHeader">
-        <div className="headerText">
-          <img src="/Images/left-arrow.svg" alt="left-arrow" />
-          <div className="headerTextTitle">My Gift Cards</div>
-        </div>
-        <div className="headerDropdown">
-          <FilterSelect />
-        </div>
-      </div>
-
-      <div className="buttonTab">
-        <ButtonTab
-          data={myGiftCardsData}
-          defaultSelected={myGiftCardsData[0]?.id}
-        />
-      </div>
       <Accordion
         activeKey={isAccordionActive ? "0" : null}
         onSelect={toggleAccordion}
@@ -65,14 +45,14 @@ const MyGiftCard = () => {
             <Container>
               <Row className="align-items-center border-bottom pb-2">
                 <Col xs="auto">
-                  <div className="circle border">
+                  <div className={`${style.circle} border`}>
                     <img src="./images/myntra.png" alt="" />
                   </div>
                 </Col>
                 <Col>
                   <div className="d-flex align-items-center justify-content-between">
                     <div>Myntra</div>
-                    <p className="textright">₹1000.00</p>
+                    <p className={style.textright}>₹1000.00</p>
                   </div>
                 </Col>
               </Row>
@@ -82,10 +62,10 @@ const MyGiftCard = () => {
             <Container>
               <Row className="mb-3">
                 <Col xs="7">
-                  <div className="name">Items available</div>
+                  <div className={style.name}>Items available</div>
                 </Col>
-                <Col xs="5" className="textright">
-                  <div className="name">03</div>
+                <Col xs="5" className={style.textright}>
+                  <div className={style.name}>03</div>
                 </Col>
               </Row>
             </Container>
@@ -111,10 +91,10 @@ const generateAccordionBody = (data) => {
           <Container>
             <Row className="align-items-center border-bottom pb-2">
               <Col xs="9">
-                <div className="name">{data.cardTitle}</div>
+                <div className={style.name}>{data.cardTitle}</div>
               </Col>
-              <Col xs="3" className="textright">
-                <div className="name">{data.quantity}</div>
+              <Col xs="3" className={style.textright}>
+                <div className={style.name}>{data.quantity}</div>
               </Col>
             </Row>
           </Container>
@@ -122,14 +102,14 @@ const generateAccordionBody = (data) => {
         <Container>
           <Row className="mb-2 px-3">
             <Col xs="6">
-              <div className="name label">Available Balance</div>
-              <div className="name" style={balanceStyle}>
+              <div className={`${style.name}  ${style.label}`} >Available Balance</div>
+              <div className={`${style.name} `} style={balanceStyle}>
                 {data.availableBalance}
               </div>
             </Col>
-            <Col xs="6" className="textright">
-              <div className="name label">Expiry Date</div>
-              <div className="name">{data.expiryDate}</div>
+            <Col xs="6" className={style.textright}>
+              <div className={`${style.name}  ${style.label}`}>Expiry Date</div>
+              <div className={style.name}>{data.expiryDate}</div>
             </Col>
           </Row>
         </Container>

@@ -42,7 +42,7 @@
     z-index: 1;
 }
 
-.input-box .input-tip{
+.input-box p{
     line-height: 1;
     font-size: 12px;
     color: 64748B;
@@ -51,7 +51,7 @@
     list-style: 14px;
 }
 
-.input-box .input-tip.error{
+.input-tip.error{
     color: #D00;
 }
 
@@ -64,4 +64,18 @@
 .input-box.error textarea:valid ~ span,
 .input-box.error textarea:focus ~ span{
     color: #D00;
+}
+
+
+.number span{
+    
+    padding: 14px;
+    padding-left: 50px;
+    /* font-size: 13px */
+    
+}
+.number input::placeholder{
+    color: #1E293B;
+    font-size: 14px;
+    font-weight: 400;
 }

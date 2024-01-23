@@ -11,19 +11,15 @@ a{
   text-decoration: none;
 }
 
-
-/* @font-face {
-  font-family: "Poppins";
+@font-face {
+  font-family: "Poppins";   /*Can be any text*/
   src: local("Poppins-Regular"),
     url("./fonts/Poppins-Regular.ttf") format("truetype");
-} */
+}
 
 a, p, ul, li{
   margin: 0;
   padding: 0;
-}
-.card{
-  border: none;
 }
 .accordion-button:not(.collapsed) {
   background-color: #fff;

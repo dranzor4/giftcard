@@ -1,22 +1,14 @@
-import React, { useCallback, useState } from "react";
+import React, { useState } from "react";
 import "./ProductDetail.css";
-import CustomCard from "../../components/CustomCard";
+import CustomCard from "../../components/CustomCard/index";
 import RadioBox from "../../components/RadioBox";
+import GiftForSomeoneFrom from "../../components/GiftForSomeoneFrom";
 import Offers from "../../components/Offers";
-import Redeemable from "../../components/Redeemable";
+import Redeemable from "../../components/Redeemable"
 import { useNavigate } from "react-router-dom";
-import CustomInput from "../../components/CustomInput";
-import NetEffecttive from "../../components/NetEffecttive";
-import { Form } from "react-bootstrap";
-import Button from "../../components/Button";
-import TermsAndCondition from "../../components/TermsAndCondition";
-import { Swiper, SwiperSlide } from "swiper/react";
-import ImageCarouselRadioBtn from "../../components/ImageCarouselRadioBtn";
-import RewardSummaryDesk from "../../components/RewardSummaryDesk";
-import DownBar from "../../components/DownBar";
-import PreviewGiftCardMob from "../../components/PreviewGiftCardMob";
-import CustomMobNoInput from "../../components/CustomMobNoInput";
+
 const ProductDetail = () => {
+<<<<<<< HEAD
   const navigate = useNavigate();
 
   const [formFields, setFormFields] = useState({
@@ -452,6 +444,54 @@ const ProductDetail = () => {
           Okay
         </Button>
       </DownBar>
+=======
+  // const { productIndex } = useParams();
+  // const navigate=useNavigate();
+  // const data = cardData[productIndex];
+  // let customClass = {
+  //   product: styles.product,
+  //   card: styles.card,
+  //   cardHeader: styles.cardHeader,
+  //   cardContent: styles.cardContent,
+  //   cardImage: styles.cardImage,
+  //   cardBadge: styles.cardBadge,
+  //   validityText: styles.validityText,
+  // };
+
+  const navigate = useNavigate()
+
+  const [selectedOption, setSelectedOption] = useState('');
+  const handleOptionChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
+  const options = [
+    { value: 'Buy for Self', label: 'Buy for Self'  },
+    { value: 'Gift to Someone', label: 'Gift to Someone' },
+  ];
+
+  return (
+    <>
+      <div className="mainConatiner">
+        <div className="backBtn">
+          <img src="/Images/left-arrow.svg" onClick={() => navigate(-1)} alt="" />
+          <img  src="/Images/search-icon.svg" alt="" />
+        </div>
+        <div className="prductDetailPage">
+          <div className="cardDetails">
+            <CustomCard label={true} tag={true}/>
+            <Redeemable />
+            <Offers />
+          </div>
+          <div className="cardForm">
+            <div className="text-center line-height-0">
+              <RadioBox options={options} selectedOption={selectedOption} onOptionChange={handleOptionChange} className="product-selforgift-btn" />
+            </div>
+            {/* <ByForSelfFrom /> */}
+            <GiftForSomeoneFrom />
+          </div>
+        </div>
+      </div>
+>>>>>>> parent of 9edd226 (Merge branch 'main' into Uzair-Gift-Card)
     </>
   );
 };

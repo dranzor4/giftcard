@@ -1,36 +1,37 @@
-.card1 img {
-  width: 100%;
+
+.card img{
+    width: 100%;
 }
 
-.cardHeader1 {
-  position: relative;
+.cardHeader {
+    position: relative;
 }
 
-.cardBody .cardBoldText {
-  color: #1e293b;
-  font-weight: 600;
-  font-size: 20px;
-  padding-top: 12px;
-  line-height: 40px;
-  letter-spacing: -1;
+.cardBody .cardBoldText{
+    color: #1E293B;
+    font-weight: 600;
+    font-size: 20px;
+    padding-top: 12px;
+    line-height: 40px;
+    letter-spacing: -1;
 }
 
-.cardBody .cardLightText {
-  padding-top: 4px;
-  color: #64748b;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 24px;
+.cardBody .cardLightText{
+    padding-top: 4px;
+    color: #64748B;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
 }
-.cardtag {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 12px 24px;
-  background-color: #25a42f;
-  border-radius: 0px 040px 40px 4px;
-  color: #fff;
-  font-size: 12px;
-  word-break: break-all;
-  line-height: 12px;
+.cardtag{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 12px 24px;
+    background-color: #25A42F;
+    border-radius: 0px 040px 40px 4px;
+    color: #fff;
+    font-size: 12px;
+    word-break: break-all;
+    line-height: 12px;
 }
