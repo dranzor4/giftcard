@@ -19,8 +19,6 @@ const LoginModalComp = ({ show, handleClose }) => {
   const [welcomeform, setWelcomeform] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(true);
   const [signModal, setSignModal] = useState(false);
-  const [showLabel, setShowLabel] = useState(false);
-
   const hardcodedOtp = "123456";
 
   useEffect(() => {
@@ -47,25 +45,11 @@ const LoginModalComp = ({ show, handleClose }) => {
       setShowOTPForm(true);
       setOtpError("");
       console.log("Sending OTP...");
-      setShowLabel(false)
     } else {
       setMobileNumber("");
       alert("Please enter a valid 10-digit mobile number.");
-      setShowLabel(false)
     }
-    
   };
-
-  const handleOTPChange=(e)=>{
-    let inputValue = e.target.value;
-    setEnteredOtp(inputValue)
-    console.log("inputValue:", inputValue);
-    if (inputValue.trim() !== "") {
-      setShowLabel(true);
-    } else {
-      setShowLabel(false);
-    }
-  }
 
   const handleOTPSubmit = (e) => {
     e.preventDefault();
@@ -76,22 +60,13 @@ const LoginModalComp = ({ show, handleClose }) => {
       setEnteredOtp("");
       setOtpError("Incorrect OTP. Please try again.");
     }
-
-    
   };
 
   const handleMobileNumberChange = (e) => {
     let inputValue = e.target.value;
-    inputValue = inputValue.replace(/\D/g, "");
+    inputValue = inputValue.replace(/\D/g, '');
     setMobileNumber(inputValue);
-    if (inputValue.trim() !== "") {
-      setShowLabel(true);
-    } else {
-      setShowLabel(false);
-    }
   };
-
- 
 
   const handleCreateAccountClick = () => {
     setIsLoginModalOpen(false); // Close LoginModalComp
@@ -110,7 +85,8 @@ const LoginModalComp = ({ show, handleClose }) => {
         onHide={handleClose}
         centered
       >
-        {welcomeform ? (
+
+      {welcomeform ? (
           <div className="welcome-header">
             <div className="welcome-header-one">
               <div>Hello Animesh,</div>
@@ -164,21 +140,14 @@ const LoginModalComp = ({ show, handleClose }) => {
 
                       <div>
                         <InputGroup>
-                        <Form.Label
-                        className={showLabel ? 'active' : ''}
-                        style={{ position: 'absolute' }}
-                        >
-                          Enter OTP
-                        </Form.Label>
                           <Form.Control
                             type="text"
                             placeholder="Enter OTP"
                             aria-label="Enter OTP"
                             aria-describedby="mobile-prefix"
-                            className="custom-form-control"
+                            style={{ fontSize: "small" }}
                             value={enteredOtp}
-                            onChange={handleOTPChange}
-                            // onChange={(e) => setEnteredOtp(e.target.value)}
+                            onChange={(e) => setEnteredOtp(e.target.value)}
                           />{" "}
                         </InputGroup>
 
@@ -236,13 +205,6 @@ const LoginModalComp = ({ show, handleClose }) => {
                       }}
                     >
                       <div>
-                        <Form.Label
-                        className={showLabel ? 'active' : ''}
-                        style={{ position: 'absolute' }}
-                        >
-                          Mobile Number
-                        </Form.Label>
-
                         <InputGroup className="mb-3">
                           <InputGroup.Text
                             id="mobile-prefix"
@@ -255,8 +217,7 @@ const LoginModalComp = ({ show, handleClose }) => {
                             placeholder="Mobile Number"
                             aria-label="Mobile Number"
                             aria-describedby="mobile-prefix"
-                            className="custom-form-control"
-                            style={{ borderLeft: "none" }}
+                            style={{ fontSize: "small", borderLeft: "none" }}
                             value={mobileNumber}
                             onChange={handleMobileNumberChange}
                           />{" "}
