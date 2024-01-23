@@ -31,8 +31,19 @@ a, p, ul, li{
 .accordion-button:focus {
   box-shadow: none;
 }
+.accordion-button::after{
+  margin-bottom: 0.795rem;
+}
 .line-height-0{
   line-height: 0;
+}
+
+
+.accordion-body {
+    padding: 6px 16px;
+}
+.accordion-body {
+  padding: 6px 16px;
 }
 
 
