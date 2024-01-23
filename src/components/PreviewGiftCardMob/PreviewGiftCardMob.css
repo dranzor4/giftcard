@@ -1,0 +1,21 @@
+.pre-gift-card{
+    border: 2px dotted #ccc;
+    padding: 2px;
+}
+
+.pre-gift-card img{
+    width: 100%;
+}
+.pre-gift-card .user-name{
+    font-size: 12px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.pre-gift-card .title{
+    font-size: 12px;
+    padding-top: 8px;
+}
+.pre-gift-card .para{
+    font-size: 12px;
+    padding-top: 8px;
+}

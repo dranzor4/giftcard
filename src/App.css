@@ -10,22 +10,21 @@
 a{
   text-decoration: none;
 }
-.row{
-  --bs-gutter-x: 0;
-}
 
-@font-face {
-  font-family: "Poppins";   /*Can be any text*/
+
+/* @font-face {
+  font-family: "Poppins";
   src: local("Poppins-Regular"),
     url("./fonts/Poppins-Regular.ttf") format("truetype");
-}
+} */
 
 a, p, ul, li{
   margin: 0;
   padding: 0;
 }
-
-
+.card{
+  border: none;
+}
 .accordion-button:not(.collapsed) {
   background-color: #fff;
 }

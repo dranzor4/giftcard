@@ -2,7 +2,7 @@ import React from "react";
 import { cardData } from "../../utils/constants/constants";
 import { Card } from "../Cards/Card";
 import { Link } from "react-router-dom";
-import  "./Carousel.css";
+import "./Carousel.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, FreeMode } from "swiper/modules";
 import "swiper/css/free-mode";
@@ -10,7 +10,7 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 
 const Carousel = (props) => {
-  const { name, animationDelay} = props;
+  const { name, animationDelay } = props;
   return (
     <div className="carouselContainer">
       <div className="carouselHeader">
@@ -22,7 +22,7 @@ const Carousel = (props) => {
         slidesPerView={3.5}
         rewind={true}
         onSlideChange={() => {}}
-        onSwiper={(swiper) => console.log(swiper)}
+        // onSwiper={(swiper) => console.log(swiper)}
         freeMode={true}
         effect={"fade"}
         modules={[FreeMode]}
@@ -45,11 +45,15 @@ const Carousel = (props) => {
             slidesPerView: 3,
             spaceBetween: 10,
           },
-          960:{
+          960: {
             slidesPerView: 4,
             spaceBetween: 10,
           },
-          1024: {
+          1050: {
+            slidesPerView: 4,
+            spaceBetween: 10,
+          },
+          1100: {
             slidesPerView: 5,
             spaceBetween: 10,
           },
@@ -59,12 +63,9 @@ const Carousel = (props) => {
           {cardData.map((data, index) => (
             <SwiperSlide key={index}>
               {" "}
-              <Link
-                to={`/productDetail/${data.id}`}
-                className="cardNavigation"
-              >
+              <Link to={`/productDetail/${data.id}`} className="cardNavigation">
                 <div className="cardParentContainer">
-                <Card data={data} index={index} />
+                  <Card data={data} index={index} />
                 </div>
               </Link>
             </SwiperSlide>

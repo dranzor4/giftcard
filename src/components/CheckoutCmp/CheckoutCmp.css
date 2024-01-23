@@ -7,7 +7,7 @@
   align-items: center;
   padding: 0px 16px;
   padding-top: 20px;
-  padding-bottom: 30px;
+  padding-bottom: 32px;
   border-bottom: 1px solid var(--button-border-color);
 }
 .orderSummaryContainer {
@@ -38,20 +38,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 .orderPayable {
   border-bottom: 1px solid var(--button-border-color);
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 }
 .orderDetailContainer {
-  padding: 30px 0px;
+  padding: 20px 0px;
   margin: 0px 16px;
   border-bottom: 1px solid var(--button-border-color);
 }
 .totalPayableDetail {
-  padding: 30px 0px;
-  margin: 0px 16px;
+  padding: 20px 16px 0 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -80,3 +79,17 @@
   font-weight: 500;
   color: var(--header-text-color);
 }
+
+.crps-container {
+  padding: 20px 16px 32px 16px;
+  border-bottom: 1px solid #cbd5e1;
+}
+/* rps-footer .net-effective */
+.crps-container .reward-point-summery .rps-header,
+.crps-container .reward-point-summery .rps-body {
+  padding: 0 20px;
+}
+.crps-container .reward-point-summery .rps-header .custom-select {
+  margin-top: 12px;
+}
+/* .crps-container .reward-point-summery  */

@@ -1,4 +1,4 @@
-.sidebar-overlay {
+.sidebarOverlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -7,9 +7,10 @@
     background-color: black;
     opacity: .2;
     display: none;
+    z-index: 999;
   }
   
-  .sidebar-overlay.active {
+  .sidebarOverlay.active {
     display: block;
   }
   
@@ -22,13 +23,13 @@
     background-color: #fff;
     color: #fff;
     transition: left 0.3s ease;
-    z-index: 1;
+    z-index: 99998;
   }
 
   .sidebar.open {
     left: 0%;
   }
-  .sidebar-prof-container{
+  .sidebarProfContainer{
     background-color: #DCEBFD;
     padding: 60px 0 20px;
     display: flex;
@@ -36,20 +37,12 @@
     flex-direction: column;
   }
 
-  .profile-image-conatiner{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    overflow: hidden;
-  
-  }
-  .profile-image-conatiner img{
-    width: 100%;
-  }
-  .sidebar-prof-container h3{
+  .sidebarProfContainer h3{
     padding-top: 10px;
     color: #000;
     font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
   }
   
   .sidebar ul{
@@ -57,14 +50,16 @@
     padding: 0;
     display: flex;
     flex-direction: column;
-    /* position: relative; */
   }
   .sidebar ul li{
     color: #000;
-    padding: 15px 0 15px 20px;
+    padding: 16px;
     border-bottom: 1px solid #DCEBFD;
-    font-weight: 600;
-    font-size: 12px;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .sidebar ul li span{
+    padding-right: 16px;
   }
   .sidebar ul li:last-child{
     border-top: 1px solid #DCEBFD;
@@ -72,4 +67,7 @@
     left: 0;
     right: 0;
     bottom: 0;
+  }
+  .SidebarOverlay{
+    z-index: 99996;
   }
