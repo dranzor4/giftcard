@@ -1,0 +1,157 @@
+
+/* src/App.css */
+:root {
+  --label-color:#64748b;
+  --main-color:#1E293B;
+
+}
+.custom-container {
+  width: 100%;
+  height: auto; /* Set your desired height */
+  border-top: 1px solid #ddd; /* Light grey top border */
+  border-bottom: 1px solid #ddd; /* Light grey bottom border */
+  border-left: none; /* Remove left border */
+  border-right: none; /* Remove right border */
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  margin-bottom: 16px; /* Add some bottom margin for better spacing */
+}
+.text-right {
+  text-align: right;
+  
+ }
+ .text-left {
+  text-align: left;
+ }
+
+ 
+.fs-10 {
+  font-size: 10px;
+}
+
+.fs-11 {
+  font-size: 11px;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.fs-13 {
+  font-size: 13px;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.fs-15 {
+  font-size: 15px;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
+.fs-17 {
+  font-size: 17px;
+}
+
+.fs-18 {
+  font-size: 18px;
+}
+
+.fs-19 {
+  font-size: 19px;
+}
+
+.fs-20 {
+  font-size: 20px;
+}
+/* Font Weights from 100 to 1000 in increments of 100 */
+.cs-1 {
+  font-weight: 100;
+}
+
+.cs-2 {
+  font-weight: 200;
+}
+
+.cs-3 {
+  font-weight: 300;
+}
+
+.cs-4 {
+  font-weight: 400;
+}
+
+.cs-5 {
+  font-weight: 500;
+}
+
+.cs-6 {
+  font-weight: 600;
+}
+
+.cs-7 {
+  font-weight: 700;
+}
+
+.cs-8 {
+  font-weight: 800;
+}
+
+.cs-9 {
+  font-weight: 900;
+}
+
+.cs-10 {
+  font-weight: 1000;
+}
+.n-wrap{
+  white-space: nowrap;
+}
+
+.label-grey{
+  color:var(--label-color)
+}
+.main-color{
+  color:var(--main-color)
+}
+.pad-10{
+  padding-bottom: 10px;
+}
+
+.pad-l20 {
+  padding-left: 20px;
+}
+.pad-l10 {
+  padding-left: 10px;
+}
+.label-container>.image-icon{
+  object-fit: cover;
+  width: 24px;
+  height: auto;
+}
+.toggle-button {
+  color: inherit; /* Maintain the original text color */
+  text-decoration: none; /* Remove default link underline */
+  cursor: pointer;
+}
+
+.toggle-arrow {
+  color: blue; /* Set the arrow color to blue */
+  margin-left: 4px; /* Adjust the spacing between text and arrow */
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+.toggle-arrow.open {
+  transform: rotate(180deg); /* Rotate the arrow when the content is open */
+}
+
+
+
+ 
+
+
