@@ -1,0 +1,7 @@
+$base-font-size: 16px; // Set your base font size
+
+@for $i from 10 through 20 {
+  .font-size-#{$i} {
+    font-size: $base-font-size * ($i / 10);
+  }
+}
