@@ -57,7 +57,7 @@
 } */
 
 .backBtn {
-  color: #1E293B;
+  color: #1e293b;
   display: flex;
   justify-content: space-between;
   padding: 22px 0 34px 0;
@@ -88,8 +88,10 @@
   padding-top: 12px;
 }
 
-
-@media(min-width: 768px) {
+.offersCmpContainer {
+  margin: 0px -16px;
+}
+@media (min-width: 768px) {
   .mainConatiner {
     padding: 0 40px;
   }
@@ -98,20 +100,15 @@
     display: grid;
     grid-template-columns: 400px auto;
   }
-}
-
-
-@media(min-width: 768px) {
   .productForm {
     padding-left: 60px;
   }
-
-  .mainConatiner {
-    padding: 0 40px;
+  .offersCmpContainer {
+    margin: 0px;
   }
 }
 
-@media(min-width: 1024px) {
+@media (min-width: 1024px) {
   .mainConatiner {
     padding: 0 60px;
   }
@@ -133,22 +130,17 @@
   } */
 }
 
-@media(min-width: 1440px) {
-
+@media (min-width: 1440px) {
   .mainConatiner {
     padding: 0 80px;
   }
 }
 
-
-
 /* demo css */
-
-
 
 /* form default style  start */
 .form-label {
-  color: #181C2D;
+  color: #181c2d;
   font-size: 14px;
   font-weight: 600;
   margin: 0;
@@ -165,11 +157,10 @@
 }
 
 .form-light-text {
-  color: #64748B;
+  color: #64748b;
   font-size: 12px;
   font-weight: 400;
 }
-
 
 /* form default style  end */
 
@@ -182,11 +173,10 @@ form {
   flex-direction: column;
   gap: 12px;
   margin-top: 24px;
-
 }
 
-.form-net-effetive-setion {}
-
+.form-net-effetive-setion {
+}
 
 .radiobtn-group {
   display: flex;
@@ -211,9 +201,8 @@ form {
 .form-light-label {
   font-size: 12px;
   font-weight: 400;
-  color: #64748B;
+  color: #64748b;
 }
-
 
 /* form sms or mail section */
 
@@ -225,12 +214,11 @@ form {
 
 .checkbox-group .form-check input {
   margin-right: 12px;
-
 }
 
 .checkbox-group .form-check label {
   font-size: 14px;
-  color: #181C2D;
+  color: #181c2d;
   font-weight: 400;
 }
 
@@ -298,11 +286,10 @@ form {
   text-align: center;
 }
 
-
 .form-personalise-section button {
-  border: 1px solid #1D86FF;
-  Padding: 10px, 18px, 10px, 18px;
-  color: #1D86FF;
+  border: 1px solid #1d86ff;
+  padding: 10px, 18px, 10px, 18px;
+  color: #1d86ff;
   font-weight: 600;
   border-radius: 6px;
 }
