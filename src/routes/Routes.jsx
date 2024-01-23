@@ -9,6 +9,7 @@ import GiftCard from '../pages/giftCardDetails';
 import MyGiftCard from '../pages/mygiftcard';
 import Checkout from '../pages/checkout';
 import Orders from '../pages/order';
+import Cart from "../pages/cart";
 
 
 
@@ -24,6 +25,7 @@ const Routers = () => {
                 <Route path="/my-gift-card" element={<MyGiftCard/> }/>
                 <Route  path="/checkout" element={<Checkout/>} />
                 <Route  path="/orders" element={<Orders/>} />
+                <Route path="/cart" element={<Cart />} />
 
             </Routes>
     );
