@@ -169,7 +169,7 @@
     z-index: 2;
     color: var(--Gray-Gray-500, #64748B);
     font-family: Poppins;
-    font-size: 10px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
   }
@@ -185,6 +185,11 @@
     z-index: 0 !important;
     box-shadow: none !important;
     outline: none;
+}
+
+.form-control:focus{
+    border-color: var(--bs-border-color) !important;
+    box-shadow: none;
 }
 
 .login-header-first div:first-child {

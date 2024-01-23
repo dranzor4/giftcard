@@ -8,6 +8,7 @@ import {
 } from "react-bootstrap";
 import "./newlogin.css";
 import SignModalComp from "./SignModalComp";
+import CustomMobNoInput from "../CustomMobNoInput";
 
 const LoginModalComp = ({ show, handleClose }) => {
   const [mobileNumber, setMobileNumber] = useState("");
@@ -244,6 +245,7 @@ const LoginModalComp = ({ show, handleClose }) => {
                         </Form.Label>
 
                         <InputGroup className="mb-3">
+                    
                           <InputGroup.Text
                             id="mobile-prefix"
                             className="mobile-country-code"
