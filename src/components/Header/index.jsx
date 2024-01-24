@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import NavSignInSignUp from "../NavSignInSignUp";
 import CalculatorModal from "../Calculator";
 import BackWithText from "../HeaderCompnents/BackWithText";
+import HeaderCommonCompoenents from "../HeaderCompnents/HeaderCommonCompoenents";
 
 const Header = ({ toggleSidebar }) => {
   const [state, setState] = useState(false);
@@ -34,7 +35,8 @@ const Header = ({ toggleSidebar }) => {
           </div>
           <div className="searchBarWrap">
             {/* <SearchBar1 /> */}
-            <BackWithText />
+            {/* <BackWithText /> */}
+            <HeaderCommonCompoenents />
           </div>
           <ul className="headerNavwrap">
             <li className="calculator">
