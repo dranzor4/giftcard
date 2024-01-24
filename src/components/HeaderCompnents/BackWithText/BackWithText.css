@@ -1,0 +1,13 @@
+.header-back-btn{
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 10px;
+}
+.header-back-btn h6 {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+    margin: 0;
+
+}

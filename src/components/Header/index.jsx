@@ -4,11 +4,12 @@ import Sidebar from "../Sidebar";
 // import "./header.css"
 import "./Header.css";
 import ProfileIcon from "../ProfileIcon";
-import SearchBar1 from "../SearchBar1/Index";
+import SearchBar1 from "../HeaderCompnents/HeaderSearchBar/Index";
 import CartIcon from "../CartIcon";
 import { Link } from "react-router-dom";
 import NavSignInSignUp from "../NavSignInSignUp";
 import CalculatorModal from "../Calculator";
+import BackWithText from "../HeaderCompnents/BackWithText";
 
 const Header = ({ toggleSidebar }) => {
   const [state, setState] = useState(false);
@@ -32,7 +33,8 @@ const Header = ({ toggleSidebar }) => {
             <img src="/Images/Logo.svg" alt="" />
           </div>
           <div className="searchBarWrap">
-            <SearchBar1 />
+            {/* <SearchBar1 /> */}
+            <BackWithText />
           </div>
           <ul className="headerNavwrap">
             <li className="calculator">

@@ -27,7 +27,7 @@ const Layout = () => {
         show={showLoginModal}
         handleClose={handleCloseLoginModal}
       />
-      <Header toggleSidebar={toggleSidebar} />
+      <Header toggleSidebar={toggleSidebar} isSideBarOpen={isSideBarOpen}/>
       <Routers />
       <Sidebar
         toggleSidebar={toggleSidebar}

@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 
-const Search = () => {
+const HeaderSearchBar = () => {
     return (
     <>
       
@@ -30,4 +30,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default HeaderSearchBar;

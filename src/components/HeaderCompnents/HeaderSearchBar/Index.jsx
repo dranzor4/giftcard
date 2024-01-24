@@ -1,14 +1,14 @@
 import React from "react";
 import { Form, InputGroup } from "react-bootstrap";
 import "./SearchBar.css";
-import useIsMobile from "../../customHooks/useIsMobile";
+import useIsMobile from "../../../customHooks/useIsMobile";
 
-const SearchBar1 = ({ customStyle }) => {
-  const modile = useIsMobile();
+const HeaderSearchBar = ({ customStyle }) => {
+  const mobile = useIsMobile();
   return (
     <Form inline className={customStyle}>
       <InputGroup className="searchBox">
-        {modile && (
+        {mobile && (
           <InputGroup.Text className="searchMobleBtn" id="search-bar">
             <img src="/Images/Search.svg" alt="search-icon" />
           </InputGroup.Text>
@@ -20,7 +20,7 @@ const SearchBar1 = ({ customStyle }) => {
           className="SearchInput"
           // onChange={device && onChange}
         />
-        {!modile && (
+        {!mobile && (
           <InputGroup.Text className="searchMobleBtn" id="search-bar">
             <img src="/Images/Search.svg" alt="search-icon" />
           </InputGroup.Text>
@@ -30,4 +30,4 @@ const SearchBar1 = ({ customStyle }) => {
   );
 };
 
-export default SearchBar1;
+export default HeaderSearchBar;
