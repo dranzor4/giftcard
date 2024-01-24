@@ -9,7 +9,6 @@ import {
   ModalBody,
 } from "react-bootstrap";
 import "./newlogin.css";
-import index from "../TransparentOverlay";
 
 const SignModalComp = ({ show, handleClose }) => {
   const [mobileNumber, setMobileNumber] = useState("");
