@@ -1,6 +1,5 @@
 .searchBox {
     border-radius: 30px;
-    overflow: hidden;
     border: 1px solid #E2E8F0;
     padding: 10px 16px;
     background-color: #F1F5F9;
@@ -10,6 +9,7 @@
     padding: 0;
     background-color: transparent;
     border: 0;
+    cursor: pointer;
 }
 
 
@@ -21,7 +21,7 @@
     font-size: 12px;
     line-height: 18px;
     font-weight: 400;
-    columns: #64748B;
+    color: #64748B;
 }
 
 .searchBox .SearchInput:focus {
@@ -30,6 +30,57 @@
     background-color: transparent;
 
 }
+
+.search-dropdown{
+    width: 100%;
+    max-height: 500px;
+    overflow: auto;
+    padding: 0;
+}
+.search-item{
+    border-bottom: 1px solid #ccc;
+    padding: 10px 16px;
+}
+.search-item-title{
+    font-size: 14px;
+    font-weight: 400;
+}
+.search-item-category{
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.clearSearchBtn{
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+.clearSearchBtn img{
+    height: 12px;
+    width: 12px;
+}
+
+.loader {
+    width: 15px;
+    height: 15px;
+    border: 3px solid #FFF;
+    border-bottom-color: #FF3D00;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
+    
 
 @media(min-width: 768px){
     .searchBox {
