@@ -165,7 +165,7 @@ const LoginModalComp = ({ show, handleClose }) => {
                       <div>
                         <InputGroup>
                         <Form.Label
-                        className={showLabel ? 'active' : ''}
+                        className={showLabel ? 'active-label' : ''}
                         style={{ position: 'absolute' }}
                         >
                           Enter OTP
@@ -237,13 +237,13 @@ const LoginModalComp = ({ show, handleClose }) => {
                     >
                       <div>
                         <Form.Label
-                        className={showLabel ? 'active' : ''}
+                        className={showLabel ? 'active-label' : ''}
                         style={{ position: 'absolute' }}
                         >
                           Mobile Number
                         </Form.Label>
 
-                        <InputGroup className="mb-3">
+                        <InputGroup className="mb-3">            
                           <InputGroup.Text
                             id="mobile-prefix"
                             className="mobile-country-code"

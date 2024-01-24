@@ -21,6 +21,11 @@ const SignModalComp = ({ show, handleClose }) => {
   const [mobileNumberVerified, setMobileNumberVerified] = useState(false);
   const [mobileError, setMobileError] = useState("");
   const [emailError, setEmailError] = useState("");
+  const [showFirstLabel, setShowFirstLabel] = useState(false);
+  const [showLastLabel, setShowLastLabel] = useState(false);
+  const [showMobileLabel, setShowMobileLabel] = useState(false);
+  const [showEmailLabel, setShowEmailLabel] = useState(false);
+  const [showOtpLabel, setShowOtpLabel] = useState(false);
 
   const generateOtp = () => {
     // You can implement logic to generate OTP here, for simplicity, using a random 4-digit number
@@ -28,11 +33,62 @@ const SignModalComp = ({ show, handleClose }) => {
     setOtp(generatedOtp.toString());
     setOtpGenerated(true);
     setMobileError("");
+    setShowOtpLabel(true)
+  };
+
+  const handleFirstChange = (e) => {
+    let inputValue = e.target.value;
+    setFirstName(inputValue);
+    if (inputValue.trim() !== "") {
+      setShowFirstLabel(true);
+    } else {
+      setShowFirstLabel(false);
+    }
   };
 
   const verifyOTP = () => {
     setOtpGenerated(false);
     setMobileNumberVerified(true);
+  };
+
+  const handleLastChange = (e) => {
+    let inputValue = e.target.value;
+    setLastName(inputValue);
+    if (inputValue.trim() !== "") {
+      setShowLastLabel(true);
+    } else {
+      setShowLastLabel(false);
+    }
+  };
+
+  const handleMobileNumberChange = (e) => {
+    const onlyDigits = e.target.value.replace(/\D/g, ""); // Remove non-numeric characters
+    setMobileNumber(onlyDigits);
+    if (onlyDigits.trim() !== "") {
+      setShowMobileLabel(true);
+    } else {
+      setShowMobileLabel(false);
+    }
+  };
+
+  const handleOTPChange = (e) => {
+    let inputValue = e.target.value;
+    setOtp(inputValue);
+    if (inputValue.trim() !== "") {
+      setShowOtpLabel(true);
+    } else {
+      setShowOtpLabel(false);
+    }
+  };
+
+  const handleEmailChange = (e) => {
+    let inputValue = e.target.value;
+    setEmail(inputValue);
+    if (inputValue.trim() !== "") {
+      setShowEmailLabel(true);
+    } else {
+      setShowEmailLabel(false);
+    }
   };
 
   // Validate mobile number
@@ -110,28 +166,46 @@ const SignModalComp = ({ show, handleClose }) => {
                   >
                     <div>
                       <InputGroup className="mb-3">
+                        <Form.Label
+                          className={showFirstLabel ? "active-label" : ""}
+                          style={{ position: "absolute" }}
+                        >
+                          First Name
+                        </Form.Label>
                         <Form.Control
                           type="text"
                           required
                           placeholder="First Name"
                           value={firstname}
-                          style={{ fontSize: "small" }}
-                          onChange={(e) => setFirstName(e.target.value)}
+                          style={{ fontSize: "small", zIndex: 1 }}
+                          onChange={handleFirstChange}
                           autoFocus
                         />
                       </InputGroup>
 
                       <InputGroup className="mb-3">
+                        <Form.Label
+                          className={showLastLabel ? "active-label" : ""}
+                          style={{ position: "absolute" }}
+                        >
+                          Last Name
+                        </Form.Label>
                         <Form.Control
                           type="text"
                           required
                           placeholder="Last Name"
-                          style={{ fontSize: "small" }}
+                          style={{ fontSize: "small", zIndex: 1 }}
                           value={lastname}
-                          onChange={(e) => setLastName(e.target.value)}
+                          onChange={handleLastChange}
                         />
                       </InputGroup>
 
+                      <Form.Label
+                        className={showMobileLabel ? "active-label" : ""}
+                        style={{ position: "absolute" }}
+                      >
+                      Mobile Number
+                      </Form.Label>
                       <InputGroup className="mb-3">
                         <InputGroup.Text
                           id="mobile-prefix"
@@ -147,16 +221,11 @@ const SignModalComp = ({ show, handleClose }) => {
                           style={{
                             fontSize: "small",
                             borderLeft: "none",
+                            zIndex: 1,
                           }}
                           value={mobileNumber}
                           required
-                          onChange={(e) => {
-                            const onlyDigits = e.target.value.replace(
-                              /\D/g,
-                              ""
-                            ); // Remove non-numeric characters
-                            setMobileNumber(onlyDigits);
-                          }}
+                          onChange={handleMobileNumberChange}
                         />{" "}
                         {mobileNumberVerified && (
                           <InputGroup.Text
@@ -208,6 +277,12 @@ const SignModalComp = ({ show, handleClose }) => {
 
                       {otpGenerated && (
                         <InputGroup className="mb-3">
+                          <Form.Label
+                            className={showOtpLabel ? "active-label" : ""}
+                            style={{ position: "absolute" }}
+                          >
+                          Enter OTP
+                          </Form.Label>
                           <Form.Control
                             type="text"
                             placeholder="Enter OTP"
@@ -216,8 +291,9 @@ const SignModalComp = ({ show, handleClose }) => {
                               borderLeft: "none",
                               borderRight: "none",
                               fontSize: "small",
+                              zIndex:1
                             }}
-                            onChange={(e) => setOtp(e.target.value)}
+                            onChange={handleOTPChange}
                           />
 
                           <InputGroup.Text
@@ -231,15 +307,22 @@ const SignModalComp = ({ show, handleClose }) => {
                       )}
 
                       <InputGroup className="mb-3">
+                        <Form.Label
+                          className={showEmailLabel ? "active-label" : ""}
+                          style={{ position: "absolute" }}
+                        >
+                          Last Name
+                        </Form.Label>
                         <Form.Control
                           type="email"
                           placeholder="Email ID"
                           value={email}
                           style={{
                             fontSize: "small",
+                            zIndex: 1,
                           }}
                           required
-                          onChange={(e) => setEmail(e.target.value)}
+                          onChange={handleEmailChange}
                         />
                       </InputGroup>
                       {emailError && (
