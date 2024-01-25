@@ -10,7 +10,7 @@ import FilterSelect from '../../FilterSelect'
 const HeaderCommonCompoenents = () => {
     const location = useLocation();
     const params = useParams();
-    
+
     const determineVisibility = () => {
         const path = location.pathname;
         switch (true) {
@@ -31,7 +31,7 @@ const HeaderCommonCompoenents = () => {
 
             case path.startsWith('/productDetail/'):
                 return {
-                    showBackButton: false,
+                    showBackButton: true,
                     showFilterDropdown: false,
                     showSearchBar: false,
                     showFlotingSearch: true,
@@ -52,19 +52,12 @@ const HeaderCommonCompoenents = () => {
     return (
         <Row className='header-common-comp'>
             <Row>
-                <Col>
-                    {showBackButton && <BackWithText />}
-                </Col>
-                <Col>
-                    {showFilterDropdown && <FilterSelect />}
-                </Col>
+                {showBackButton && <Col><BackWithText /> </Col>}
+                {showFilterDropdown && <Col><FilterSelect /></Col>}
+                {showFlotingSearch && <Col className='d-flex align-items-center justify-content-end'><img className='float-end' src="/Images/search-icon.svg" alt="floting search" /></Col>}
             </Row>
             <Row>
                 {showSearchBar && <HeaderSearchBar />}
-                {showFlotingSearch && <>
-                    <Col> back </Col>
-                    <Col><span>FLOATING SEARCH</span> </Col>
-                </>}
             </Row>
         </Row>
     )

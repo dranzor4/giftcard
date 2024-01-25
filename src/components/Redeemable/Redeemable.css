@@ -1,6 +1,7 @@
 .redeemable-container {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   margin-top: 8px;
 }
 .containerHeader {

@@ -7,7 +7,7 @@ import Redeemable from "../../components/Redeemable";
 import { useNavigate } from "react-router-dom";
 import CustomInput from "../../components/CustomInput";
 import NetEffecttive from "../../components/NetEffecttive";
-import { Form } from "react-bootstrap";
+import { Col, Form, Row } from "react-bootstrap";
 import Button from "../../components/Button";
 import TermsAndCondition from "../../components/TermsAndCondition";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -222,159 +222,146 @@ const ProductDetail = () => {
   return (
     <>
       <div className="mainConatiner">
-        <div className={"backBtn"}>
-          <img
-            src="/Images/left-arrow.svg"
-            onClick={() => navigate(-1)}
-            alt=""
-          />
-          <img src="/Images/search-icon.svg" alt="" />
-        </div>
-        <div className={""}>
-          <div className="row">
-            <div className="col-md-6 col-lg-4">
-              <CustomCard label={true} tag={true} />
-              <Redeemable />
-              <Offers />
-            </div>
-            <div className={`${"product-form"} | col-md-6 col-lg-8`}>
-              <div className={`row`}>
-                <div className={`product-form-grid row`}>
-                  <div className="form-toggle ">
-                    <div className="text-center line-height-0">
-                      <RadioBox
-                        options={options}
-                        selectedOption={formToggle}
-                        onOptionChange={(event) =>
-                          setFormToggle(event.target.value)
-                        }
-                        className="product-selforgift-btn"
-                      />
-                    </div>
-                  </div>
-                  <div className="form-price-section">
-                    <label className="form-label p-b-8">
-                      Select Gift Value
-                    </label>
-                    <div className="radiobtn-group">
-                      <PriceRadioBtns />
-                    </div>
-                    <label className="form-label">Or</label>
-                    <CustomInput
-                      label={"Enter Amount"}
-                      hintText={"Min: ₹100, Max: ₹1,00,000"}
-                      hintShow={true}
-                      onChange={handlePrceChange}
-                      value={formFields.giftPrice}
-                      type="number"
-                    />
-                    <CustomInput
-                      label={"Quantity"}
-                      hintText={"Min: 1, Max: 10"}
-                      hintShow={true}
-                      onChange={handleQuantityChange}
-                      value={formFields.giftQuantity}
-                      type="number"
-                    />
-                  </div>
-                  <div className="form-ne-section">
-                    <div className="ne-mobile">
-                      <NetEffecttive onClick={() => toggleSRPMob()} />
-                    </div>
-                    <div className="ne-desk">{/* <RewardSummaryDesk /> */}</div>
-                  </div>
+        <Form>
+        <Row className="pt-3">
+          <Col md={6} lg={4}>
+            <CustomCard label={true} tag={true} />
+            <Redeemable />
+            <Offers />
+          </Col>
+          <Col md={6} lg={8} className="product-form">
+            <Row className={`product-form-grid`}>
+              <Col xs={12} className="form-toggle ">
+                <div className="text-center line-height-0">
+                  <RadioBox
+                    options={options}
+                    selectedOption={formToggle}
+                    onOptionChange={(event) =>
+                      setFormToggle(event.target.value)
+                    }
+                    className="product-selforgift-btn"
+                  />
                 </div>
-                {formToggle === "gift-to-someone" ? (
-                  <div className="row">
-                    <div className="form-delivery-details-section ">
-                      <div className="form-divider">
-                        <h3>
-                          <span>Delivery Details</span>
-                        </h3>
-                      </div>
-                      <div className="row">
-                        <div className="form-sms-or-mail-section col-lg-6">
-                          <label className="form-label">
-                            How would you like to send it?
-                          </label>
-                          <div className="checkbox-group">
-                            <Form.Check
-                              type={"checkbox"}
-                              id={`default-checkbox`}
-                              name="onEmail"
-                              label={`Email`}
-                              onChange={handleEmailCheckboxChange}
-                            />
-                            <Form.Check
-                              type={"checkbox"}
-                              id={`default-checkbox`}
-                              name="emialOrSms"
-                              label={`onSms`}
-                              onChange={handleSMSCheckboxChange}
-                            />
-                          </div>
-                          <p className="form-light-text">
-                            Gift card will be delivered to this Mobile number
-                            and Email ID{" "}
-                            <span>
-                              <img src="/Images/whatsapp-icon.svg" alt="" />
-                            </span>
-                          </p>
-                          <label className="form-label">
-                            How would you like to send it?
-                          </label>
-                          <SendNowOrLaterRadioBtns />
-                        </div>
-                        <div className="form-user-details col-lg-6">
-                          <label className="form-label">
-                            Who is this gift for?
-                          </label>
-                          <p className="form-light-text">
-                            Gift card will be delivered to this Mobile number
-                            and Email ID
-                          </p>
-                          <CustomInput
-                            label={"First Name"}
-                            onChange={handleFirstNameChange}
-                            value={formFields.firstNmae}
-                          />
-                          <CustomInput
-                            label={"last Name"}
-                            onChange={handleLastNameChange}
-                            value={formFields.lastNmae}
-                          />
-                          <CustomInput
-                            label={"Email ID"}
-                            onChange={handleEmialIDChange}
-                            value={formFields.emailId}
-                          />
-                          <CustomMobNoInput
-                            label={"Mobile Number"}
-                            onChange={handleMobileNoChange}
-                            value={formFields.mobileNo}
-                            type="number"
-                            countryCode={"+91"}
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ) : null}
-              </div>
-            </div>
-          </div>
-          <div className="row col-md-9">
+              </Col>
+              <Col xs={12} className="form-price-section">
+                <label className="form-label p-b-8">
+                  Select Gift Value
+                </label>
+                <div className="radiobtn-group">
+                  <PriceRadioBtns />
+                </div>
+                <label className="form-label">Or</label>
+                <CustomInput
+                  label={"Enter Amount"}
+                  hintText={"Min: ₹100, Max: ₹1,00,000"}
+                  hintShow={true}
+                  onChange={handlePrceChange}
+                  value={formFields.giftPrice}
+                  type="number"
+                />
+                <CustomInput
+                  label={"Quantity"}
+                  hintText={"Min: 1, Max: 10"}
+                  hintShow={true}
+                  onChange={handleQuantityChange}
+                  value={formFields.giftQuantity}
+                  type="number"
+                />
+              </Col>
+              <Col xs={12} className="form-ne-section">
+                <div className="ne-mobile">
+                  <NetEffecttive onClick={() => toggleSRPMob()} />
+                </div>
+                <div className="ne-desk">{/* <RewardSummaryDesk /> */}</div>
+              </Col>
+            </Row>
             {formToggle === "gift-to-someone" ? (
-              <>
-                <div className="form-divider">
-                  <h3>
-                    <span>Personalise your Gift Card</span>
-                  </h3>
-                </div>
-              </>
+              <Row className="form-delivery-details-section">
+                  <Row className="form-divider">
+                    <h3>
+                      <span>Delivery Details</span>
+                    </h3>
+                  </Row>
+                  <Row>
+                    <Col lg={6} className="form-sms-or-mail-section">
+                      <label className="form-label">
+                        How would you like to send it?
+                      </label>
+                      <div className="checkbox-group">
+                        <Form.Check
+                          type={"checkbox"}
+                          id={`default-checkbox`}
+                          name="onEmail"
+                          label={`Email`}
+                          onChange={handleEmailCheckboxChange}
+                        />
+                        <Form.Check
+                          type={"checkbox"}
+                          id={`default-checkbox`}
+                          name="emialOrSms"
+                          label={`onSms`}
+                          onChange={handleSMSCheckboxChange}
+                        />
+                      </div>
+                      <p className="form-light-text">
+                        Gift card will be delivered to this Mobile number
+                        and Email ID{" "}
+                        <span>
+                          <img src="/Images/whatsapp-icon.svg" alt="" />
+                        </span>
+                      </p>
+                      <label className="form-label">
+                        How would you like to send it?
+                      </label>
+                      <SendNowOrLaterRadioBtns />
+                    </Col>
+                    <Col  lg={6} className="form-user-details">
+                      <label className="form-label">
+                        Who is this gift for?
+                      </label>
+                      <p className="form-light-text">
+                        Gift card will be delivered to this Mobile number
+                        and Email ID
+                      </p>
+                      <CustomInput
+                        label={"First Name"}
+                        onChange={handleFirstNameChange}
+                        value={formFields.firstNmae}
+                      />
+                      <CustomInput
+                        label={"last Name"}
+                        onChange={handleLastNameChange}
+                        value={formFields.lastNmae}
+                      />
+                      <CustomInput
+                        label={"Email ID"}
+                        onChange={handleEmialIDChange}
+                        value={formFields.emailId}
+                      />
+                      <CustomMobNoInput
+                        label={"Mobile Number"}
+                        onChange={handleMobileNoChange}
+                        value={formFields.mobileNo}
+                        type="number"
+                        countryCode={"+91"}
+                      />
+                    </Col>
+                  </Row>
+                
+              </Row>
             ) : null}
-            <div className="col-md-6"></div>
-            <div className="form-personalise-section col-md-6">
+          </Col>
+        </Row>
+        <Row>
+          {formToggle === "gift-to-someone" ? (
+            <Row className="form-divider">
+              <h3>
+                <span>Personalise your Gift Card</span>
+              </h3>
+            </Row>
+          ) : null}
+          <Row>
+            <Col className="form-personalise-section col-md-6">
               {formToggle === "gift-to-someone" ? (
                 <>
                   <label className="form-label">Choose Category</label>
@@ -424,9 +411,14 @@ const ProductDetail = () => {
                 </>
               ) : null}
               <TermsAndCondition />
-            </div>
-          </div>
+            </Col>
+          </Row>
+        </Row>
+        <div className="addToCartOrBuyNow">
+          <Col><Button className="addToCart">Add To Cart</Button></Col>
+          <Col><Button className="buyNow text-white">Buy Now</Button></Col>
         </div>
+        </Form>
       </div>
 
       {/* All pop comes from downs */}
@@ -441,6 +433,7 @@ const ProductDetail = () => {
           Okay
         </Button>
       </DownBar>
+
       <DownBar
         toggleDownbar={togglePGMob}
         state={isPGOpen}

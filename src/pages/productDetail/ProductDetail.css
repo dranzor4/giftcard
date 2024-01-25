@@ -224,6 +224,48 @@
   border-radius: 6px;
 }
 
+.addToCartOrBuyNow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 12px;
+  padding-bottom: 20px;
+}
+
+.addToCart {
+  padding: 14px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 8px;
+  background: var(--bg-initial-button-color);
+  color: var(--bg-blue-color);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+  text-transform: capitalize;
+  width: 100%;
+}
+.buyNow {
+  display: flex;
+  padding: 14px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 8px;
+  background: var(--bg-blue-color);
+  color: var(--white-color);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+  text-transform: capitalize;
+  width: 100%;
+}
+
 /* reward point summary downbar----------- */
 
 .rps-mob-view .rps-header,

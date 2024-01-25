@@ -79,11 +79,6 @@ const TermsAndCondition = () => {
             allowfullscreen
           ></iframe>
         )}
-
-        <div className="addToCartOrBuyNow">
-          <Button className="addToCart">Add To Cart</Button>
-          <Button className="buyNow text-white">Buy Now</Button>
-        </div>
       </div>
     </div>
   );
