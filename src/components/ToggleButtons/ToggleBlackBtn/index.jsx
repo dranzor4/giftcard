@@ -5,10 +5,10 @@ import ToggleButton from 'react-bootstrap/ToggleButton';
 // style
 import "./ToggleBlackBtn.css"
 
-function ToggleBlackBtn({radios, formToggle, setFormToggle}) {
+function ToggleBlackBtn({radios, selected, setSelected, customeClass}) {
   return (
     <>
-      <ButtonGroup >
+      <ButtonGroup className={customeClass} >
         {radios.map((radio, idx) => (
           <ToggleButton
             key={idx}
@@ -17,9 +17,9 @@ function ToggleBlackBtn({radios, formToggle, setFormToggle}) {
             variant={"outline-dark"}
             name="radio"
             value={radio.value}
-            checked={formToggle === radio.value}
-            onChange={(e) => setFormToggle(e.currentTarget.value)}
-            className={`toggle-btn-1 ${formToggle === radio.value ? ".active-btn" : ""}`}
+            checked={selected === radio.value}
+            onChange={(e) => setSelected(e.currentTarget.value)}
+            className={`${selected === radio.value ? ".active-btn" : ""}`}
           >
             {radio.name}
           </ToggleButton>

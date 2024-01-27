@@ -1,18 +1,43 @@
-.toggle-btn-1 {
+/* toggle structure 1 */
+.toggle-btn-1 label {
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
     line-height: 20px;
     padding: 8px 10px;
     border: 1px solid #ccc;
+    transition: .3s ease-in-out;
 }
-.btn-check:checked+.toggle-btn-1{
+.toggle-btn-1 .btn-check:checked+.btn{
     background-color: #1E293B;
 }
 
 @media(min-width:  320px){
-    .toggle-btn-1 {
+    .toggle-btn-1 label {
         padding: 8px 20px;
     }
+}
+
+/* toggle structure 2 */
+
+.toggle-btn-2{
+    padding: 4px;
+    background-color: #D0E7FF4D;
+    border-radius: 100px;
+}
+.toggle-btn-2 label {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 8px 16px;
+    color: #1D86FF;
+    border: 1px solid #ccc;
+    border: 0;
+    transition: .3s ease-in-out;
+}
+.toggle-btn-2 .btn-check:checked+.btn{
+    border-radius: 100px;
+    background-color: #1D86FF;
 }
 

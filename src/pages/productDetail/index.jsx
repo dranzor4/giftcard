@@ -44,7 +44,7 @@ const ProductDetail = () => {
   const [isRPSMobOpen, setIsRPSMobOpen] = useState(false);
   const [isPGOpen, setIsPGOpen] = useState(false);
 
-  const formTogglearr = [
+  const formToggleArr = [
     { name: 'Buy for self', value: 'buy-for-self' },
     { name: 'Gift to someone', value: 'gift-to-someone' },
   ];
@@ -239,15 +239,11 @@ const ProductDetail = () => {
               <Row className={`product-form-grid`}>
                 <Col xs={12} className="form-toggle ">
                   <div className="text-center line-height-0">
-                    {/* <RadioBox
-                      options={options}
-                      selectedOption={formToggle}
-                      onOptionChange={(event) =>
-                        setFormToggle(event.target.value)
-                      }
-                      className="product-selforgift-btn"
-                    /> */}
-                    <ToggleBlackBtn formToggle={formToggle} setFormToggle={setFormToggle} radios={formTogglearr}/>
+                    <ToggleBlackBtn
+                      selected={formToggle}
+                      setSelected={setFormToggle}
+                      radios={formToggleArr}
+                      customeClass={"toggle-btn-1"} />
                   </div>
                 </Col>
                 <Col xs={12} className="form-price-section">
@@ -373,21 +369,21 @@ const ProductDetail = () => {
                   <>
                     <label className="form-label">Choose Category</label>
                     <div className="radiobtn-group category">
-                        <Swiper 
-                         slidesPerView={"auto"}
-                         spaceBetween={5}
-                        >
-                          {giftCategoryArr.map((ele) => (
-                            <SwiperSlide key={ele.value}>
-                              <RadioBox
-                                onOptionChange={handleGiftCategoryRadioBox}
-                                selectedOption={formFields.giftCardCategory}
-                                options={[{ value: ele.value, label: ele.label }]}
-                                className={"byforself-pric"}
-                              />
-                            </SwiperSlide>
-                          ))}
-                        </Swiper>
+                      <Swiper
+                        slidesPerView={"auto"}
+                        spaceBetween={5}
+                      >
+                        {giftCategoryArr.map((ele) => (
+                          <SwiperSlide key={ele.value}>
+                            <RadioBox
+                              onOptionChange={handleGiftCategoryRadioBox}
+                              selectedOption={formFields.giftCardCategory}
+                              options={[{ value: ele.value, label: ele.label }]}
+                              className={"byforself-pric"}
+                            />
+                          </SwiperSlide>
+                        ))}
+                      </Swiper>
 
                     </div>
                     <label className="form-label">Select a Theme</label>
