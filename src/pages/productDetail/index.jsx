@@ -16,9 +16,14 @@ import RewardSummaryDesk from "../../components/RewardSummaryDesk";
 import DownBar from "../../components/DownBar";
 import PreviewGiftCardMob from "../../components/PreviewGiftCardMob";
 import CustomMobNoInput from "../../components/CustomMobNoInput";
+import ToggleBlackBtn from "../../components/ToggleButtons/ToggleBlackBtn";
+// Import Swiper styles
+// import 'swiper/css';
+
 const ProductDetail = () => {
   const navigate = useNavigate();
 
+  // Form fields 
   const [formFields, setFormFields] = useState({
     giftPrice: "",
     giftQuantity: 1,
@@ -34,15 +39,16 @@ const ProductDetail = () => {
     emailSubject: "",
     emailMessage: "",
   });
-  console.log(formFields);
+
   const [formToggle, setFormToggle] = useState("buy-for-self");
   const [isRPSMobOpen, setIsRPSMobOpen] = useState(false);
   const [isPGOpen, setIsPGOpen] = useState(false);
 
-  const options = [
-    { value: "buy-for-self", label: "Buy for Self" },
-    { value: "gift-to-someone", label: "Gift to Someone" },
+  const formTogglearr = [
+    { name: 'Buy for self', value: 'buy-for-self' },
+    { name: 'Gift to someone', value: 'gift-to-someone' },
   ];
+
   let PriceRadioBtnArry = [
     {
       value: "250",
@@ -223,60 +229,61 @@ const ProductDetail = () => {
     <>
       <div className="mainConatiner">
         <Form>
-        <Row className="pt-3">
-          <Col md={6} lg={4}>
-            <CustomCard label={true} tag={true} />
-            <Redeemable />
-            <Offers />
-          </Col>
-          <Col md={6} lg={8} className="product-form">
-            <Row className={`product-form-grid`}>
-              <Col xs={12} className="form-toggle ">
-                <div className="text-center line-height-0">
-                  <RadioBox
-                    options={options}
-                    selectedOption={formToggle}
-                    onOptionChange={(event) =>
-                      setFormToggle(event.target.value)
-                    }
-                    className="product-selforgift-btn"
+          <Row className="pt-3">
+            <Col md={6} lg={4}>
+              <CustomCard label={true} tag={true} />
+              <Redeemable />
+              <Offers />
+            </Col>
+            <Col md={6} lg={8} className="product-form">
+              <Row className={`product-form-grid`}>
+                <Col xs={12} className="form-toggle ">
+                  <div className="text-center line-height-0">
+                    {/* <RadioBox
+                      options={options}
+                      selectedOption={formToggle}
+                      onOptionChange={(event) =>
+                        setFormToggle(event.target.value)
+                      }
+                      className="product-selforgift-btn"
+                    /> */}
+                    <ToggleBlackBtn formToggle={formToggle} setFormToggle={setFormToggle} radios={formTogglearr}/>
+                  </div>
+                </Col>
+                <Col xs={12} className="form-price-section">
+                  <label className="form-label p-b-8">
+                    Select Gift Value
+                  </label>
+                  <div className="radiobtn-group">
+                    <PriceRadioBtns />
+                  </div>
+                  <label className="form-label">Or</label>
+                  <CustomInput
+                    label={"Enter Amount"}
+                    hintText={"Min: ₹100, Max: ₹1,00,000"}
+                    hintShow={true}
+                    onChange={handlePrceChange}
+                    value={formFields.giftPrice}
+                    type="number"
                   />
-                </div>
-              </Col>
-              <Col xs={12} className="form-price-section">
-                <label className="form-label p-b-8">
-                  Select Gift Value
-                </label>
-                <div className="radiobtn-group">
-                  <PriceRadioBtns />
-                </div>
-                <label className="form-label">Or</label>
-                <CustomInput
-                  label={"Enter Amount"}
-                  hintText={"Min: ₹100, Max: ₹1,00,000"}
-                  hintShow={true}
-                  onChange={handlePrceChange}
-                  value={formFields.giftPrice}
-                  type="number"
-                />
-                <CustomInput
-                  label={"Quantity"}
-                  hintText={"Min: 1, Max: 10"}
-                  hintShow={true}
-                  onChange={handleQuantityChange}
-                  value={formFields.giftQuantity}
-                  type="number"
-                />
-              </Col>
-              <Col xs={12} className="form-ne-section">
-                <div className="ne-mobile">
-                  <NetEffecttive onClick={() => toggleSRPMob()} />
-                </div>
-                <div className="ne-desk">{/* <RewardSummaryDesk /> */}</div>
-              </Col>
-            </Row>
-            {formToggle === "gift-to-someone" ? (
-              <Row className="form-delivery-details-section">
+                  <CustomInput
+                    label={"Quantity"}
+                    hintText={"Min: 1, Max: 10"}
+                    hintShow={true}
+                    onChange={handleQuantityChange}
+                    value={formFields.giftQuantity}
+                    type="number"
+                  />
+                </Col>
+                <Col xs={12} className="form-ne-section">
+                  <div className="ne-mobile">
+                    <NetEffecttive onClick={() => toggleSRPMob()} />
+                  </div>
+                  <div className="ne-desk">{/* <RewardSummaryDesk /> */}</div>
+                </Col>
+              </Row>
+              {formToggle === "gift-to-someone" ? (
+                <Row className="form-delivery-details-section">
                   <Row className="form-divider">
                     <h3>
                       <span>Delivery Details</span>
@@ -315,7 +322,7 @@ const ProductDetail = () => {
                       </label>
                       <SendNowOrLaterRadioBtns />
                     </Col>
-                    <Col  lg={6} className="form-user-details">
+                    <Col lg={6} className="form-user-details">
                       <label className="form-label">
                         Who is this gift for?
                       </label>
@@ -347,77 +354,81 @@ const ProductDetail = () => {
                       />
                     </Col>
                   </Row>
-                
-              </Row>
-            ) : null}
-          </Col>
-        </Row>
-        <Row>
-          {formToggle === "gift-to-someone" ? (
-            <Row className="form-divider">
-              <h3>
-                <span>Personalise your Gift Card</span>
-              </h3>
-            </Row>
-          ) : null}
-          <Row>
-            <Col className="form-personalise-section col-md-6">
-              {formToggle === "gift-to-someone" ? (
-                <>
-                  <label className="form-label">Choose Category</label>
-                  <div className="radiobtn-group">
-                    <Swiper slidesPerView={3.2} loop={true}>
-                      {giftCategoryArr.map((ele) => (
-                        <SwiperSlide key={ele.value}>
-                          <RadioBox
-                            onOptionChange={handleGiftCategoryRadioBox}
-                            selectedOption={formFields.giftCardCategory}
-                            options={[{ value: ele.value, label: ele.label }]}
-                            className={"byforself-pric"}
-                          />
-                        </SwiperSlide>
-                      ))}
-                    </Swiper>
-                  </div>
-                  <label className="form-label">Select a Theme</label>
-                  <div className="radiobtn-group ">
-                    <ImageCarouselRadioBtn
-                      onChange={hanldeGiftThemeRadioChange}
-                      selectedImage={formFields.giftCardTheme}
-                    />
-                  </div>
-                  <CustomInput
-                    label={"Email Subject"}
-                    hintText={"Max 24 characters"}
-                    hintShow={true}
-                    onChange={handleEmailSubChange}
-                    value={formFields.emailSubject}
-                  />
 
-                  <CustomInput
-                    type="textarea"
-                    label={"Personal Message"}
-                    hintText={"Min: ₹100, Max: ₹1,00,000"}
-                    hintShow={true}
-                    onChange={handleEmaiTextChange}
-                    value={formFields.emailMessage}
-                  />
-
-                  <div className="form-btn">
-                    <Button handleClick={() => togglePGMob()}>
-                      Preview eGift Card
-                    </Button>
-                  </div>
-                </>
+                </Row>
               ) : null}
-              <TermsAndCondition />
             </Col>
           </Row>
-        </Row>
-        <div className="addToCartOrBuyNow">
-          <Col><Button className="addToCart">Add To Cart</Button></Col>
-          <Col><Button className="buyNow text-white">Buy Now</Button></Col>
-        </div>
+          <Row>
+            {formToggle === "gift-to-someone" ? (
+              <Row className="form-divider">
+                <h3>
+                  <span>Personalise your Gift Card</span>
+                </h3>
+              </Row>
+            ) : null}
+            <Row>
+              <Col className="form-personalise-section col-md-6">
+                {formToggle === "gift-to-someone" ? (
+                  <>
+                    <label className="form-label">Choose Category</label>
+                    <div className="radiobtn-group category">
+                        <Swiper 
+                         slidesPerView={"auto"}
+                         spaceBetween={5}
+                        >
+                          {giftCategoryArr.map((ele) => (
+                            <SwiperSlide key={ele.value}>
+                              <RadioBox
+                                onOptionChange={handleGiftCategoryRadioBox}
+                                selectedOption={formFields.giftCardCategory}
+                                options={[{ value: ele.value, label: ele.label }]}
+                                className={"byforself-pric"}
+                              />
+                            </SwiperSlide>
+                          ))}
+                        </Swiper>
+
+                    </div>
+                    <label className="form-label">Select a Theme</label>
+                    <div className="radiobtn-group ">
+                      <ImageCarouselRadioBtn
+                        onChange={hanldeGiftThemeRadioChange}
+                        selectedImage={formFields.giftCardTheme}
+                      />
+                    </div>
+                    <CustomInput
+                      label={"Email Subject"}
+                      hintText={"Max 24 characters"}
+                      hintShow={true}
+                      onChange={handleEmailSubChange}
+                      value={formFields.emailSubject}
+                    />
+
+                    <CustomInput
+                      type="textarea"
+                      label={"Personal Message"}
+                      hintText={"Min: ₹100, Max: ₹1,00,000"}
+                      hintShow={true}
+                      onChange={handleEmaiTextChange}
+                      value={formFields.emailMessage}
+                    />
+
+                    <div className="form-btn">
+                      <Button handleClick={() => togglePGMob()}>
+                        Preview eGift Card
+                      </Button>
+                    </div>
+                  </>
+                ) : null}
+                <TermsAndCondition />
+              </Col>
+            </Row>
+          </Row>
+          <div className="addToCartOrBuyNow">
+            <Col><Button className="addToCart">Add To Cart</Button></Col>
+            <Col><Button className="buyNow text-white">Buy Now</Button></Col>
+          </div>
         </Form>
       </div>
 

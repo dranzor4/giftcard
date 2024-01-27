@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import "./ImageCarouselRadioBtn.css"
 import { Swiper, SwiperSlide } from "swiper/react";
+import 'swiper/css';
 
 const ImageCarouselRadioBtn = ({selectedImage, onChange}) => {
 
@@ -18,9 +19,8 @@ const ImageCarouselRadioBtn = ({selectedImage, onChange}) => {
 
     return (
         <Swiper
-        slidesPerGroupSkip={2.5}
-            spaceBetween={10}
-            loop={true}
+        slidesPerView={2}
+        spaceBetween={12}
         >
 
             {

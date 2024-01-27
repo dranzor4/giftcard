@@ -1,0 +1,18 @@
+.toggle-btn-1 {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+}
+.btn-check:checked+.toggle-btn-1{
+    background-color: #1E293B;
+}
+
+@media(min-width:  320px){
+    .toggle-btn-1 {
+        padding: 8px 20px;
+    }
+}
+
