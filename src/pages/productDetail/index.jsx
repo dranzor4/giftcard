@@ -17,6 +17,7 @@ import DownBar from "../../components/DownBar";
 import PreviewGiftCardMob from "../../components/PreviewGiftCardMob";
 import CustomMobNoInput from "../../components/CustomMobNoInput";
 import CustomToggleBtn from "../../components/ToggleButtons/CustomToggleBtn";
+import { validateEmailId, validateFirstName, validateGiftPrice, validateGiftQuantity, validateLastName, validateMobileNo, validateOnEmailOrSms, validateSendNowOrLater } from "./validation";
 const ProductDetail = () => {
   const [formFields, setFormFields] = useState({
     giftPrice: "",
@@ -33,6 +34,22 @@ const ProductDetail = () => {
     emailSubject: "",
     emailMessage: "",
   });
+  const [formError, setFormError] = useState({
+    giftPrice: "",
+    giftQuantity: "",
+    onEmail: "",
+    onSms: "",
+    sendLatterOrNow: "",
+    firstNmae: "",
+    lastNmae: "",
+    emailId: "",
+    mobileNo: "",
+    giftCardCategory: "",
+    giftCardTheme: "",
+    emailSubject: "",
+    emailMessage: "",
+  });
+  
   const [formToggle, setFormToggle] = useState("buy-for-self");
   const [isRPSMobOpen, setIsRPSMobOpen] = useState(false);
   const [isPGOpen, setIsPGOpen] = useState(false);
@@ -194,26 +211,40 @@ const ProductDetail = () => {
     [formFields.emailMessage]
   );
 
-  const PriceRadioBtns = () =>
-    PriceRadioBtnArry.map((obj) => (
-      <RadioBox
-        key={obj.value}
-        onOptionChange={handlePrceChange}
-        selectedOption={formFields.giftPrice}
-        options={[{ value: obj.value, label: obj.label }]}
-        className={"byforself-pric"}
-      />
-    ));
-  const SendNowOrLaterRadioBtns = () =>
-    sendNowOrLaterBtnArr.map((obj) => (
-      <RadioBox
-        key={obj.value}
-        onOptionChange={handleSendORNowChange}
-        selectedOption={formFields.sendLatterOrNow}
-        options={[{ value: obj.value, label: obj.label }]}
-        className={"byforself-pric"}
-      />
-    ));
+  const handleSubmit = (e) => {
+    debugger
+    e.preventDefault()
+    // onst [formFields, setFormFields] = useState({
+    //   giftPrice: "",
+    //   giftQuantity: 1,
+    //   onEmail: "",
+    //   onSms: "",
+    //   sendLatterOrNow: "sendnow",
+    //   firstNmae: "",
+    //   lastNmae: "",
+    //   emailId: "",
+    //   mobileNo: "",
+    //   giftCardCategory: "",
+    //   giftCardTheme: 0,
+    //   emailSubject: "",
+    //   emailMessage: "",
+    const error = {}
+    error.giftPrice = validateGiftPrice(formFields.giftPrice)
+    error.giftQuantity = validateGiftQuantity(formFields.giftQuantity)
+    // error.onEmail = validateEmailId()
+    // error.onSms = validateOnEmailOrSms()
+    error.sendLatterOrNow = validateSendNowOrLater(formFields.sendLatterOrNow, formToggle)  
+    error.firstNmae = validateFirstName(formFields.firstNmae, formToggle)
+    error.lastNmae = validateLastName(formFields.lastNmae, formToggle)
+    error.emailId = validateEmailId(formFields.emailId, formToggle)
+    error.mobileNo = validateMobileNo(formFields.mobileNo, formToggle)
+    error.giftCardCategory = validateMobileNo(formFields.giftCardCategory, formToggle)
+    error.giftCardTheme = validateMobileNo(formFields.giftCardTheme, formToggle)
+    error.emailSubject = validateMobileNo(formFields.emailSubject, formToggle)
+    error.emailMessage = validateMobileNo(formFields.emailMessage, formToggle)
+    console.log(error);
+    setFormError(error)
+  }
 
   const toggleSRPMob = () => {
     setIsRPSMobOpen((prevState) => !prevState);
@@ -224,7 +255,7 @@ const ProductDetail = () => {
   return (
     <>
       <div className="mainConatiner">
-        <Form>
+        <Form onSubmit={handleSubmit} noValidate >
           <Row className="pt-3">
             <Col md={6} lg={4}>
               <CustomCard label={true} tag={true} />
@@ -265,6 +296,7 @@ const ProductDetail = () => {
                     onChange={handlePrceChange}
                     value={formFields.giftPrice}
                     type="number"
+                    error={formError.giftPrice}
                   />
                   <CustomInput
                     label={"Quantity"}
@@ -273,6 +305,7 @@ const ProductDetail = () => {
                     onChange={handleQuantityChange}
                     value={formFields.giftQuantity}
                     type="number"
+                    error={formError.giftQuantity}
                   />
                 </Col>
                 <Col xs={12} className="form-ne-section">
@@ -424,8 +457,8 @@ const ProductDetail = () => {
             </Row>
           </Row>
           <div className="addToCartOrBuyNow">
-            <Col><Button className="addToCart">Add To Cart</Button></Col>
-            <Col><Button className="buyNow text-white">Buy Now</Button></Col>
+            <Col><Button type={"submit"} className="addToCart">Add To Cart</Button></Col>
+            <Col><Button type={"submit"} className="buyNow text-white">Buy Now</Button></Col>
           </div>
         </Form>
       </div>
