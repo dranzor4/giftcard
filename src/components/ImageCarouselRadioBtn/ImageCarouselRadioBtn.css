@@ -1,5 +1,6 @@
 .img-carousel-btn.selected{
-    box-shadow: 5px 5px 10px #ccc;
+    padding: 1px;
+    border: 2px solid #F38231;
 }
 .img-carousel-btn img{
     width: 100%;
