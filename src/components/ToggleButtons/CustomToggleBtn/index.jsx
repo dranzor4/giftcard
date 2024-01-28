@@ -1,24 +1,24 @@
-import { useState } from 'react';
+import { memo } from 'react';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 
 // style
-import "./ToggleBlackBtn.css"
+import "./CustomToggleBtn.css"
 
-function ToggleBlackBtn({radios, selected, setSelected, customeClass}) {
+function CustomToggleBtn({radios, selected, setSelected, customeClass, name}) {
   return (
     <>
       <ButtonGroup className={customeClass} >
         {radios.map((radio, idx) => (
           <ToggleButton
             key={idx}
-            id={`radio-${idx}`}
+            id={`radio-${radio.value}`}
             type="radio"
             variant={"outline-dark"}
-            name="radio"
+            name={name}
             value={radio.value}
             checked={selected === radio.value}
-            onChange={(e) => setSelected(e.currentTarget.value)}
+            onChange={setSelected}
             className={`${selected === radio.value ? ".active-btn" : ""}`}
           >
             {radio.name}
@@ -29,4 +29,4 @@ function ToggleBlackBtn({radios, selected, setSelected, customeClass}) {
   );
 }
 
-export default ToggleBlackBtn;
+export default memo(CustomToggleBtn);

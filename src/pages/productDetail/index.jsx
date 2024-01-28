@@ -16,14 +16,8 @@ import RewardSummaryDesk from "../../components/RewardSummaryDesk";
 import DownBar from "../../components/DownBar";
 import PreviewGiftCardMob from "../../components/PreviewGiftCardMob";
 import CustomMobNoInput from "../../components/CustomMobNoInput";
-import ToggleBlackBtn from "../../components/ToggleButtons/ToggleBlackBtn";
-// Import Swiper styles
-// import 'swiper/css';
-
+import CustomToggleBtn from "../../components/ToggleButtons/CustomToggleBtn";
 const ProductDetail = () => {
-  const navigate = useNavigate();
-
-  // Form fields 
   const [formFields, setFormFields] = useState({
     giftPrice: "",
     giftQuantity: 1,
@@ -39,7 +33,6 @@ const ProductDetail = () => {
     emailSubject: "",
     emailMessage: "",
   });
-
   const [formToggle, setFormToggle] = useState("buy-for-self");
   const [isRPSMobOpen, setIsRPSMobOpen] = useState(false);
   const [isPGOpen, setIsPGOpen] = useState(false);
@@ -48,33 +41,32 @@ const ProductDetail = () => {
     { name: 'Buy for self', value: 'buy-for-self' },
     { name: 'Gift to someone', value: 'gift-to-someone' },
   ];
-
   let PriceRadioBtnArry = [
     {
+      name: "₹250",
       value: "250",
-      label: "₹250",
     },
     {
+      name: "₹500",
       value: "500",
-      label: "₹250",
     },
     {
+      name: "₹1000",
       value: "1000",
-      label: "₹250",
     },
     {
+      name: "₹5000",
       value: "5000",
-      label: "₹250",
     },
   ];
   let sendNowOrLaterBtnArr = [
     {
+      name: "Send Now",
       value: "sendnow",
-      label: "Send Now",
     },
     {
+      name: "Send Later",
       value: "sendlater",
-      label: "Send Later",
     },
   ];
   let giftCategoryArr = [
@@ -95,6 +87,10 @@ const ProductDetail = () => {
       label: "Anniversary",
     },
   ];
+
+  const handleFormToggleChange = useCallback((event) => {
+    setFormToggle(event.target.value)
+  }, [formToggle]);
 
   const handlePrceChange = useCallback(
     (event) =>
@@ -239,11 +235,13 @@ const ProductDetail = () => {
               <Row className={`product-form-grid`}>
                 <Col xs={12} className="form-toggle ">
                   <div className="text-center line-height-0">
-                    <ToggleBlackBtn
+                    <CustomToggleBtn
                       selected={formToggle}
-                      setSelected={setFormToggle}
+                      setSelected={handleFormToggleChange}
                       radios={formToggleArr}
-                      customeClass={"toggle-btn-1"} />
+                      name={"form-toggle"}
+                      customeClass={"toggle-btn-3"}
+                    />
                   </div>
                 </Col>
                 <Col xs={12} className="form-price-section">
@@ -251,7 +249,13 @@ const ProductDetail = () => {
                     Select Gift Value
                   </label>
                   <div className="radiobtn-group">
-                    <PriceRadioBtns />
+                    <CustomToggleBtn
+                      selected={formFields.giftPrice}
+                      setSelected={handlePrceChange}
+                      radios={PriceRadioBtnArry}
+                      name={"gift-price"}
+                      customeClass={"toggle-btn-3"}
+                    />
                   </div>
                   <label className="form-label">Or</label>
                   <CustomInput
@@ -316,7 +320,13 @@ const ProductDetail = () => {
                       <label className="form-label">
                         How would you like to send it?
                       </label>
-                      <SendNowOrLaterRadioBtns />
+                      <CustomToggleBtn
+                      selected={formFields.sendLatterOrNow}
+                      setSelected={handleSendORNowChange}
+                      radios={sendNowOrLaterBtnArr}
+                      name={"send-now-or-latter"}
+                      customeClass={"toggle-btn-3"}
+                    />
                     </Col>
                     <Col lg={6} className="form-user-details">
                       <label className="form-label">
@@ -428,7 +438,7 @@ const ProductDetail = () => {
         </Form>
       </div>
 
-      {/* All pop comes from downs */}
+      {/* All pop comes from downside */}
 
       <DownBar
         toggleDownbar={toggleSRPMob}

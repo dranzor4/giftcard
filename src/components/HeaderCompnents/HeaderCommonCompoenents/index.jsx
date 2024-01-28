@@ -1,6 +1,7 @@
 import React from 'react'
 import { Col, Row } from 'react-bootstrap'
 import { useLocation, useParams } from 'react-router-dom';
+import "./HeaderCommonCompoenents.css"
 
 // components
 import HeaderSearchBar from '../HeaderSearchBar/Index'
@@ -50,7 +51,8 @@ const HeaderCommonCompoenents = () => {
     // Get visibility based on the current page
     const { showBackButton, showFilterDropdown, showSearchBar, showFlotingSearch } = determineVisibility();
     return (
-        <Row className='header-common-comp'>
+        <div className='header-common-comp'>
+        <Row>
             <Row>
                 {showBackButton && <Col><BackWithText /> </Col>}
                 {showFilterDropdown && <Col><FilterSelect /></Col>}
@@ -60,6 +62,7 @@ const HeaderCommonCompoenents = () => {
                 {showSearchBar && <HeaderSearchBar />}
             </Row>
         </Row>
+        </div>
     )
 }
 

@@ -1,5 +1,5 @@
 /* toggle structure 1 */
-.toggle-btn-1 label {
+.toggle-btn-1 .btn {
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -8,24 +8,26 @@
     border: 1px solid #ccc;
     transition: .3s ease-in-out;
 }
-.toggle-btn-1 .btn-check:checked+.btn{
+
+.toggle-btn-1 .btn-check:checked+.btn {
     background-color: #1E293B;
 }
 
-@media(min-width:  320px){
-    .toggle-btn-1 label {
+@media(min-width: 320px) {
+    .toggle-btn-1 .btn {
         padding: 8px 20px;
     }
 }
 
 /* toggle structure 2 */
 
-.toggle-btn-2{
+.toggle-btn-2 {
     padding: 4px;
     background-color: #D0E7FF4D;
     border-radius: 100px;
 }
-.toggle-btn-2 label {
+
+.toggle-btn-2 .btn {
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
@@ -36,8 +38,31 @@
     border: 0;
     transition: .3s ease-in-out;
 }
-.toggle-btn-2 .btn-check:checked+.btn{
+
+.toggle-btn-2 .btn-check:checked+.btn {
     border-radius: 100px;
     background-color: #1D86FF;
 }
 
+/* toggle structure 3 */
+
+.toggle-btn-3 {
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.toggle-btn-3 .btn {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 8px 24px;
+    border: 1px solid #ccc;
+    border-radius: 10px !important;
+    transition: .3s ease-in-out;
+}
+
+.toggle-btn-3 .btn-check:checked+.btn {
+    border-radius: 8px;
+    background-color:  #1E293B;
+}
