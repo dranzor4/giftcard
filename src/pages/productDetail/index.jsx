@@ -72,19 +72,19 @@ const ProductDetail = () => {
   let giftCategoryArr = [
     {
       value: "best_wishes",
-      label: "Best Wishes",
+      name: "Best Wishes",
     },
     {
       value: "cccasions",
-      label: "Occasions",
+      name: "Occasions",
     },
     {
       value: "festival",
-      label: "Festival",
+      name: "Festival",
     },
     {
       value: "anniversary",
-      label: "Anniversary",
+      name: "Anniversary",
     },
   ];
 
@@ -240,7 +240,7 @@ const ProductDetail = () => {
                       setSelected={handleFormToggleChange}
                       radios={formToggleArr}
                       name={"form-toggle"}
-                      customeClass={"toggle-btn-3"}
+                      customeClass={"toggle-btn-1"}
                     />
                   </div>
                 </Col>
@@ -379,22 +379,14 @@ const ProductDetail = () => {
                   <>
                     <label className="form-label">Choose Category</label>
                     <div className="radiobtn-group category">
-                      <Swiper
-                        slidesPerView={"auto"}
-                        spaceBetween={5}
-                      >
-                        {giftCategoryArr.map((ele) => (
-                          <SwiperSlide key={ele.value}>
-                            <RadioBox
-                              onOptionChange={handleGiftCategoryRadioBox}
-                              selectedOption={formFields.giftCardCategory}
-                              options={[{ value: ele.value, label: ele.label }]}
-                              className={"byforself-pric"}
-                            />
-                          </SwiperSlide>
-                        ))}
-                      </Swiper>
-
+                      <CustomToggleBtn 
+                      isCarousel={true}
+                      customeClass={"toggle-btn-3"}
+                      name={"gift-theme-gategory"}
+                      selected={formFields.giftCardCategory}
+                      setSelected={handleGiftCategoryRadioBox}
+                      radios={giftCategoryArr}
+                      />
                     </div>
                     <label className="form-label">Select a Theme</label>
                     <div className="radiobtn-group ">

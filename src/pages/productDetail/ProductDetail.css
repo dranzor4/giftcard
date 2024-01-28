@@ -7,6 +7,7 @@
 
 .mainConatiner {
   padding: 0 16px;
+  overflow: hidden;
 }
 .p-l-50 {
   padding-left: 50px;
@@ -202,10 +203,6 @@
 
 .form-personalise-section .form-btn {
   padding-top: 24px;
-}
-
-.form-personalise-section .radiobtn-group.category .swiper-slide{
-  width: auto !important;
 }
 
 .form-btn {
