@@ -156,7 +156,7 @@
     font-weight: bold;
     
   }
-  .card {
+  .profile-card {
     max-width: 400px; /* Adjust the max-width based on your design */
     margin: 0 auto; /* Center the card */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow property */

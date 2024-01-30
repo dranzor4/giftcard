@@ -11,9 +11,9 @@ const RectangularContainer = () => {
     setShowOrderSummary(!showOrderSummary);
   };
   return (
-    <Row className="">
+    <Row className="mx-0">
       <Col xs={12} md={8}>
-        <Card className="custom-container ">
+        <Card className="custom-container pb-3">
           <Card.Body>
             {/* Row for label and order ID/content aligned to the left */}
             <Row className="border-bottom pad-10 mb-3">

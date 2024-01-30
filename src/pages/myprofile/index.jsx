@@ -11,7 +11,7 @@ const divStyle = {
 const MyProfile = () => {
   return (
     <div>
-      <Card border="lightgrey" className="m-3">
+      <Card border="lightgrey" className="m-3 profile-card">
         <Card.Body>
           <Container>
             <Row className="align-items-center border-bottom pb-2">

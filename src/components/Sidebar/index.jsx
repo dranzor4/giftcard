@@ -1,5 +1,5 @@
 import React from "react";
-import "./Sidebar.css";
+import "./sidebar.css";
 import ProfileIcon from "../ProfileIcon";
 import TransparentOverlay from "../TransparentOverlay/index";
 
@@ -16,20 +16,22 @@ const Sidebar = ({ state, toggleSidebar, toggleDownbar }) => {
           <li>
             <span>
               <img src="/Images/profile-icon.svg" alt="" />
-            </span>{" "}
-            My Account
+            </span>{""}
+            <a href="/my-profile">My Account</a>
           </li>
           <li>
             <span>
               <img src="/Images/giftcard-Icon.svg" alt="" />
             </span>{" "}
-            My Gift Cards
+            <a href="/my-gift-card">My Gift Cards</a>
+            
           </li>
           <li>
             <span>
               <img src="/Images/order-bag.svg" alt="" />
             </span>{" "}
-            Orders
+            <a href="/orders">Orders</a>
+            
           </li>
           <li onClick={() => toggleDownbar()}>
             <span>
