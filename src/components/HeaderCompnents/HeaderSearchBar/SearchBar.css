@@ -1,3 +1,30 @@
+.no-focus-outline:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+
+  .loader {
+    width: 15px;
+    height: 15px;
+    border: 3px solid #FFF;
+    border-bottom-color: #FF3D00;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
+
+    /* requred end */
 .searchBox {
     border-radius: 30px;
     border: 1px solid #E2E8F0;
@@ -61,25 +88,7 @@
     width: 12px;
 }
 
-.loader {
-    width: 15px;
-    height: 15px;
-    border: 3px solid #FFF;
-    border-bottom-color: #FF3D00;
-    border-radius: 50%;
-    display: inline-block;
-    box-sizing: border-box;
-    animation: rotation 1s linear infinite;
-    }
 
-    @keyframes rotation {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-    } 
     
 
 @media(min-width: 768px){
