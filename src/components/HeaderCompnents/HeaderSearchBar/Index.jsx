@@ -125,6 +125,7 @@ const HeaderSearchBar = ({ customStyle }) => {
   }
 
   const handleSelect = (item) => {
+    setSearchIterm(item.title)
     setSearchData([])
   }
   const hanldeClear = () => {
